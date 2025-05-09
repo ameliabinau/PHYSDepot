@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: white;
+  font-family: system-ui;
+}
+
+.glow {
+  font-size: 20px;
+  color: #fff;
+  text-align: Left;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #42008C, 0 0 40px #42008C, 0 0 50px #42008C, 0 0 60px #42008C, 0 0 70px #42008C;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #04008C, 0 0 40px #04008C, 0 0 50px #04008C, 0 0 60px #04008C, 0 0 70px #04008C, 0 0 80px #04008C;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2 class="glow">_PHYSDepot⚛️_</h2>
+
+<p>A directory for all your physics needs. For the FREE THINKERZ <p>
+     
+</body>
+</html> 
