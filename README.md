@@ -1,5 +1,5 @@
 # PHYSDepot
-A repository of physics/math/STEM resources for the independent learner/researcher. 
+A repository of physics/math/STEM resources for the independent learner/researcher. All high-quality resources, simulations, open-source data sets, packages, learning tools, and more organized and currated by scientists wth explainations for easy use/onboarding/learning/set-up. 
 
 Currently running drafts for the website on a generic web-based HTML renderer for now.
 
