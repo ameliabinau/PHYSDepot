@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Integral A Day</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</head>
+<body>
+  <h1>Integral A Day</h1>
+  <pre id="output">Loading...</pre>
+
+  <script type="text/javascript">
+    async function main() {
+      let pyodide = await loadPyodide();
+      await pyodide.loadPackage(["numpy", "sympy", "micropip"]);
+
+      // Your script (simplified example)
+      const code = `
+import numpy as np
+import scipy as sci
+import scipy.constants as con
+from datetime import datetime
+import random as random
+from fractions import Fraction
+import sympy as sp
+from IPython.display import display, Math
+
+genesis = datetime(2025, 5, 9)
+today = datetime.now()
+time_difference = today - genesis
+print(time_difference.days)
+#Assings an integer to today's date.
+
+seeds = [1,0.7,0.7,0.7,0.7] 
+
+lower = []
+upper = []
+a = []
+integrand = 0
+
+x = sp.Symbol('x')
+
+#General Gaussian 
+
+if seeds[0] == 1:
+
+    #Bounds
+    bins = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    lower_opt = [-sp.pi, 0, 0, -1, -2, 0, 0 , -1, -2, -sp.pi]
+    upper_opt = [2*sp.pi, 1, 2, 1, 2, 2, 0.1, 2, 3, sp.pi]
+    for i in range(9):
+        if seeds[3] == bins[i]:
+                lower_var = lower_opt[i]
+                lower = float(lower_var)
+                print(lower)
+                upper = upper_opt[i]
+                upper = float(upper)
+                print(upper)
+
+    #coefficient1
+    a_opt = [1, 1, 1.1, sp.pi, 2*sp.pi, 2, 3, 1, 2.1, 0.2]
+    for i in range(9):
+        if seeds[4] == bins[i]:
+                a = a_opt[i]
+                a = float(a)
+
+    print(a)
+
+    x,y,z,w,p,m,n,k,q,u = sp.Symbol('x'), sp.Symbol('y'), sp.Symbol('z'), sp.Symbol('w'), sp.Symbol('p'), sp.Symbol('m'), sp.Symbol('n'), sp.Symbol('k'), sp.Symbol('q'), sp.Symbol('n')
+    var_opt = [x, y, z, w, p, m, n, k, q, u]
+    for i in range(9):
+        if seeds[1]==bins[i]:
+            new_var = var_opt[i]
+
+    integrand = new_var**2 * sp.exp(-new_var**2 / a**2)
+    integrand = sp.nsimplify(integrand, rational=True)
+
+def_integral = sp.integrate(integrand, (new_var, lower, upper))
+
+latex_expr = "Solve" + r"\int_{" + sp.latex(lower) + r"}^{" + sp.latex(upper) + r"} " + sp.latex(integrand)
+solution = sp.latex(def_integral)
+print(latex_expr))
+print("Solution:"), print(solution)
+numeric_result = def_integral.evalf()
+print(numeric_result)
+`;
+
+      let output = await pyodide.runPythonAsync(code);
+      document.getElementById("output").textContent = output;
+    }
+
+    main();
+  </script>
+</body>
+</html>
+
