@@ -4,7 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  background-color: white;
+  height: 3000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
   font-family: system-ui;
 }
 
