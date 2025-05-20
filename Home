@@ -10,7 +10,6 @@ body {
 }
 
 .glow {
-  font-size: 20px;
   color: #fff;
   text-align: Left;
   animation: glow 1s ease-in-out infinite alternate;
