@@ -28,6 +28,37 @@ body {
 </style>
 </head>
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  height: 3000px; /* Used to enable scrolling */
+  background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
+  font-family: system-ui;
+}
+
+.glow {
+  font-size: 20px;
+  color: #fff;
+  text-align: Left;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #42008C, 0 0 40px #42008C, 0 0 50px #42008C, 0 0 60px #42008C, 0 0 70px #42008C;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #04008C, 0 0 40px #04008C, 0 0 50px #04008C, 0 0 60px #04008C, 0 0 70px #04008C, 0 0 80px #04008C;
+  }
+}
+</style>
+</head>
+
+<!-- ______________________________________^^^Universal Formatting^^^____________________________________________________ -->
 
 <body>
 
