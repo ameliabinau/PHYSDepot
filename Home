@@ -27,14 +27,17 @@ body {
 }
 </style>
 </head>
+
+/* ___________________________________________________________________________________________________________________ */
+
 <body>
 
 <h2 class="glow"> PHYSDepot⚛️ </h2>
 <h4 class="glow">A repository of physics resources.</h4>
 
-<p b i>Welcome!</i b> <br>PHYSDepot is a repository of physics resources (and the related) helpful to physicsts at all stages - from beginners/hobbyists to professional researchers. The goal of this site is to organize and currate a list of tools, packages, simulations, and educational resources. This centralization of resources not only lowers the barrier of entry to physics research/education but provides the active scientist a comprehensive overview of tools that could benefit their labs, analyses, collaborations, or educational/teaching pursuits.<p>
+<p> Welcome! <br>PHYSDepot is a repository of physics resources (and the related) helpful to physicsts at all stages - from beginners/hobbyists to professional researchers. The goal of this site is to organize and currate a list of tools, packages, simulations, and educational resources. This centralization of resources not only lowers the barrier of entry to physics research/education but provides the active scientist a comprehensive overview of tools that could benefit their labs, analyses, collaborations, or educational/teaching pursuits.<p>
 
-<p b>In recent times, efforts to make exploration of modern physics research is more accessible are rapidly intensifying</b> with the vast hoards of data being produced and diverse fields being explored. With even just a baseline set of fundementals (conceptal, mathematical, and computational), an individual should be able to carry out their own analyses, explore and create novel ideas, and tackle some of the greatest problems in modern physics. PHYSDepot is a project inspired by years of struggle endured by now-professional physicists who came from backgrounds where mentorship and educational opportunities in physics (and other scientific fields they were passionate about) were scarce. Our goal at PHYSDepot is inherently that of utility, connection, and unity. We aim to repackage advanced and basic science such that it is readily explorable to all for whatever their needs may be.<p>
+<p>In recent times, efforts to make exploration of modern physics research is more accessible are rapidly intensifying with the vast hoards of data being produced and diverse fields being explored. With even just a baseline set of fundementals (conceptal, mathematical, and computational), an individual should be able to carry out their own analyses, explore and create novel ideas, and tackle some of the greatest problems in modern physics. PHYSDepot is a project inspired by years of struggle endured by now-professional physicists who came from backgrounds where mentorship and educational opportunities in physics (and other scientific fields they were passionate about) were scarce. Our goal at PHYSDepot is inherently that of utility, connection, and unity. We aim to repackage advanced and basic science such that it is readily explorable to all for whatever their needs may be.<p>
 
 <p>PHYSDepot's creators are Amelia Binau (abinau@iu.edu) and Richard (Ricky) Dube (rdube@iu.edu) of Indiana University - Bloomington Department of Physics. We need collaborators! To become a contirbutor, email Amelia & Ricky. To simply recommend resoures to feature in the repository, please fill out this form: .<p>
      
