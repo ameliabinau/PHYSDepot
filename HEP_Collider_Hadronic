@@ -9,6 +9,8 @@ body {
   background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
 }
 
+<!---------Collapsible-------> 
+
 .collapsible {
   background-color: rgba(249, 250, 247,0.5);
   color: black;
@@ -34,6 +36,8 @@ body {
   background-color: white;
 }
 
+<!------Glow------->
+
 .glow {
   color: #fff;
   text-align: Left;
@@ -50,7 +54,8 @@ body {
   }
 }
 
-/* The navigation bar */
+<!--------Navigation bar---------->
+
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -87,10 +92,9 @@ body {
 
 <body>
 
-<h2 class="glow"> PHYSDepot⚛️ </h2>
-<h4 class="glow">A repository of physics resources.</h4>
-
 <div class="navbar">
+  <h2 class="glow"> PHYSDepot⚛️ </h2>
+  <h4 class="glow">A repository of physics resources.</h4>
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
