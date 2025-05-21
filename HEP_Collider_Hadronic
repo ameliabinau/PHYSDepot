@@ -86,7 +86,7 @@ body {
 <body>
 
 <div class="navbar">
-  <img src="https://github.com/ameliabinau/PHYSDepot/blob/main/PhysDEPOT.png" width="50" height="50" alt="PHYSDepot"><h2 class="glow">__PHYSDepot⚛️ </h2><h4 class="glow">__A repository of physics resources.</h4>
+  <img src="https://github.com/ameliabinau/PHYSDepot/blob/main/PhysDEPOT.png?raw=true" width="50" height="50" alt="PHYSDepot"><h2 class="glow">__PHYSDepot⚛️ </h2><h4 class="glow">__A repository of physics resources.</h4>
   <a href="#home">Navigation</a>
   <a href="#news">Homebrew Tools</a>
   <a href="#contact">About</a>
