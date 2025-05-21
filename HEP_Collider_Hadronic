@@ -97,8 +97,7 @@ body {
 <br>
 <h2>Resources & Tools</h2>
 
-<p>Collapsible Set:</p>
-<button class="collapsible">Open Section 1</button>
+<button class="collapsible"><a href="https://op-webtools.web.cern.ch/vistar/">CMS</a></button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
