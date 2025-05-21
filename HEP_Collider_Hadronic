@@ -101,7 +101,7 @@ body {
   <a href="#contact">About</a>
 </div>
 
-<h2>Resources & Tools</h2>
+<h2 br>Resources & Tools</h2 /br>
 
 <p>Collapsible Set:</p>
 <button class="collapsible">Open Section 1</button>
