@@ -17,7 +17,6 @@ body {
   cursor: pointer;
   padding: 3px;
   width: 50%;
-  border: 1px;
   text-align: left;
   outline: 1px;
   font-size: 12px;
@@ -58,7 +57,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: white;
+  background-color: #ffffff;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -70,13 +69,13 @@ body {
   display: block;
   color: black;
   text-align: center;
-  padding: 10px 12px;
+  padding: 8px 10px;
   text-decoration: wavy;
 }
 
 /* Change background on mouse-over */
 .navbar a:hover {
-  background: #ddd;
+  background: #ffffff;
   color: black;
 }
 
