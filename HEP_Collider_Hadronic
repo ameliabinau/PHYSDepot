@@ -106,7 +106,7 @@ body {
 
 <button class="collapsible"><a href="https://github.com/impy-project/chromo">Chromo: Cosmic ray and HadROnic interactiOn MOnte-carlo frontend</a></button>
 <div class="content">
-  <p b style="color:#990282;">Language Requirement(s): Python. Usage Requirements: Python-compatable IDE, Jupyter Notebooks</p>
+  <p style="color:#990282;">Language Requirement(s): Python. Usage Requirements: Python-compatable IDE, Jupyter Notebooks</p>
   <p>This fairly plug-and-play Python package allows the user to run popular hadronic collision event generators/simulations. What are possible outcomes of proton-proton collisions at a certain energy? Run PYTHIA 8.3, SIBYLL-2.3d, EPOS-LHC, QGSJet-III, and more without the cumbersome FORTRAN. Chromo's authors provide a variety of examples to play around with.</p>
 </div>
 
