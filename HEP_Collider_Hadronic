@@ -6,7 +6,7 @@
 
 body {
   height: 3000px; /* Used to enable scrolling */
-  background: linear-gradient(0deg, #e4ebd3 0%, #e6fcd2 51%, #f6fcf0 85%);
+  background: linear-gradient(0deg, #e6fcd2 0%, #e4ebd3 51%, #f6fcf0 85%);
   font-family: courier, serif;
 }
 
