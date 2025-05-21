@@ -92,16 +92,17 @@ body {
 
 <body>
 
-<h2 class="glow"> PHYSDepot⚛️ </h2>
-<h4 class="glow">A repository of physics resources.</h4>
-
 <div class="navbar">
+  <h2 class="glow"> PHYSDepot⚛️ </h2>
+  <h4 class="glow">A repository of physics resources.</h4>
+  <br>
   <a href="#home">Navigation</a>
   <a href="#news">Homebrew Tools</a>
   <a href="#contact">About</a>
 </div>
 
-<h2 br>Resources & Tools</h2 /br>
+<br>
+<h2>Resources & Tools</h2>
 
 <p>Collapsible Set:</p>
 <button class="collapsible">Open Section 1</button>
