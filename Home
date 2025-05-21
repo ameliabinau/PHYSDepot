@@ -48,16 +48,31 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    h1, h2, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       text-align: center;
     }
 
     #contributors {
-      background-color: rgba(155, 24, 105, 0.45);
-      color: white;
-      padding: 1rem;
+      background-color: rgba(155, 24, 105, 0.445);
+      padding: 2rem;
       border-radius: 12px;
       margin-top: 2rem;
+    }
+
+    .contributors-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .contrib-column {
+      flex: 1 1 300px;
+      color: white;
+      text-align: center;
     }
 
     a {
@@ -94,17 +109,21 @@
     <section id="contributors">
       <h2>Contributors</h2>
       <p>We always welcome new collaborators! To join, email <a href="mailto:abinau@iu.edu">Amelia</a> and
-        <a href="mailto:rdube@iu.edu">Ricky</a>. To suggest resources, fill out our form (coming soon).</p>
+        <a href="mailto:rdube@iu.edu">Ricky</a>. To suggest resources, fill out our form (coming soon).
+      </p>
 
-      <div>
-        <h4>Institutions</h4>
-        <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University (Bloomington)</a></p>
-
-        <h4>Individuals</h4>
-        <p>
-          <a href="mailto:abinau@iu.edu">Amelia Binau</a><br>
-          <a href="mailto:rdube@iu.edu">Richard (Ricky) Dube</a>
-        </p>
+      <div class="contributors-container">
+        <div class="contrib-column">
+          <h3>Institutions</h3>
+          <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University (Bloomington)</a></p>
+        </div>
+        <div class="contrib-column">
+          <h3>Individuals</h3>
+          <p>
+            <a href="mailto:abinau@iu.edu">Amelia Binau</a><br>
+            <a href="mailto:rdube@iu.edu">Richard (Ricky) Dube</a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
