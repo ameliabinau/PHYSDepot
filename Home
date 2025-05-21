@@ -1,44 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  height: 3000px; /* Used to enable scrolling */
-  background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
-  font-family: system-ui;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHYSDepot ⚛️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
-.glow {
-  color: #fff;
-  text-align: Left;
-  animation: glow 1s ease-in-out infinite alternate;
-}
+    header {
+      background-color: #42008C;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #42008C, 0 0 40px #42008C, 0 0 50px #42008C, 0 0 60px #42008C, 0 0 70px #42008C;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #04008C, 0 0 40px #04008C, 0 0 50px #04008C, 0 0 60px #04008C, 0 0 70px #04008C, 0 0 80px #04008C;
-  }
-}
-</style>
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+      color: #fff;
+      text-shadow: 0 0 8px #fff, 0 0 12px #42008C;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #42008C;
+      }
+
+      to {
+        text-shadow: 0 0 15px #fff, 0 0 25px #04008C;
+      }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h4 {
+      text-align: center;
+    }
+
+    #contributors {
+      background-color: rgba(155, 24, 105, 0.45);
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #42008C;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 
-<!-- ______________________________________^^^Universal Formatting^^^____________________________________________________ -->
-
 <body>
+  <header>
+    <h1 class="glow">PHYSDepot ⚛️</h1>
+    <h4 class="glow">A repository of physics resources</h4>
+  </header>
 
-<h2 class="glow"> PHYSDepot⚛️ </h2>
-<h4 class="glow">A repository of physics resources.</h4>
+  <main>
+    <p>Welcome!</p>
+    <p><strong>PHYSDepot</strong> is a repository of physics resources helpful to physicists at all stages — from
+      beginners to professional researchers. Our goal is to curate tools, packages, simulations, and educational
+      materials that lower the barrier to entry and empower both students and scientists alike.</p>
 
-<p> Welcome! <br>PHYSDepot is a repository of physics resources (and the related) helpful to physicsts at all stages - from beginners/hobbyists to professional researchers. The goal of this site is to organize and currate a list of tools, packages, simulations, and educational resources. This centralization of resources not only lowers the barrier of entry to physics research/education but provides the active scientist a comprehensive overview of tools that could benefit their labs, analyses, collaborations, or educational/teaching pursuits.<p>
+    <p>Whether you are just beginning your journey or working on advanced research, PHYSDepot is built to support your
+      work. This platform was inspired by the struggle many scientists face when access to mentorship and educational
+      opportunities is limited. We aim to connect, unify, and enable exploration through science and learning.</p>
 
-<p>In recent times, efforts to make exploration of modern physics research is more accessible are rapidly intensifying with the vast hoards of data being produced and diverse fields being explored. With even just a baseline set of fundementals (conceptal, mathematical, and computational), an individual should be able to carry out their own analyses, explore and create novel ideas, and tackle some of the greatest problems in modern physics. PHYSDepot is a project inspired by years of struggle endured by now-professional physicists who came from backgrounds where mentorship and educational opportunities in physics (and other scientific fields they were passionate about) were scarce. Our goal at PHYSDepot is inherently that of utility, connection, and unity. We aim to repackage advanced and basic science such that it is readily explorable to all for whatever their needs may be.<p>
+    <section id="contributors">
+      <h2>Contributors</h2>
+      <p>We always welcome new collaborators! To join, email <a href="mailto:abinau@iu.edu">Amelia</a> and
+        <a href="mailto:rdube@iu.edu">Ricky</a>. To suggest resources, fill out our form (coming soon).</p>
 
-<p>PHYSDepot's creators are Amelia Binau (abinau@iu.edu) and Richard (Ricky) Dube (rdube@iu.edu) of Indiana University - Bloomington Department of Physics. We need collaborators! To become a contirbutor, email Amelia & Ricky. To simply recommend resoures to feature in the repository, please fill out this form: .<p>
-     
+      <div>
+        <h4>Institutions</h4>
+        <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University (Bloomington)</a></p>
+
+        <h4>Individuals</h4>
+        <p>
+          <a href="mailto:abinau@iu.edu">Amelia Binau</a><br>
+          <a href="mailto:rdube@iu.edu">Richard (Ricky) Dube</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 PHYSDepot. All rights reserved.
+  </footer>
 </body>
-</html> 
+
+</html>
