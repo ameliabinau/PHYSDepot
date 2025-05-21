@@ -55,6 +55,8 @@ also they took down the fermilab frog site, but it’s archived here https://web
 
 #Physics: Tutorials & Activities
 ## Resources
+- [Particle Identification Playground](https://duberii.github.io/pid-playground/)
+    - 
 ## Packages
 ## Open-Source Data
 
