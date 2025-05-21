@@ -33,17 +33,74 @@ body {
   transition: max-height 0.1s ease-out;
   background-color: white;
 }
+
+.glow {
+  color: #fff;
+  text-align: Left;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #42008C, 0 0 40px #42008C, 0 0 50px #42008C, 0 0 60px #42008C, 0 0 70px #42008C;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #04008C, 0 0 40px #04008C, 0 0 50px #04008C, 0 0 60px #04008C, 0 0 70px #04008C, 0 0 80px #04008C;
+  }
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
 </style>
 </head>
+
+<!----------------------- Universal Formatting ------------------------------>
+
 <body>
 
-<h2>Animated Collapsibles</h2>
+<h2 class="glow"> PHYSDepot⚛️ </h2>
+<h4 class="glow">A repository of physics resources.</h4>
 
-<p>A Collapsible:</p>
-<button class="collapsible">Open Collapsible</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
 </div>
+
+<div class="main">
+  <p>Some text some text some text some text..</p>
+</div>
+
+<h2>Resources & Tools</h2>
 
 <p>Collapsible Set:</p>
 <button class="collapsible">Open Section 1</button>
@@ -58,6 +115,10 @@ body {
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
+
+<h2>Packages</h2>
+
+<h2>Datasets</h2>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
