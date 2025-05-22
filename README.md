@@ -5,6 +5,6 @@ Currently running drafts for the website on a generic web-based HTML renderer fo
 
 **Home Page Render:** http://htmlpreview.github.io/?https://github.com/ameliabinau/PHYSDepot/blob/main/index.html
 
-**HEP_Collider_Hadronic Render:** http://htmlpreview.github.io/?https://github.com/ameliabinau/PHYSDepot/blob/main/HEP_Collider_Hadronic
+**HEP_Collider_Hadronic Render:** http://htmlpreview.github.io/?https://github.com/ameliabinau/PHYSDepot/blob/main/resources.html
 
 **Integral_A_Day_Test Render:** http://htmlpreview.github.io/?https://github.com/ameliabinau/PHYSDepot/blob/main/Integral_A_Day_HTML_TEST
