@@ -72,6 +72,14 @@
     border-bottom-right-radius: 12px;
 }
 
+.worldmap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Optional: allows wrapping if screen is too small */
+    background: rgba(36,10,89,1);
+    border-radius: 12px;
+}
+
 
 body {
     margin: 0;
