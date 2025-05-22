@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSDepot ⚛️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="brand">
+                <img src="PhysDEPOT.png" alt="PHYSDepot">
+                <div class="brand-text">
+                    <h2 class="glow">PHYSDepot ⚛️</h2>
+                    <h4 class="glow">A repository of physics resources.</h4>
+                </div>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+
+            <div class="nav-links" id="navLinks">
+                <div class="dropdown">
+                    <div class="dropbtn" onclick="toggleDropdown(event)">About</div>
+                    <div class="dropdown-content">
+                        <a href="#">About PHYSDepot</a>
+                        <a href="#">Getting Started</a>
+                    </div>
+                </div>
+
+                <a href="#">Subfields</a>
+
+                <div class="dropdown">
+                    <div class="dropbtn" onclick="toggleDropdown(event)">Homebrew</div>
+                    <div class="dropdown-content">
+                        <a href="#">Simulations</a>
+                        <a href="#">Articles</a>
+                        <a href="#">Videos</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="dropbtn" onclick="toggleDropdown(event)">Forums</div>
+                    <div class="dropdown-content">
+                        <a href="#">Setup Guides</a>
+                        <a href="#">Data Sets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div style="height:100vh">
+        <!-- Replace this tag with the relevant content for the page-->
+    </div>
+
+
+    <footer>
+        &copy; 2025 PHYSDepot. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }
+
+        function toggleDropdown(event) {
+            const parent = event.currentTarget.parentElement;
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            // Close others
+            dropdowns.forEach(d => {
+                if (d !== parent) d.classList.remove("open");
+            });
+
+            // Toggle current
+            parent.classList.toggle("open");
+
+            // Prevent default hover behavior on mobile
+            event.stopPropagation();
+        }
+
+        // Optional: close dropdowns when clicking outside
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+        });
+    </script>
+</body>
+
+</html>

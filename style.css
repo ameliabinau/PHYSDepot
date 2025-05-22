@@ -1,16 +1,23 @@
+/* NAVBAR STUFF*/
+
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap; /* Optional: allows wrapping if screen is too small */
-    background: rgba(36,10,89,1);
+    align-items: center;
+    /* vertically center brand, menu toggle, nav */
+    background: rgba(36, 10, 89, 1);
     border-radius: 12px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
 }
 
+/* Brand area: logo + text */
 .brand {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 1;
+    /* take remaining space on row */
 }
 
 .brand img {
@@ -20,58 +27,175 @@
     padding: 0 5px 0 20px;
 }
 
-.brand-text h2 {
-    margin: 0;
-    line-height: 1.2;
-    text-align: left;
-    padding: 20px 10px 0 5px;
-}
-
+.brand-text h2,
 .brand-text h4 {
     margin: 0;
     line-height: 1.2;
     text-align: left;
-    padding: 5px 10px 20px 5px;
 }
 
+.brand-text h2 {
+    padding: 20px 10px 0 5px;
+    color: white;
+    text-shadow: 0 0 5px #6a1b9a;
+}
+
+.brand-text h4 {
+    padding: 5px 10px 20px 5px;
+    color: white;
+    text-shadow: 0 0 5px #6a1b9a;
+}
+
+/* Nav links container */
 .nav-links {
     display: flex;
-    flex: 1;
-    align-items: stretch;
     justify-content: space-evenly;
+    align-items: center;
+    flex: 2;
+    /* takes space on right */
 }
 
-.nav-links a {
-    display: flex;              /* NEW */
-    align-items: center;        /* Centers text vertically */
-    justify-content: center;    /* Optional: centers text horizontally */
+/* Each nav link */
+.nav-links a,
+.nav-links .dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
-    flex: 1;
-    text-align: center;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 20px 0;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 10px;
     transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    user-select: none;
 }
 
-
-.nav-links a:hover {
+/* Hover styles for nav links */
+.nav-links a:hover,
+.dropdown:hover .dropbtn {
     background: #fff;
     color: #42008C;
 }
-.nav-links a:first-child {
-    border-left: none;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.nav-links a:last-child {
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+/* Dropdown submenu content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #42008C;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
 }
 
+/* Dropdown submenu links */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    background-color: #42008C;
+}
+
+/* Hover for dropdown submenu links */
+.dropdown-content a:hover {
+    background-color: #fff;
+    color: #42008C;
+}
+
+/* Show dropdown submenu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger menu button - hidden on wide screens */
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+        order: 2;
+        /* appear after brand */
+        margin-left: auto;
+        /* push it to the right */
+    }
+
+    /* Brand stays first */
+    .brand {
+        flex: none;
+        order: 1;
+    }
+
+    /* Nav links hidden by default */
+    .nav-links {
+        flex-basis: 100%;
+        /* full width below */
+        flex-grow: 0;
+        order: 3;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(36, 10, 89, 1);
+        width: 100%;
+    }
+
+    /* Show nav links when toggled */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Nav links styled vertically */
+    .nav-links a,
+    .nav-links .dropbtn {
+        padding: 15px;
+        text-align: center;
+        flex: none;
+        /* remove flex:1 to size naturally */
+    }
+
+    /* Dropdown submenu should be position: relative, not absolute */
+    .dropdown-content {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Dropdown submenu is always visible inside expanded menu */
+    .dropdown:hover .dropdown-content {
+        display: none;
+        /* disable hover dropdown on mobile */
+    }
+.dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropbtn::after {
+    content: '';
+  }
+    .dropdown-content {
+        display: none;
+    }
+
+    /* We'll add toggle for submenu below in JS if needed */
+}
 
 body {
     margin: 0;
@@ -106,6 +230,22 @@ header {
     }
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(55deg, #fdf7ff 0%, #f9e6ff 51%, #dbf5ff 85%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #42008C;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
 main {
     max-width: 800px;
     margin: 2rem auto;
