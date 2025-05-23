@@ -10,81 +10,44 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <div class="brand">
-                <img src="PhysDEPOT.png" alt="PHYSDepot">
-                <div class="brand-text">
-                    <h2 class="glow">PHYSDepot ⚛️</h2>
-                    <h4 class="glow">A repository of physics resources.</h4>
-                </div>
-            </div>
-
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-
-            <div class="nav-links" id="navLinks">
-                <div class="dropdown">
-                    <div class="dropbtn" onclick="toggleDropdown(event)"> <span style="margin:0 10px">About</span></div>
-                    <div class="dropdown-content">
-                        <a href="#">About PHYSDepot</a>
-                        <a href="#">Getting Started</a>
-                    </div>
-                </div>
-
-                <a href="https://htmlpreview.github.io/?https://github.com/ameliabinau/PHYSDepot/blob/main/subfields.html">Subfields</a>
-
-                <div class="dropdown">
-                    <div class="dropbtn" onclick="toggleDropdown(event)">Homebrew</div>
-                    <div class="dropdown-content">
-                        <a href="#">Simulations</a>
-                        <a href="#">Articles</a>
-                        <a href="#">Videos</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <div class="dropbtn" onclick="toggleDropdown(event)">Forums</div>
-                    <div class="dropdown-content">
-                        <a href="#">Ideas Forum</a>
-                        <a href="#">Recommendation Forum</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="navbar-placeholder"></div>
     </header>
 
 
     <main>
-    <p>Welcome!</p>
-    <p><strong>PHYSDepot</strong> is a repository of physics resources helpful to physicists at all stages — from
-      beginners to professional researchers. Our goal is to curate tools, packages, simulations, and educational
-      materials that lower the barrier to entry and empower both students and scientists alike.</p>
+        <p>Welcome!</p>
+        <p><strong>PHYSDepot</strong> is a repository of physics resources helpful to physicists at all stages — from
+            beginners to professional researchers. Our goal is to curate tools, packages, simulations, and educational
+            materials that lower the barrier to entry and empower both students and scientists alike.</p>
 
-    <p>Whether you are just beginning your journey or working on advanced research, PHYSDepot is built to support your
-      work. This platform was inspired by the struggle many scientists face when access to mentorship and educational
-      opportunities is limited. We aim to connect, unify, and enable exploration through science and learning.</p>
+        <p>Whether you are just beginning your journey or working on advanced research, PHYSDepot is built to support
+            your
+            work. This platform was inspired by the struggle many scientists face when access to mentorship and
+            educational
+            opportunities is limited. We aim to connect, unify, and enable exploration through science and learning.</p>
 
-    <section id="contributors">
-      <h2>Contributors</h2>
-      <p>We always welcome new collaborators! To join, email <a href="mailto:abinau@iu.edu">Amelia</a> and
-        <a href="mailto:rdube@iu.edu">Ricky</a>. To suggest resources, fill out our form (coming soon).
-      </p>
+        <section id="contributors">
+            <h2>Contributors</h2>
+            <p>We always welcome new collaborators! To join, email <a href="mailto:abinau@iu.edu">Amelia</a> and
+                <a href="mailto:rdube@iu.edu">Ricky</a>. To suggest resources, fill out our form (coming soon).
+            </p>
 
-      <div class="contributors-container">
-        <div class="contrib-column">
-          <h3>Institutions</h3>
-          <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University (Bloomington)</a></p>
-        </div>
-        <div class="contrib-column">
-          <h3>Individuals</h3>
-          <p>
-            <a href="mailto:abinau@iu.edu">Amelia Binau</a><br>
-            <a href="mailto:rdube@iu.edu">Richard (Ricky) Dube</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+            <div class="contributors-container">
+                <div class="contrib-column">
+                    <h3>Institutions</h3>
+                    <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University
+                            (Bloomington)</a></p>
+                </div>
+                <div class="contrib-column">
+                    <h3>Individuals</h3>
+                    <p>
+                        <a href="mailto:abinau@iu.edu">Amelia Binau</a><br>
+                        <a href="mailto:rdube@iu.edu">Richard (Ricky) Dube</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
     <footer>
@@ -117,6 +80,13 @@
         document.addEventListener("click", () => {
             document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
         });
+    </script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+            });
     </script>
 </body>
 
