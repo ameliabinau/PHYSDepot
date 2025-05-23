@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHYSDepot ⚛️</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -15,18 +18,53 @@
 
 
     <main>
-    <p>Something Something Subfields</p>
+        <p>Something Something Subfields</p>
+        <div class="card-container">
+            <div class="card">
+                <h2>Astrophysics</h2>
+                <p>Astrophysics is the study of...</p>
+                <button class=" button button1">Astrophysics Homepage</button>
+            </div>
+            <div class="card">
+                <h2>Quantum Information </h2>
+                <p>Quantum Information is the study of...</p>
+                <button class=" button button1">Quantum Information Homepage</button>
+            </div>
+            <div class="card">
+                <h2>Solid State and AMO Physics</h2>
+                <p>Solid State physics is the study of...</p>
+                <button class=" button button1">Solid State/AMO Homepage</button>
+            </div>
+            <div class="card">
+                <h2>Particle and Nuclear Physics </h2>
+                <p>Nuclear physics is the study of...</p>
+                <button class=" button button1">Particle and Nuclear Homepage</button>
+            </div>
+            <div class="card">
+                <h2>Mathematical Physics </h2>
+                <p>Mathematical physics is the study of...</p>
+                <button class=" button button1">Mathematical Physics Homepage</button>
+            </div>
+            <div class="card">
+                <h2>Biophysics and Geophysics </h2>
+                <p>Biophysics is the study of...</p>
+                <button class=" button button1">Bio/Geophysics Homepage</button>
+            </div>
+            <div class="card">
+                <h2> Physics Education</h2>
+                <p>Physics Education is the study of...</p>
+                <button class=" button button1">Mathematical Physics Homepage</button>
+            </div>
+            <div class="card">
+                <h2> Experimental Techniques and Statistics</h2>
+                <p>Some things are useful for all fields of experimental physics. Find them here</p>
+                <button class=" button button1">Experimental Homepage</button>
+            </div>
+        </div>
 
-<button class="button button1">Astrophysics</button>
-<button class="button button2">Quantum/QC/QI</button>
-<button class="button button1">Solid State/AMO/Optics</button>
-<button class="button button2">Particle/Nuclear</button>
-<button class="button button1">Mathematical/Mechanics</button>
-<button class="button button2">Biophysics/Geophysics</button>
-<button class="button button1">Physics Education</button>
-<button class="button button2">Experimental/Statistical Techniques</button>
-      
-  </main>
+
+
+    </main>
 
 
     <footer>
@@ -59,6 +97,13 @@
         document.addEventListener("click", () => {
             document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
         });
+    </script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+            });
     </script>
 </body>
 

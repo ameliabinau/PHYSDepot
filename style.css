@@ -183,13 +183,15 @@
         display: none;
         /* disable hover dropdown on mobile */
     }
-.dropdown.open .dropdown-content {
-    display: block;
-  }
 
-  .dropbtn::after {
-    content: '';
-  }
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn::after {
+        content: '';
+    }
+
     .dropdown-content {
         display: none;
     }
@@ -246,6 +248,7 @@ header {
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 main {
     max-width: 800px;
     margin: 2rem auto;
@@ -295,38 +298,63 @@ footer {
     margin-top: 2rem;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 12px;
+    border-width: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(36, 10, 89, 1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
 .button {
-  border: none;
-  color: rgba(36, 10, 89, 1);
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+    border: none;
+    color: rgba(36, 10, 89, 1);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-top: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid rgba(36, 10, 89, 1);
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(36, 10, 89, 1);
+    border-radius: 10px;
 }
 
 .button1:hover {
-  background-color: rgba(36, 10, 89, 1);
-  color: white;
+    background-color: rgba(36, 10, 89, 1);
+    color: white;
 }
 
 .button2 {
-  background-color: white;
-  color: black;
-  border: 2px solid rgba(202, 132, 207);
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(202, 132, 207);
+    border-radius: 10px;
 }
 
 .button2:hover {
-  background-color: rgba(202, 132, 207);
-  color: white;
+    background-color: rgba(202, 132, 207);
+    color: white;
 }
-
