@@ -13,9 +13,25 @@
         <div id="navbar-placeholder"></div>
     </header>
 
+    <h3 b>Resources & Tools</h3 b>
 
-    <div style="height:100vh">
-        <!-- Replace this tag with the relevant content for the page-->
+    <button class="accordion">Your Mom</button>
+    <div class="panel">
+         <p>Lorem ipsum...</p>
+    </div>
+
+    <h3 b>Packages</h3 b>
+
+    <button class="accordion">Your Dad</button>
+    <div class="panel">
+         <p>Lorem ipsum...</p>
+    </div>
+
+    <h3 b>Datasets</h3 b>
+
+    <button class="accordion">Your Dad</button>
+    <div class="panel">
+         <p>Lorem ipsum...</p>
     </div>
 
 
@@ -56,6 +72,23 @@
             .then(html => {
                 document.getElementById('navbar-placeholder').innerHTML = html;
             });
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        }
     </script>
 </body>
 
