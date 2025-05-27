@@ -320,6 +320,10 @@ footer {
     margin-bottom: 10px;
     margin-top: 0;
 }
+.card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 .button {
     border: none;
