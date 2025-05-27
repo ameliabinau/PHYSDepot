@@ -65,17 +65,13 @@
         document.addEventListener("click", () => {
             document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
         });
-    </script>
-    
-    <script>
+
         fetch('navbar.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('navbar-placeholder').innerHTML = html;
             });
-    </script>
 
-    <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
 
