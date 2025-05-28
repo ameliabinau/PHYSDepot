@@ -62,7 +62,7 @@
 
         function toggleDropdown(event) {
             const parent = event.currentTarget.parentElement;
-            const dropdowns = document.querySelectorAll(".dropdown");
+            const dropdowns = document.querySelectorAll(".navbar-dropdown");
 
             // Close others
             dropdowns.forEach(d => {
@@ -78,7 +78,7 @@
 
         // Optional: close dropdowns when clicking outside
         document.addEventListener("click", () => {
-            document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+            document.querySelectorAll(".navbar-dropdown").forEach(d => d.classList.remove("open"));
         });
     </script>
     <script>

@@ -13,7 +13,7 @@
         <div id="navbar-placeholder"></div>
     </header>
 
-    <h2>Particle & Nuclear Physics</h2>
+    <h2>Quantum Information</h2>
 
     <h3>Resources & Tools</h3>
 
@@ -57,7 +57,7 @@
 
         function toggleDropdown(event) {
             const parent = event.currentTarget.parentElement;
-            const dropdowns = document.querySelectorAll(".dropdown");
+            const dropdowns = document.querySelectorAll(".navbar-dropdown");
 
             // Close others
             dropdowns.forEach(d => {
@@ -73,30 +73,15 @@
 
         // Optional: close dropdowns when clicking outside
         document.addEventListener("click", () => {
-            document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+            document.querySelectorAll(".navbar-dropdown").forEach(d => d.classList.remove("open"));
         });
-
-        fetch('navbar.html')
+    </script>
+    <script>
+        fetch('../navbar.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('navbar-placeholder').innerHTML = html;
             });
-
-        var acc = document.getElementsByClassName("accordion");
-        
-        for (let i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-        
-            // Toggle display
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-          });
-        }
     </script>
 
 </body>
