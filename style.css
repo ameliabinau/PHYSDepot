@@ -31,13 +31,12 @@ Contains:
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 30%;
-    padding: 0 5px 0 20px;
+    width: 100%;
     height: 100%;
 }
 
 .brand a {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -50,10 +49,10 @@ Contains:
 }
 
 .brand-text {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    height:100%;
+    height: 100%;
 }
 
 .brand-text h2,
@@ -63,7 +62,7 @@ Contains:
     text-align: left;
     color: white;
     text-shadow: 0 0 5px #6a1b9a;
-    width:100%;
+    width: 100%;
 }
 
 /* Navbar menu container 
@@ -77,29 +76,31 @@ Contains:
     justify-content: space-evenly;
     align-items: center;
     width: 65%;
-    height:100%;
+    height: 100%;
 }
 
 /* Button Widths */
 
 .navbar-item {
-    width:25%;
-    display:flex;
-    align-items:center;
+    width: 25%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    position:relative;
-    height:100%;
+    position: relative;
+    height: 100%;
 }
 
-.navbar-link,.navbar-dropdown, .navbar-dropbtn {
-    width:100%;
-    height:100%;
+.navbar-link,
+.navbar-dropdown,
+.navbar-dropbtn {
+    width: 100%;
+    height: 100%;
 }
 
 /* Button Styles */
 .navbar-menu .navbar-link,
 .navbar-menu .navbar-dropbtn {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
@@ -112,7 +113,7 @@ Contains:
 }
 
 /* Hover styles for nav links */
-.navbar-link:hover ,
+.navbar-link:hover,
 .navbar-dropbtn:hover {
     background: #fff;
     color: #42008C;
@@ -121,7 +122,7 @@ Contains:
 /* Dropdown submenu content */
 .navbar-dropdown-content {
     display: block;
-    visibility:hidden;
+    visibility: hidden;
     position: absolute;
     top: 100%;
     background-color: #42008C;
@@ -138,8 +139,8 @@ Contains:
     font-size: 1.2rem;
     background-color: #42008C;
     width: 100%;
-    display:flex;
-    position:relative;
+    display: flex;
+    position: relative;
     text-decoration: none;
     font-weight: bold;
     min-height: 40px;
@@ -167,87 +168,78 @@ Contains:
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    height:100%;
 }
 
 /* Responsive adjustments */
+/* Mobile styles */
+/* By default hide menu and stack for mobile */
 @media (max-width: 1000px) {
     .navbar {
-        flex-wrap: wrap;
-    }
-    /* Brand stays first */
-    .brand {
-        width:90%;
-        margin-right:auto;
-    }
-    .brand h2 {
-        font-size: clamp(1.125rem, 1.5rem, 1.875rem);
-    }
-    .brand h4 {
-        font-size: clamp(1.1rem, 1.125rem, 1.25rem);
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
     }
 
-    /* Show hamburger button */
     .menu-toggle {
         display: block;
-        order: 2;
-        /* appear after brand */
-        margin-left: auto;
-        /* push it to the right */
     }
 
-    
-    /* Nav links hidden by default */
     .navbar-menu {
-        flex-basis: 100%;
-        /* full width below */
-        flex-grow: 0;
-        order: 3;
         display: none;
-        flex-direction: column;
-        background-color: rgba(36, 10, 89, 1);
         width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 10px;
     }
 
-    /* Show nav links when toggled */
     .navbar-menu.show {
         display: flex;
     }
 
-    /* Nav links styled vertically */
-    .navbar-menu a,
-    .navbar-menu .dropbtn {
-        padding: 15px;
-        text-align: center;
-        flex: none;
-        /* remove flex:1 to size naturally */
-    }
-
-    /* Dropdown submenu should be position: relative, not absolute */
-    .navbar-dropdown-content {
-        position: relative;
-        top: 0;
+    .navbar-item {
         width: 100%;
     }
 
-    /* Dropdown submenu is always visible inside expanded menu */
-    .navbar-dropdown:hover .dropdown-content {
-        display: none;
-        /* disable hover dropdown on mobile */
-    }
-
-    .navbar-dropdown.open .navbar-dropdown-content {
-        display: block;
-    }
-
-    .navbar-dropbtn::after {
-        content: '';
+    .navbar-link,
+    .navbar-dropbtn {
+        justify-content: flex-start;
     }
 
     .navbar-dropdown-content {
+        position: static;
+        visibility: visible;
         display: none;
+        flex-direction: column;
+        background-color: #42008C;
+    }
+
+    .navbar-dropdown.open .navbar-dropdown-content {
+        display: flex;
+    }
+
+    /* Override hover behavior for mobile */
+    .navbar-dropdown:hover .navbar-dropdown-content {
+        visibility: visible;
+    }
+    .mobile-menu {
+        width:100%;
+        align-items: center;
+    }
+    .brand {
+        width:80%
+
     }
 }
+
+
 
 body {
     margin: 0;
@@ -355,6 +347,7 @@ footer {
     margin-bottom: 10px;
     margin-top: 0;
 }
+
 .card p {
     text-align: justify;
     text-justify: inter-word;
@@ -398,36 +391,38 @@ footer {
     color: white;
 }
 
-a { 
+a {
     color: #230030;
 }
 
 /* Accordion
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: rgba(249, 250, 247,0.5);
-  color: #230030;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small;
-  cursor: pointer;
-  padding: 2px;
-  border: 1px solid #ccc;              /* Light border instead of outline */
-  border-radius: 3px;
-  width: 90%;
-  text-align: left;
-  transition: 0.4s;
+    background-color: rgba(249, 250, 247, 0.5);
+    color: #230030;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid #ccc;
+    /* Light border instead of outline */
+    border-radius: 3px;
+    width: 90%;
+    text-align: left;
+    transition: 0.4s;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ffffff;
+.active,
+.accordion:hover {
+    background-color: #ffffff;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 1px;
-  width: 90%;
-  background-color: rgba(249, 250, 247,0.5);
-  font-size: 11px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1px;
+    width: 90%;
+    background-color: rgba(249, 250, 247, 0.5);
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
