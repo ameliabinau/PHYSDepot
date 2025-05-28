@@ -186,6 +186,7 @@ Contains:
         flex-direction: column;
         align-items: flex-start;
         height: auto;
+        padding: 0px;
     }
 
     .menu-toggle {
@@ -235,7 +236,6 @@ Contains:
     }
     .brand {
         width:80%
-
     }
 }
 
@@ -341,6 +341,12 @@ footer {
     padding: 10px;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 400px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 .card h2 {
