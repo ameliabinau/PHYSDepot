@@ -1,30 +1,59 @@
-/* NAVBAR STUFF*/
+header {
+    background-color: #42008C;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* NAVBAR STUFF
+Contains:
+- brand tag, which holds picture and website name
+- navlinks tab, which has all the links/dropdowns to other pages
+*/
 
 .navbar {
     display: flex;
     align-items: center;
-    /* vertically center brand, menu toggle, nav */
     background: rgba(36, 10, 89, 1);
     border-radius: 12px;
     padding: 0 10px;
-    flex-wrap: wrap;
-    /* allow wrapping on small screens */
+    height: 80px;
 }
 
-/* Brand area: logo + text */
+/* Brand area:
+Contains:
+- img tag, which holds picture
+- h2 tag, which is the website name
+- h4 tag, which is the tagline
+*/
 .brand {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex: 1;
-    /* take remaining space on row */
+    width: 30%;
+    padding: 0 5px 0 20px;
+    height: 100%;
+}
+
+.brand a {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .brand img {
     border-radius: 8px;
     width: 70px;
     height: 70px;
-    padding: 0 5px 0 20px;
+    display: inline-block
+}
+
+.brand-text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100%;
 }
 
 .brand-text h2,
@@ -32,88 +61,102 @@
     margin: 0;
     line-height: 1.2;
     text-align: left;
-}
-
-.brand-text h2 {
-    padding: 20px 10px 0 5px;
     color: white;
     text-shadow: 0 0 5px #6a1b9a;
+    width:100%;
 }
 
-.brand-text h4 {
-    padding: 5px 10px 20px 5px;
-    color: white;
-    text-shadow: 0 0 5px #6a1b9a;
-}
-
-/* Nav links container */
-.nav-links {
+/* Navbar menu container 
+Contains:
+-navbar-items, which is a container for:
+    - a, which is a simple link (no dropdown)
+    - dropbtn, which has no link and just opens a dropdown
+*/
+.navbar-menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex: 2;
-    /* takes space on right */
+    width: 65%;
+    height:100%;
 }
 
-/* Each nav link */
-.nav-links a,
-.nav-links .dropbtn {
-    display: flex;
+/* Button Widths */
+
+.navbar-item {
+    width:25%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+    height:100%;
+}
+
+.navbar-link,.navbar-dropdown, .navbar-dropbtn {
+    width:100%;
+    height:100%;
+}
+
+/* Button Styles */
+.navbar-menu .navbar-link,
+.navbar-menu .navbar-dropbtn {
+    display:flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 20px 10px;
     transition: background 0.3s, color 0.3s;
     cursor: pointer;
     user-select: none;
 }
 
 /* Hover styles for nav links */
-.nav-links a:hover,
-.dropdown:hover .dropbtn {
+.navbar-link:hover ,
+.navbar-dropbtn:hover {
     background: #fff;
     color: #42008C;
 }
 
-/* Dropdown container */
-.dropdown {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 /* Dropdown submenu content */
-.dropdown-content {
-    display: none;
+.navbar-dropdown-content {
+    display: block;
+    visibility:hidden;
     position: absolute;
     top: 100%;
     background-color: #42008C;
     width: 100%;
     z-index: 1;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Dropdown submenu links */
-.dropdown-content a {
-    padding: 12px 16px;
+.navbar-dropdown-content a {
     text-align: center;
     color: white;
     font-size: 1.2rem;
     background-color: #42008C;
+    width: 100%;
+    display:flex;
+    position:relative;
+    text-decoration: none;
+    font-weight: bold;
+    min-height: 40px;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
 }
 
 /* Hover for dropdown submenu links */
-.dropdown-content a:hover {
+.navbar-dropdown-content a:hover {
     background-color: #fff;
     color: #42008C;
 }
 
 /* Show dropdown submenu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
+.navbar-dropdown:hover .navbar-dropdown-content {
+    visibility: visible;
 }
 
 /* Hamburger menu button - hidden on wide screens */
@@ -128,7 +171,21 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    /* Brand stays first */
+    .brand {
+        width:90%;
+        margin-right:auto;
+    }
+    .brand h2 {
+        font-size: clamp(1.125rem, 1.5rem, 1.875rem);
+    }
+    .brand h4 {
+        font-size: clamp(1.1rem, 1.125rem, 1.25rem);
+    }
 
     /* Show hamburger button */
     .menu-toggle {
@@ -139,14 +196,9 @@
         /* push it to the right */
     }
 
-    /* Brand stays first */
-    .brand {
-        flex: none;
-        order: 1;
-    }
-
+    
     /* Nav links hidden by default */
-    .nav-links {
+    .navbar-menu {
         flex-basis: 100%;
         /* full width below */
         flex-grow: 0;
@@ -158,13 +210,13 @@
     }
 
     /* Show nav links when toggled */
-    .nav-links.show {
+    .navbar-menu.show {
         display: flex;
     }
 
     /* Nav links styled vertically */
-    .nav-links a,
-    .nav-links .dropbtn {
+    .navbar-menu a,
+    .navbar-menu .dropbtn {
         padding: 15px;
         text-align: center;
         flex: none;
@@ -172,31 +224,29 @@
     }
 
     /* Dropdown submenu should be position: relative, not absolute */
-    .dropdown-content {
+    .navbar-dropdown-content {
         position: relative;
         top: 0;
         width: 100%;
     }
 
     /* Dropdown submenu is always visible inside expanded menu */
-    .dropdown:hover .dropdown-content {
+    .navbar-dropdown:hover .dropdown-content {
         display: none;
         /* disable hover dropdown on mobile */
     }
 
-    .dropdown.open .dropdown-content {
+    .navbar-dropdown.open .navbar-dropdown-content {
         display: block;
     }
 
-    .dropbtn::after {
+    .navbar-dropbtn::after {
         content: '';
     }
 
-    .dropdown-content {
+    .navbar-dropdown-content {
         display: none;
     }
-
-    /* We'll add toggle for submenu below in JS if needed */
 }
 
 body {
@@ -206,14 +256,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
-}
-
-header {
-    background-color: #42008C;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    min-width: 320px;
 }
 
 .glow {
@@ -239,14 +282,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
-}
-
-header {
-    background-color: #42008C;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 main {
