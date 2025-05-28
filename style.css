@@ -366,14 +366,14 @@ footer {
 /* Accordion
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: rgba(230, 230, 230, 0.927);
+  background-color: rgba(230, 230, 230, 0.9);
   color: #230030;
-  font-family: "Times New Roman";
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: small;
   cursor: pointer;
   padding: 2px;
   border: 1px solid #ccc;              /* Light border instead of outline */
-  border-radius: 6px;
+  border-radius: 3px;
   width: 90%;
   text-align: left;
   transition: 0.4s;
@@ -386,8 +386,7 @@ footer {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 3px;
+  padding: 1px;
   background-color: rgba(242, 242, 242, 0.50);
   width: 90%;
-  font-size: 0.95em
 }
