@@ -390,7 +390,7 @@ a {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 3px;
+  padding: 1px;
   width: 90%;
   background-color: rgba(249, 250, 247,0.5);
   font-size: 11px;
