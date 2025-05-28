@@ -369,6 +369,7 @@ footer {
   background-color: rgba(230, 230, 230, 0.927);
   color: #230030;
   font-family: "Times New Roman";
+  font-size: small;
   cursor: pointer;
   padding: 2px;
   border: 1px solid #ccc;              /* Light border instead of outline */
@@ -385,10 +386,8 @@ footer {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 10px;
-  background-color: rgba(242, 242, 242, 0.616);
-  border-left: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  padding: 3px;
+  background-color: rgba(242, 242, 242, 0.50);
+  width: 90%;
   font-size: 0.95em
 }
