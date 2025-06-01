@@ -341,6 +341,31 @@ footer {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+.subfield-button {
+    border: none;
+    color: rgba(36, 10, 89, 1);
+    padding: 16px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-top: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(36, 10, 89, 1);
+    border-radius: 10px;
+    width:100%
+}
+
+.subfield-button:hover {
+    background-color: rgba(36, 10, 89, 1);
+    color: white;
 }
 
 @media (max-width: 400px) {
@@ -371,6 +396,7 @@ footer {
     transition-duration: 0.4s;
     cursor: pointer;
     font-weight: bold;
+
 }
 
 .button1 {

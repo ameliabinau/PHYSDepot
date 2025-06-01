@@ -49,40 +49,7 @@
         &copy; 2025 PHYSDepot. All rights reserved.
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById("navLinks");
-            nav.classList.toggle("show");
-        }
-
-        function toggleDropdown(event) {
-            const parent = event.currentTarget.parentElement;
-            const dropdowns = document.querySelectorAll(".navbar-dropdown");
-
-            // Close others
-            dropdowns.forEach(d => {
-                if (d !== parent) d.classList.remove("open");
-            });
-
-            // Toggle current
-            parent.classList.toggle("open");
-
-            // Prevent default hover behavior on mobile
-            event.stopPropagation();
-        }
-
-        // Optional: close dropdowns when clicking outside
-        document.addEventListener("click", () => {
-            document.querySelectorAll(".navbar-dropdown").forEach(d => d.classList.remove("open"));
-        });
-    </script>
-    <script>
-        fetch('../navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar-placeholder').innerHTML = html;
-            });
-    </script>
+    <script src="../navbar.js" type="text/javascript"></script>
 
 </body>
 
