@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSDepot ⚛️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <h3>Resources, Tools & Software</h3>
+
+    <button class="accordion">
+        <a href="https://stellarium-web.org/">Stellarium</a>
+    </button>
+    <div class="panel">
+        <p>Usage Requirements: </p>
+        <p> </p>
+        <p align="right" style="color:indigo">Contibutor: Amelia Binau, Indiana University<p> 
+    </div>
+
+    <h3>Packages</h3>
+
+    <button class="accordion">
+        <a href="https://stellarium-web.org/">Stellarium</a>
+    </button>
+    <div class="panel">
+        <p>Usage Requirements: </p>
+        <p> </p>
+        <p align="right" style="color:indigo">Contibutor: Amelia Binau, Indiana University<p> 
+    </div>
+
+    <h3>Datasets</h3>
+
+    <button class="accordion">
+        <a href="https://stellarium-web.org/">Stellarium</a>
+    </button>
+    <div class="panel">
+        <p>Usage Requirements: </p>
+        <p> </p>
+        <p align="right" style="color:indigo">Contibutor: Amelia Binau, Indiana University<p> 
+    </div>
+
+
+    <footer>
+        &copy; 2025 PHYSDepot. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }
+
+        function toggleDropdown(event) {
+            const parent = event.currentTarget.parentElement;
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            // Close others
+            dropdowns.forEach(d => {
+                if (d !== parent) d.classList.remove("open");
+            });
+
+            // Toggle current
+            parent.classList.toggle("open");
+
+            // Prevent default hover behavior on mobile
+            event.stopPropagation();
+        }
+
+        // Optional: close dropdowns when clicking outside
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("open"));
+        });
+
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-placeholder').innerHTML = html;
+            });
+
+        var acc = document.getElementsByClassName("accordion");
+        
+        for (let i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+        
+            // Toggle display
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+</body>
+
+</html>
