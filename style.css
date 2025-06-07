@@ -248,7 +248,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
-    font-size: 12px;
+    font-size: 14px;
     min-width: 320px;
 }
 
@@ -275,7 +275,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
 }
 
@@ -286,7 +286,7 @@ main {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size:12px;
+    font-size:14px;
     text-align: left;
 }
 
@@ -347,7 +347,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     text-wrap: wrap;
     line-height: 100%;
 }
