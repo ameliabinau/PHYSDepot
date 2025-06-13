@@ -319,6 +319,12 @@ h4 {
     text-align: center;
 }
 
+.contrib-column h3{
+    flex: 1 1 300px;
+    color: white;
+    text-align: center;
+}
+
 a {
     color: #ffffff;
     text-decoration: underline;
