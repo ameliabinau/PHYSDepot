@@ -302,6 +302,7 @@ h4 {
     padding: 2rem;
     border-radius: 12px;
     margin-top: 2rem;
+    text-align: center
 }
 
 .contributors-container {
@@ -309,9 +310,16 @@ h4 {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
+    text-align: center
 }
 
 .contrib-column {
+    flex: 1 1 300px;
+    color: white;
+    text-align: center;
+}
+
+.contrib-column h3{
     flex: 1 1 300px;
     color: white;
     text-align: center;
