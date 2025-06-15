@@ -357,7 +357,7 @@ footer {
     text-align: left;
     font-size: 14px;
     text-wrap: wrap;
-    line-height: 140%;
+    line-height: 145%;
 }
 
 .subfield-button {
@@ -412,7 +412,6 @@ footer {
     transition-duration: 0.4s;
     cursor: pointer;
     font-weight: bold;
-
 }
 
 .button1 {
@@ -458,6 +457,7 @@ a {
     width: 90%;
     text-align: left;
     transition: 0.4s;
+    margin: 10px
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -468,9 +468,10 @@ a {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-    padding: 1px;
+    padding: 2px;
     width: 90%;
     background-color: rgba(249, 250, 247, 0.5);
     font-size: 11px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
 }
