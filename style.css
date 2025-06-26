@@ -401,6 +401,7 @@ footer {
 .card h2 {
     margin-bottom: 10px;
     margin-top: 0;
+    text-align: center;
 }
 
 .card p {
