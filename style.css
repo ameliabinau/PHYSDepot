@@ -542,6 +542,7 @@ a {
     margin-bottom: 0;
     padding: 0; /* if needed */
     transition: max-height 0.3s ease;
+    opacity:0;
 }
 
 .collapsible-card.open .collapsible-card-info {
@@ -552,6 +553,7 @@ a {
     background-color: rgba(249, 250, 247, 0.5);
     font-size: 11px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity:1;
 }
 
 .collapsible-card.open .collapsible-card-info p {
@@ -560,3 +562,35 @@ a {
     margin-right: 10px;
     margin-top: 0px;
 }
+.collapsible-content-button {
+    display:block;
+    font-size: medium;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.collapsible-card.open .collapsible-content-button {
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(202, 132, 207);
+    border-radius: 10px;
+    max-height: 200px;
+    transition-duration: 0.4s;
+}
+
+.collapsible-card.open .collapsible-content-button:hover {
+    background-color: rgba(202, 132, 207);
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.resource-contributor {
+    text-align:right; 
+    color:rgb(158, 121, 0)
+}
+
+.resource-requirements {
+    color:rgb(130, 68, 169);
+}
+
+

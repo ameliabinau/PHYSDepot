@@ -19,91 +19,132 @@
 
 <body>
     <header>
-        <nav id="navbar-placeholder"></nav>
+        <div id="navbar-placeholder"></div>
     </header>
+    <main>
+        <h1>Particle & Nuclear Physics</h1>
 
+        <h2>Resources & Tools</h2>
 
-    <h2>Particle & Nuclear Physics</h2>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">iNSPIRE-HEP: High-Energy Physics Content Search</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None | Usage Requirements: Internet
+                        Connection</p>
+                    <p>Using the community hub, you can search literature, authors, jobs, seminars, conferences,
+                        institutions, experiments, journals, and data relevant to the field of high energy physics. This
+                        resource is helpful to find articles relating to specific experiments and authors in high energy
+                        physics. </p>
+                    <p class="resource-contributor">Contributor: Robert C. Laughlin, Indiana University - Bloomington
+                    </p>
+                    <a class="collapsible-content-button" href="https://inspirehep.net/" target="_blank">Click here to
+                        access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">NOvA Live Event Display</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None | Usage Requirements: Internet
+                        Connection</p>
+                    <p>The NOvA live event display allows users to view charged particle tracks within the NOvA near and
+                        far detectors in real time. Updated every 15 seconds, view particle tracks from a top and side
+                        perspective of the detector, as well as time spectra.</p>
+                    <p class="resource-contributor">Contributor: Hannah LeMoine, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://nusoft.fnal.gov/nova/public/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+        </div>
 
-    <h3>Resources, Software, & Tools</h3>
+        <h2>Packages</h2>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">AxionLimits: Plot Limits for Axion-Like Particles</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatible IDE, Jupyter Notebooks, Internet Connection</p>
+                    <p>This resource provides data, plots, and code for the experimental limits on axions, a dark matter
+                        candidate.</p>
+                    <p class="resource-contributor">Contributor: Robert C. Laughlin, Indiana University - Bloomington
+                    </p>
+                    <a class="collapsible-content-button" href="https://cajohare.github.io/AxionLimits/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Chromo: Cosmic ray and HadROnic interactiOn MOnte-carlo frontend</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatible IDE, Jupyter Notebooks</p>
+                    <p>One of my personal favorites. This fairly plug-and-play Python package allows the user to run
+                        popular hadronic collision event generators/simulations. What are possible outcomes of
+                        proton-proton collisions at a certain energy? Run PYTHIA 8.3, SIBYLL-2.3d, EPOS-LHC, QGSJet-III,
+                        and more without the cumbersome FORTRAN. Chromo's authors provide a variety of examples to play
+                        around with.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://github.com/impy-project/chromo"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+        </div>
 
-<!-- iNSPIRE-HEP -->
-    <button class="accordion">
-        <a href="https://inspirehep.net/">iNSPIRE-HEP: High-Energy Physics Content Search</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): None Usage Requirements: Internet Connection</p>
-        <p> Using the community hub, you can search literature, authors, jobs, seminars, conferences, institutions, experiments, journals, and data relevant to the field of high energy physics. This resource is helpful to find articles relating to specific experiments and authors in high energy physics. </p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contibutor: Robert C. Laughlin, Indiana University - Bloomington<p> 
-    </div>
-
-<!-- Live NovA -->
-    <button class="accordion">
-        <a href="https://nusoft.fnal.gov/nova/public/">NOvA Live Event Display</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): None Usage Requirements: Internet Connection</p>
-        <p> The NOvA live event display allows users to view charged particle tracks within the NOvA near and far detectors in real time. Updated every 15 seconds, view particle tracks from a top and side perspective of the detector, as well as time spectra. </p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contributor: Hannah LeMoine, Indiana University - Bloomington<p> 
-    </div>
-
-    <h3>Packages</h3>
-
-<!-- AxionLimits -->
-    <button class="accordion">
-        <a href="https://cajohare.github.io/AxionLimits/">AxionLimits: Plot Limits for Axion-Like Particles</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): Python. Usage Requirements: Python-compatable IDE, Jupyter Notebooks, Internet Connection</p>
-        <p> This resource provides data, plots, and code for the experimental limits on axions, a dark matter candidate. </p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contibutor: Robert C. Laughlin, Indiana University - Bloomington<p> 
-    </div>
-
-<!-- Chromo -->
-    <button class="accordion">
-        <a href="https://github.com/impy-project/chromo">Chromo: Cosmic ray and HadROnic interactiOn MOnte-carlo frontend</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): Python. Usage Requirements: Python-compatable IDE, Jupyter Notebooks</p>
-        <p> One of my personal favorites. This fairly plug-and-play Python package allows the user to run popular hadronic collision event generators/simulations. What are possible outcomes of proton-proton collisions at a certain energy? Run PYTHIA 8.3, SIBYLL-2.3d, EPOS-LHC, QGSJet-III, and more without the cumbersome FORTRAN. Chromo's authors provide a variety of examples to play around with.</p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contibutor: Amelia Binau, Indiana University - Bloomington<p> 
-    </div>
-
-    <h3>Datasets</h3>
-
-        <button class="accordion">
-        <a href="https://i2u2-minerva.crc.nd.edu/arachnesimplelaunchpage.html">Arachne Simple: The MINERνA Experiment's Web Event Display</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): Allows access to ROOT data files, but web-based interactive doesn't require any programing. Usage Requirements: Internet connection. </p>
-        <p> Arachne allows the user to browse a sample of the MINERνA experiment's neutrino events inside a clean, informative interactive. Users can use the <href="https://i2u2-minerva.crc.nd.edu/masterclass?entry=0&filename=/disks/arachne/outreach/production_Spring2019_2019-02-19/mergedTuple_176.root">interface</href> to explore histograms of energy and time spectra, as well of cross-sectional and three-dimensional displays of interaction tracks within the MINERνA detector. While some of the links are dead, additional ROOT files and documentation can be found <href="https://quarknet.org/content/using-arachne-simple">here</href> and on <href="https://arxiv.org/abs/1111.5315">arXiv</href>.</p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contributor: Hannah LeMoine, Indiana University - Bloomington<p> 
-    </div>
-
-    <button class="accordion">
-        <a href="https://zenodo.org/records/8370883">MicroBooNE Open Dataset</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Language Requirement(s): Anything compatable with HDF5 file formats. Usage Requirements: Internet connection, compiler compatable with relevant language.</p>
-        <p> Designed specifically for broad participation in MicroBooNE analysis, this dataset contains one million muon neutrino interactions and one hundred thousand electron neutrino events in the MicroBooNE liquid argon neutrino detector. As stated in <a href=https://arxiv.org/abs/2506.09238>this</a> paper, these simulated data are the same as those used in many MicroBooNE physics analyses. These data are saved as HDF5 files for both the <a href="https://zenodo.org/records/8370883">muon</a> and <a href="https://zenodo.org/records/7261921">electron</a> neutrino samples.</p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contributor: Amelia Binau, Indiana University - Bloomington<p> 
-    </div>
-
-    <button class="accordion">
-        <a href="https://pdglive.lbl.gov/Viewer.action">Particle Data Group</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Usage Requirements: Internet connection for online database.</p>
-        <p>Used by physicists around the world, the Particle Data Group (PDG) maintains and publishes summary tables of particle masses, charges, full decay widths, decay modes, and more for fundamental and composite particles. Additionally the PDG contains tables for physical constants and reviews for the Standard Model, detectors, probability/ statistics, and major experimental results. </p>
-        <p align="right", style="color:rgb(158, 121, 0)">Contibutor: Robert Laughlin, Indiana University - Bloomington<p> 
-    </div>
-
-
+        <h2>Datasets</h2>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Arachne Simple: The MINERνA Experiment's Web Event Display</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Allows access to ROOT data files, but
+                        web-based interactive doesn't require any programing. Usage Requirements: Internet connection.
+                    </p>
+                    <p>Arachne allows the user to browse a sample of the MINERνA experiment's neutrino events inside a
+                        clean, informative interactive. Users can use theinterfaceto explore histograms of energy and
+                        time spectra, as well of cross-sectional and three-dimensional displays of interaction tracks
+                        within the MINERνA detector. While some of the links are dead, additional ROOT files and
+                        documentation can be foundhereand onarXiv.</p>
+                    <p class="resource-contributor">Contributor: Hannah LeMoine, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button"
+                        href="https://i2u2-minerva.crc.nd.edu/arachnesimplelaunchpage.html" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">MicroBooNE Open Dataset</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Anything compatable with HDF5 file
+                        formats. Usage Requirements: Internet connection, compiler compatable with relevant language.
+                    </p>
+                    <p>Designed specifically for broad participation in MicroBooNE analysis, this dataset contains one
+                        million muon neutrino interactions and one hundred thousand electron neutrino events in the
+                        MicroBooNE liquid argon neutrino detector. As stated inthispaper, these simulated data are the
+                        same as those used in many MicroBooNE physics analyses. These data are saved as HDF5 files for
+                        both themuonandelectronneutrino samples.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://zenodo.org/records/8370883"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Particle Data Group</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Internet connection for online database.</p>
+                    <p>Used by physicists around the world, the Particle Data Group (PDG) maintains and publishes
+                        summary tables of particle masses, charges, full decay widths, decay modes, and more for
+                        fundamental and composite particles. Additionally the PDG contains tables for physical constants
+                        and reviews for the Standard Model, detectors, probability/ statistics, and major experimental
+                        results.</p>
+                    <p class="resource-contributor">Contributor: Robert Laughlin, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://pdglive.lbl.gov/Viewer.action"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+        </div>
+    </main>
     <footer>
         &copy; 2025 PHYSDepot. All rights reserved.
     </footer>
-
     <script src="../navbar.js" type="text/javascript"></script>
+    <script src="../collapsible-cards.js" type="text/javascript"></script>
 
 </body>
 

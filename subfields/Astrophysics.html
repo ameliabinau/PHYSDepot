@@ -17,107 +17,159 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-
-
-
 <body>
     <header>
-        <nav id="navbar-placeholder"></nav>
+        <div id="navbar-placeholder"></div>
     </header>
+    <main>
+        <h1>Astrophysics 🪐</h1>
 
-    <h2 align="left">Astrophysics 🪐</h2>
+        <h2>Resources & Tools</h2>
 
-    <h3 align="left">Resources, Tools & Software</h3>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Stellarium</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Fairly strong internet connection, decent
+                        graphics processing for downloadable software.</p>
+                    <p>Using either the web-based interactive or the downloadable application, explore the night sky
+                        using this well-known software detailing the celestial sphere. Great for outreach, education,
+                        amateur astronomy, and anyone who wants to take a zoomed-in look at the night sky. Use this tool
+                        to determine exactly what the sky will look like at a specific location and time and to gain an
+                        interactive understanding of how to use popular astronomical coordinate systems. Stellarium
+                        allows you to chart magnitude, position, and other physical properties of almost all
+                        astronomical objects.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University</p>
+                    <a class="collapsible-content-button" href="https://stellarium-web.org/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Universe Monitor</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Strong internet connection.</p>
+                    <p>Universe Monitor is a free public website created by Dave Owen, AKA "Space Dave" of Te Awamutu,
+                        New Zealand. Owen is also the creator of the Te Awamutu Space Centre, a space museum and
+                        education center. The website contains live feeds, video, CGI visualizations, text reports, etc.
+                        from various sources, such as the Solar Dynamics Observatory, NASA Earth Observatories, NOAA,
+                        ISS, etc, and includes recent space news, launches, and random astronomical facts. It is
+                        accessible from any device. Dave Owen writes that anyone is able to access the website for
+                        educational purposes, as well as set up public displays for science museums, observatories, and
+                        schools. To help keep the website ad-free, one can support their Patreon and learn more about
+                        the
+                        service on their about page.</p>
+                    <p class="resource-contributor">Contributor: Robert J. Mailliard, Indiana University - Bloomington
+                    </p>
+                    <a class="collapsible-content-button" href="https://www.universemonitor.com/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SAOImageDS9: Image Processing for Astronomical Data</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Works best on Linux, but also available on
+                        MacOS and Windows</p>
+                    <p>How do astronomers process, analyze, and display the electromagnetic data they collect through
+                        telescopes from astronomical objects? One of the most common software for this purpose is
+                        SAODS9, a product of theChandra X-Ray Center (CXC). This software requires astronomical data to
+                        be
+                        contained in FITS (Flexible Image Transport System) files, which is the standard among
+                        astronomers. NASA has collected public FITS files for processing here and more are available
+                        onMAST. More information on other image viewers is provided here.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University</p>
+                    <a class="collapsible-content-button" href="https://sites.google.com/cfa.harvard.edu/saoimageds9"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+        </div>
 
-<!--Stellarium-->
-    <button class="accordion">
-        <a href="https://stellarium-web.org/">Stellarium</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Usage Requirements: Fairly strong internet connection, decent graphics processing for downloadable software.</p>
-        <p>Using either the web-based interactive or the <a href="https://stellarium.org/">downloadable application</a>, explore the night sky using this well-known software detailing the celestial sphere. Great for outreach, education, amateur astronomy, and anyone who wants to take a zoomed-in look at the night sky. Use this tool to determine exactly what the sky will look like at a specific location and time and to gain an interactive understanding of how to use popular astronomical coordinate systems. Stellarium allows you to chart magnitude, position, and other physical properties of almost all astronomical objects.</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Amelia Binau, Indiana University<p> 
-    </div>
+        <h2>Packages</h2>
 
-<!--Universe Monitor-->
-    <button class="accordion">
-        <a href="https://www.universemonitor.com/">Universe Monitor</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Usage Requirements: Strong internet connection. </p>
-        <p>Universe Monitor is a free public website created by Dave Owen, AKA "Space Dave" of Te Awamutu, New Zealand. Owen is also the creator of the Te Awamutu Space Centre, a space museum and education center. The website contains live feeds, video, CGI visualizations, text reports, etc. from various sources, such as the Solar Dynamics Observatory, NASA Earth Observatories, NOAA, ISS, etc, and includes recent space news, launches, and random astronomical facts. It is accessible from any device. Dave Owen writes that anyone is able to access the website for educational purposes, as well as set up public displays for science museums, observatories, and schools. To help keep the website ad-free, one can support their <a href="https://www.patreon.com/SpaceCentre">Patreon</a> and learn more about the service on their <a href="https://www.universemonitor.com/home/about/""> about page</a>.</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Robert J. Mailliard, Indiana University - Bloomington<p> 
-    </div>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Altaipony: Stellar Flare Time Series Statistics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatable IDE or Jupyter Notebooks</p>
+                    <p>Altaipony is used to analyze flaring data from Kepler, K2, and Tess missions. It has built-in
+                        functions that lessen the noise of photometric data and identify flares from the normalized
+                        data. It’s completely free and the data from these missions can be pulled fromMASTthrough
+                        Altaipony. It also works with target pixel files! (andLightkurvedoes all of this as well).</p>
+                    <p class="resource-contributor">Contributor: Grace Cassidy, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://altaipony.readthedocs.io/en/latest/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">MESA: Modules for Experiments in Stellar Astrophysics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Terminal, Bash, Fortran 90. Usage
+                        Requirements: Ubuntu Linux setup for windows, or IOS alternative, git packages</p>
+                    <p>MESA is a hydrodynamic code that simulates stars, black bodies, and supernovae remnants. It is
+                        often used to simulate stars along the main sequence. The applications are wide in astrophysics
+                        and nuclear physics. You can use it to simulate the life and conditions of just about any star
+                        or black body you want. MESA also hosts a yearlysummer school; past summer schools have their
+                        materials publishedonline.</p>
+                    <p class="resource-contributor">Contributor: Aydian Brown, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://docs.mesastar.org/en/latest/index.html"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">DISCO: 3D Moving-Mesh Magnetohydrodynamics Code for Astrophysical
+                    Disks</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Terminal C-Based Language. Usage
+                        Requirements: Ubuntu Linux setup for windows or IOS alternative</p>
+                    <p>DISCO is a moving-mesh hydrodynamics code that simulates gases moving and evolving at its core.
+                        This can be applied to any problem in astrophysics and broader applications for other
+                        hydrodynamic/fluid dynamic problems. For example, one could simulate a pulsar or a fluid-based
+                        experiment in a lab. The basics are set up for you in templates and you can create any fluid
+                        dynamic simulation you want simply by utilizing a little basic C and reading the source code.
+                    </p>
+                    <p class="resource-contributor">Contributor: Aydian Brown, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://github.com/duffell/Disco" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">galpy: Galactic Dynamics in Python</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-Compatable IDE, Jupyter Notebook</p>
+                    <p>galpy allows the user to model galactic dynamics or any large-scale system in a gravitaitonal
+                        potential. With plenty of examples and documentation, users can plot rotation curves and
+                        integrate orbits (plot object paths over time).</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://github.com/duffell/Disco" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+        </div>
 
-<!--SAODS9-->
-    <button class="accordion">
-        <a href="https://sites.google.com/cfa.harvard.edu/saoimageds9">SAOImageDS9: Image Processing for Astronomical Data</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)">Usage Requirements: Works best on Linux, but also available on MacOS and Windows</p>
-        <p>How do astronomers process, analyze, and display the electromagnetic data they collect through telescopes from astronomical objects? One of the most common software for this purpose is SAODS9, a product of the <a href="https://cxc.harvard.edu/">Chandra X-Ray Center (CXC)</a>. This software requires astronical data to be contained in FITS (Flexible Image Transport System) files, which is the standard among astronomers. NASA has collected public FITS files for processing <a href="https://fits.gsfc.nasa.gov/fits_samples.html">here</a> and more are available on <a href = "https://archive.stsci.edu/">MAST</a>. More informagion on other image viewers is provided <a href="https://fits.gsfc.nasa.gov/fits_viewer.html">here</a>.</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Amelia Binau, Indiana University<p> 
-    </div>
-
-    <h3 align="left">Packages</h3>
-
-<!--Altaipony-->
-    <button class="accordion">
-        <a href = "https://altaipony.readthedocs.io/en/latest/">Altaipony: Stellar Flare Time Series Statistics</a>
-    </button>
-    <div class="panel">
-        <p  style="color:rgb(130, 68, 169)"> Language Requirement(s): Python. Usage Requirements: Python-compatable IDE or Jupyter Notebooks</p>
-        <p> Altaipony is used to analyze flaring data from Kepler, K2, and Tess missions. It has built-in functions that lessen the noise of photometric data and identify flares from the normalized data. It’s completely free and the data from these missions can be pulled from <a href="https://archive.stsci.edu/">MAST</a> through Altaipony. It also works with target pixel files! (and <a href="https://lightkurve.github.io/lightkurve/">Lightkurve</a> does all of this as well).</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Grace Cassidy, Purdue University<p> 
-    </div>
-
-<!--MESA-->
-    <button class="accordion">
-        <a href = "https://docs.mesastar.org/en/latest/index.html">MESA: Modules for Experiments in Stellar Astrophysics</a>
-    </button>
-    <div class="panel">
-        <p  style="color:rgb(130, 68, 169)"> Language Requirement(s): Terminal, Bash, Fortran 90. Usage Requirements: Ubuntu Linux setup for windows, or IOS alternative, git packages</p>
-        <p> MESA is a hydrodynamic code that simulates stars, black bodies, and supernovae remnants. It is often used to simulate stars along the main sequence. The applications are wide in astrophysics and nuclear physics. You can use it to simulate the life and conditions of just about any star or black body you want. MESA also hosts a yearly <a href = "https://docs.mesastar.org/en/latest/summer_schools.html">summer school</a>; past summer schools have their materials published <a href = https://maygpedersen.github.io/mesa-down-under-2024/program.html">online</a>. </p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Aydian Brown, Purdue University<p> 
-    </div>
-
-<!--DISCO-->
-    <button class="accordion">
-        <a href = "https://github.com/duffell/Disco">DISCO: 3D Moving-Mesh Magnetohydrodynamics Code for Astrophysical Disks</a>
-    </button>
-    <div class="panel">
-        <p  style="color:rgb(130, 68, 169)"> Language Requirement(s): Terminal C-Based Language. Usage Requirements: Ubuntu Linux setup for windows or IOS alternative</p>
-        <p> DISCO is a moving-mesh hydrodynamics code that simulates gases moving and evolving at its core. This can be applied to any problem in astrophysics and broader applications for other hydrodynamic/fluid dynamic problems. For example, one could simulate a pulsar or a fluid-based experiment in a lab. The basics are set up for you in templates and you can create any fluid dynamic simulation you want simply by utilizing a little basic C and reading the source code.</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Aydian Brown, Purdue University<p> 
-    </div>
-
-<!--galpy-->
-    <button class="accordion">
-        <a href = "https://github.com/duffell/Disco">galpy: Galactic Dynamics in Python</a>
-    </button>
-    <div class="panel">
-        <p  style="color:rgb(130, 68, 169)"> Language Requirement(s): Python. Usage Requirements: Python-Compatable IDE, Jupyter Notebook</p>
-        <p> galpy allows the user to model galactic dynamics or any large-scale system in a gravitaitonal potential. With plenty of examples and documentation, users can plot rotation curves and integrate orbits (plot object paths over time).</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Amelia Binau, Indiana University - Bloomington<p> 
-    </div>
-
-    <h3 align="left">Datasets</h3>
-
-    <button class="accordion">
-        <a href = "https://archive.stsci.edu/">MAST: Mikulski Archive for Space Telescopes</a>
-    </button>
-    <div class="panel">
-        <p style="color:rgb(130, 68, 169)"> Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required. </p>
-        </p>
-        <p> Spectra, images, photometry. Through their extensive <a href = "https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html">catalog</a>, the Space Telescope Science Insitute allows simple querying of mass collections of astronomical data spanning missions such as JWST, Hubble, TESS, and more, including ground-based observations. Select a mission/enter the name of an astronomical target and begin querying.</p>
-        <p align="right" style="color:rgb(158, 121, 0)">Contibutor: Grace Cassidy, Purdue University<p> 
-    </div>
-
+        <h2>Datasets</h2>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">MAST: Mikulski Archive for Space Telescopes</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only
+                        internet connection and/or local storage required.</p>
+                    <p>Spectra, images, photometry. Through their extensivecatalog, the Space Telescope Science Insitute
+                        allows simple querying of mass collections of astronomical data spanning missions such as JWST,
+                        Hubble, TESS, and more, including ground-based observations. Select a mission/enter the name of
+                        an astronomical target and begin querying.</p>
+                    <p class="resource-contributor">Contributor: Grace Cassidy, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://archive.stsci.edu/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+        </div>
+    </main>
     <footer>
         &copy; 2025 PHYSDepot. All rights reserved.
     </footer>
-
     <script src="../navbar.js" type="text/javascript"></script>
+    <script src="../collapsible-cards.js" type="text/javascript"></script>
 
 </body>
 
