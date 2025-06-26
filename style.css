@@ -483,3 +483,80 @@ a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 15px;
 }
+
+/* Collapsible cards for the subfields pages */
+
+.collapsible-card {
+    overflow: hidden; /* needed for height transition */
+    box-sizing: border-box; /* good practice */
+    border-radius: 12px;
+    border-width: 12px;
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(36, 10, 89, 1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    text-wrap: wrap;
+    transition: height 0.3s ease;
+}
+
+.collapsible-card.collapsed {
+  justify-content: center; /* vertically center children */
+}
+
+.collapsible-card-title {
+    font-size: 1.5em;          /* matches <h2> size */
+    font-weight: bold;         /* matches <h2> weight */
+    display: block;            /* ensure block-level appearance */
+    cursor: pointer;           /* keep button behavior */
+    text-align:center;
+
+}
+
+.collapsible-card.collapsed:hover {
+    transition-duration: 0.4s;
+    background-color:rgba(36, 10, 89, 1);
+}
+
+.collapsible-card.collapsed:hover h2{
+    transition-duration: 0.4s;
+    color:white;
+}
+
+
+.collapsible-card h2 {
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.collapsible-card.collapsed .collapsible-card-info {
+    max-height:0;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0; /* if needed */
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-card.open .collapsible-card-info {
+    display: block;
+    text-align: left;
+    width: 100%;
+    max-height: 500px; /* or large enough for full content */
+    background-color: rgba(249, 250, 247, 0.5);
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.collapsible-card.open .collapsible-card-info p {
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
