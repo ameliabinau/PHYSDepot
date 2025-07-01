@@ -307,7 +307,7 @@ h4 {
 
 #contributors {
     background-color: rgba(155, 24, 105, 0.445);
-    padding: 2rem;
+    padding: 10px;
     border-radius: 12px;
     margin-top: 2rem;
     text-align: center
@@ -331,6 +331,10 @@ h4 {
     flex: 1 1 300px;
     color: white;
     text-align: center;
+}
+
+#contributors p{
+    font-size: 16px;
 }
 
 a {
@@ -499,7 +503,7 @@ a {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
     text-wrap: wrap;
     transition: height 0.3s ease;
 }
@@ -563,6 +567,11 @@ a {
     margin-right: 10px;
     margin-top: 0px;
 }
+.collapsible-card.open a {
+    color: rgb(223, 0, 174);
+    text-decoration: underline;
+}
+
 .collapsible-content-button {
     display:block;
     font-size: medium;
