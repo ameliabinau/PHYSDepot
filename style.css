@@ -663,5 +663,5 @@ body {
 .featured-column {
     flex: 1 1 300px;
     color: rgb(250, 239, 255);
-    text-align: left;
+    text-align: center;
 }
