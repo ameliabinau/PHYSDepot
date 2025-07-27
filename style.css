@@ -666,13 +666,3 @@ body {
     color: rgb(0, 0, 0);
     text-align: left;
 }
-
-.featured-column h3{
-    flex: 1 1 300px;
-    color: rgb(0, 0, 0);
-    text-align: left;
-}
-
-#contributors p{
-    font-size: 16px;
-}
