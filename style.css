@@ -649,20 +649,18 @@ body {
     background-color: rgba(71, 16, 119, 0.445);
     padding: 5px;
     border-radius: 10px;
-    text-align: left;
-    margin-top: 2rem;
+    text-align: center;
 }
 
 .featured-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-align: left;
-    gap: 2rem;
+    text-align: center;
 }
 
 .featured-column {
     flex: 1 1 300px;
-    color: rgb(0, 0, 0);
+    color: rgb(250, 239, 255);
     text-align: left;
 }
