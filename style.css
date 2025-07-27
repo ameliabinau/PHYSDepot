@@ -645,23 +645,34 @@ body {
   padding: 20px;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 15px;
+#featured {
+    background-color: rgba(141, 69, 205, 0.445);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: left
 }
 
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+.featured-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    text-align: center
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
+.featured-column {
+    flex: 1 1 300px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.featured-column h3{
+    flex: 1 1 300px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+#contributors p{
+    font-size: 16px;
 }
