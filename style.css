@@ -649,14 +649,16 @@ body {
     background-color: rgba(71, 16, 119, 0.445);
     padding: 5px;
     border-radius: 10px;
-    text-align: left
+    text-align: left;
+    margin-top: 2rem;
 }
 
 .featured-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-align: left
+    text-align: left;
+    gap: 2rem;
 }
 
 .featured-column {
