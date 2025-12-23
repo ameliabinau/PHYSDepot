@@ -646,7 +646,7 @@ body {
 }
 
 #featured {
-    background-color: rgba(136, 86, 181, 0.56);
+    background-color: rgba(137, 86, 181, 0.209);
     padding: 5px;
     border-radius: 10px;
     text-align: center;
@@ -654,7 +654,7 @@ body {
 }
 
 #featured2 {
-    background-color: rgba(71, 126, 141, 0.6);
+    background-color: rgba(71, 126, 141, 0.282);
     padding: 5px;
     border-radius: 10px;
     text-align: center;
