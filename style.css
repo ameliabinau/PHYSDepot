@@ -41,12 +41,16 @@ Contains:
     gap: 12px;
     width: 100%;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .brand a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .brand img {
@@ -61,6 +65,8 @@ Contains:
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .brand-text h2,
@@ -71,6 +77,7 @@ Contains:
     color: white;
     text-shadow: 0 0 5px #6a1b9a;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar menu container 
@@ -614,7 +621,7 @@ a {
 }
 
 .typing-demo {
-  width: 21ch;
+  width: 40ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -646,7 +653,7 @@ body {
 }
 
 #featured {
-    background-color: rgba(136, 86, 181, 0.56);
+    background-color: rgba(137, 86, 181, 0.209);
     padding: 5px;
     border-radius: 10px;
     text-align: center;
@@ -654,7 +661,7 @@ body {
 }
 
 #featured2 {
-    background-color: rgba(71, 126, 141, 0.6);
+    background-color: rgba(71, 126, 141, 0.282);
     padding: 5px;
     border-radius: 10px;
     text-align: center;
@@ -670,6 +677,6 @@ body {
 
 .featured-column {
     flex: 1 1 300px;
-    color: rgb(250, 239, 255);
+    color: rgb(29, 0, 42);
     text-align: center;
 }
