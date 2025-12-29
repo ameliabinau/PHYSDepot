@@ -17,6 +17,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHYSDepot ⚛️</title>
     <link rel="stylesheet" href="style.css">
+
+<style>
+
+.collapsible {
+  background-color: rgba(249, 250, 247,0.5);
+  color: blue;
+  cursor: pointer;
+  padding: 3px;
+  width: 70%;
+  text-align: left;
+  outline: 0px;
+  font-size: 14px;
+  font-family: Times New Roman;
+}
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content {
+  padding: 3px;
+  max-height: 0;
+  width: 90%;
+  overflow: hidden;
+  transition: max-height 0.1s ease-out;
+  background-color: rgba(249, 250, 247,0.5);
+  font-size: 11px;
+  font-family: Times New Roman;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -33,13 +65,16 @@
 
         <p>Interested in dabbling with research tools from a specific subfield, but looking for guidance on where to start? Joing a lab and need some relevant independent, hands-on experience? Below is a list of existing or homebrew examples, tutorials, and "worksheets" available for beginners or scientists looking to learn about other fields using resources listed on PHYSDepots main directories. Many homebrew examples/activites are imply downloadable Python Notebooks with clear instructions and physical explainations for producing science-quality results from corresponding packages, datasets, etc.</p>
 
+        <h2>Notebooks</h2>
+
         <h3><strong>Astrophysics</strong></h3>
         <h3><strong>Quantum Information</strong></h3>
         <h3><strong>Condensed Matter and AMO Physics</strong></h3>
         <h3><strong>Particle and Nuclear Physics</strong></h3>
-            <ul>
-              <li><a href="https://github.com/ameliabinau/PHYSDepot/blob/main/getting_started/Visualizing%20Data%20with%20Histograms%20in%20High%20Energy%20Particle%20Physics.ipynb">Visualizing Data with Histograms in High Energy Particle Physics</a></li>
-            </ul>
+            <button class="collapsible"><a href="https://github.com/ameliabinau/PHYSDepot/blob/main/getting_started/Visualizing%20Data%20with%20Histograms%20in%20High%20Energy%20Particle%20Physics.ipynb">Visualizing Data with Histograms in High Energy Particle Physics</a></button>
+            <div class="content">
+            <p>This notebook is designed to be a starting place for those looking to begin with basic plots of simulated particle physics proton-proton collision data.</p>
+            </div>
         <h3><strong>Mathematical Physics</strong></h3>
         <h3><strong>Biophysics and Geophysics</strong></h3>
         <h3><strong>Physics Education</strong></h3>
@@ -55,7 +90,55 @@
         &copy; 2025 PHYSDepot. All rights reserved.
     </footer>
 
-    <script src="navbar.js" type="text/javascript"></script>
+<script src="navbar.js" type="text/javascript"></script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
 </body>
 
 </html>
+
+
+
+
+
+
+<header>
+  <div id="navbar-placeholder"></div>
+</header>
+
+<br><br><br><br><br><br><br><br>
+
+
+
+<h2>Packages</h2>
+
+<button class="collapsible"><a href="https://github.com/impy-project/chromo">Chromo: Cosmic ray and HadROnic interactiOn MOnte-carlo frontend</a></button>
+<div class="content">
+  <p style="color:#990282;">Language Requirement(s): Python. Usage Requirements: Python-compatable IDE, Jupyter Notebooks</p>
+  <p>This fairly plug-and-play Python package allows the user to run popular hadronic collision event generators/simulations. What are possible outcomes of proton-proton collisions at a certain energy? Run PYTHIA 8.3, SIBYLL-2.3d, EPOS-LHC, QGSJet-III, and more without the cumbersome FORTRAN. Chromo's authors provide a variety of examples to play around with.</p>
+</div>
+
+
+
+
+
+
+
+
+
