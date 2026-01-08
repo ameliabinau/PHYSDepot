@@ -1,5 +1,5 @@
 //Replaces the navbar placeholder with the actual navbar
-fetch("https://ameliabinau.github.io/PHYSDepot/navbar.html")
+fetch("/navbar.html")
     .then(response => response.text())
     .then(html => {
         document.getElementById('navbar-placeholder').innerHTML = html;
