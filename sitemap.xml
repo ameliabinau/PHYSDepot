@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://physdepot.org/</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/about</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/getting_started</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/learning_resources</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Astrophysics</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Quantum</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/AMO</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Particle</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Mathematical</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Bio</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Education</loc>
+   </url>
+   <url>
+      <loc>https://physdepot.org/subfields/Experiment</loc>
+   </url>
+
+</urlset> 
