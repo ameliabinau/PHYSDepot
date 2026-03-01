@@ -647,7 +647,7 @@ body {
 
 #featured {
     background-color: hsla(272, 100%, 43%, 0.352);
-    padding: 3px;
+    padding: 5px;
     border-radius: 10px;
     text-align: center;
     border: 4px solid #001f37e4;
@@ -656,7 +656,7 @@ body {
 
 #featured2 {
     background-color: rgba(0, 157, 255, 0.404);
-    padding: 3px;
+    padding: 5px;
     border-radius: 10px;
     text-align: center;
     border: 4px solid #001f37e4;
