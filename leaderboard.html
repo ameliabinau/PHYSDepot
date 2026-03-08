@@ -47,6 +47,22 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 </style>
 
 </head>
@@ -61,79 +77,75 @@
 
         <img src="https://physdepot.org/graphics/NotebookBumper2.png" width = 100%/>
 
-        <h2><strong>Leaderboard!</strong></h2>
+        <h2 style="text-align:center;"><strong>Leaderboard!</strong></h2>
 
-        <p>Interested in dabbling with research tools from a specific subfield, but looking for guidance on where to start? Joing a lab and need some relevant independent, hands-on experience? Below is a list of existing or homebrew examples, tutorials, and "worksheets" available for beginners or scientists looking to learn about other fields using resources listed on PHYSDepots main directories. Many homebrew examples/activites are imply downloadable Python Notebooks with clear instructions and physical explainations for producing science-quality results from corresponding packages, datasets, etc.</p>
+        <p style="text-align:center;">PHYSDepot is built on community contribution. Here's our current leaderboard of most contributions! You must have at least ~2~ contributions to PHYSDepot to appear on the leaderboard. If you see any inaccuracies in the leaderboard or believe you should be featured and are not, contact PHYSDepot leadership.</p>
 
-        <h2>Notebooks</h2>
+        <h2 style="text-align:center;"><strong>Last updated: Mar. 8, 2026</strong></h2>
 
-        <h3><strong>Astrophysics</strong></h3>
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/crash-course/demos/hr_diagram_demo.ipynb">The Hertzsprung-Russell Diagram: A Crash Course - PyIU</a></button>
-            <div class="content">
-            <p>This notebook, part of PyIU's collection (and introductory Python crash course organization at Indiana University), is designed to teach the user the basics of the Python programming language, all while they create a HR diagram from scratch. See the rest of the PyIU GitHub for more resources.</p>
-            </div>
+<table>
+  <tr>
+    <th>Contributor</th>
+    <th>Institution</th>
+    <th># Resources Contributed</th>
+    <th>Primary Subfield</th>
+  </tr>
+  <tr>
+    <td>Amelia Binau</td>
+    <td>Indiana University - Bloomington</td>
+    <td>25</td>
+    <td>Biophysics & Geophysics</td>
+  </tr>
+      <tr>
+    <td>Ricky Dube</td>
+    <td>Indiana University - Bloomington</td>
+    <td>5</td>
+    <td>Particle & Nuclear Physics</td>
+  </tr>
+  <tr>
+    <td>Robert Laughlin</td>
+    <td>Indiana University - Bloomington</td>
+    <td>4</td>
+    <td>Particle & Nuclear Physics</td>
+  </tr>
+    <tr>
+    <td>Hannah LeMoine</td>
+    <td>Indiana University - Bloomington</td>
+    <td>3</td>
+    <td>Particle & Nuclear Physics</td>
+  </tr>
+    <tr>
+    <td>Melody Shimba</td>
+    <td>Brown University</td>
+    <td>3</td>
+    <td>Condensed Matter, AMO & Optics</td>
+  </tr>
+    <tr>
+    <td>Aydian Brown</td>
+    <td>Purdue University</td>
+    <td>2</td>
+    <td>Astrophysics</td>
+  </tr>
+      <tr>
+    <td>Grace Cassidy</td>
+    <td>Purdue University</td>
+    <td>2</td>
+    <td>Astrophysics</td>
+  </tr>
+    <tr>
+    <td>Allison Loper</td>
+    <td>Purdue University</td>
+    <td>2</td>
+    <td>Biophysics & Geophysics</td>
+  </tr>
+</table>
 
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/crash-course/demos/hr_diagram_demo.ipynb">Using Astronomy-Specific Packages - PyIU</a></button>
-            <div class="content">
-            <p>A notebook part of PyIU's collection that introduces the user to the functionalities of the packages AstroPy, Specutils, and Astroquery.</p>
-            </div>
-        <h3><strong>Quantum Information</strong></h3>
-            <button class="collapsible"><a href="https://github.com/IvanIsCoding/Quantum">Quantum Computing in Qiskit</a></button>
-            <div class="content">
-            <p>This repository by GitHub user IvanIsCoding introduces basic quantum computing and quantum algorithums using popular package Qiskit. It also offers activities involving quantum communication.</p>
-            </div>
-
-            <button class="collapsible"><a href="https://qutip.org/qutip-tutorials/">Quantum Computing in QuTiP</a></button>
-            <div class="content">
-            <p>QuTiP's official collection of JuPyter notebooks covering topics of quantum compting and quantum algorithums. Featured is a lecture series on fundmentals in QC in QuTiP.</p>
-            </div>
-        <h3><strong>Condensed Matter and AMO Physics</strong></h3>
-            <button class="collapsible"><a href="https://github.com/fiscioluzzi/Ising-spin-models">Ising Spin Models</a></button>
-            <div class="content">
-            <p>A repository of notebooks by user fiscioluzzi that construct, simulate, and analyze multiple 2D Ising models, including the square ice model and lattice guage theory.</p>
-            </div>
-
-        <h3><strong>Particle and Nuclear Physics</strong></h3>
-            <button class="collapsible"><a href="https://github.com/ameliabinau/PHYSDepot/blob/main/getting_started/Visualizing%20Data%20with%20Histograms%20in%20High%20Energy%20Particle%20Physics.ipynb">Visualizing Data with Histograms in High Energy Particle Physics</a></button>
-            <div class="content">
-            <p>This notebook is designed to be a starting place for those looking to begin with basic plots of simulated particle physics proton-proton collision data.</p>
-            </div>
-        <h3><strong>Mathematical Physics</strong></h3>
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/workshop/plotting/advanced_plotting_complete.ipynb">Computing Different Types of Mandelbrot and Julia Sets</a></button>
-            <div class="content">
-            <p>The usage of the code is very straightforward. Hit run, and you will be guided through a short menu system where you choose whether you want to compute and plot either a basic Mandelbrot set, a basic Julia set, a Multibrot set, a Multibrot Julia set, or a seeded Mandelbrot set. For each type, you will need to enter in a couple of numbers, ranging from the initial condition z0, a specific constant c, the value of the exponent, as well as the number of iterations you want, and hence the precision of the plots. The code is very well-commented and should be easy to read.
-
- Mandelbrot and Julia sets appear in mathematics and are a very popular type of set that is often used to represent the beauty inherent in mathematics, as they are fractal patterns that are very beautiful to look at and relate to niche topics in complex analysis. The basic idea is that you are plotting real and imaginary pairs of points of a bunch of constants c that are fed into a recursive relation. The constants that result in divergences of the recursion are thrown out, and the constants that stay bounded are plotted. The resulting set of points is the Mandelbrot set, which follows the relation:
- <br>
-
-z_next = z^n + c
 <br>
-where the standard Mandelbrot set chooses specifically z0 = 0 and n = 2, where z0 is the initial condition of the complex number z that is first fed into the recursion relation. Other types of sets are constructed by basically changing z0, the exponent n, or iterating over different parameters. 
-<br>
-<b>Contributor: Nick Adkins - Indiana University</b></p>
-            </div>
-        <h3><strong>Biophysics and Geophysics</strong></h3>
-        <h3><strong>Physics Education</strong></h3>
-        <h3><strong>Experimental Techniques & Statistics</strong></h3>
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/workshop/plotting/advanced_plotting_complete.ipynb">Advanced Plotting - PyIU</a></button>
-            <div class="content">
-            <p>A demonstration of advanced plotting, including colorbars, from PyIU at Indiana University.</p>
-            </div>
 
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/workshop/plotting/advanced_plotting_complete.ipynb">Advanced Plotting with Supernovae- PyIU</a></button>
-            <div class="content">
-            <p>Another demonstration of advanced plotting from PyIU at Indiana University, while producing a Type Ia supernova light cruve.</p>
-            </div>
 
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/workshop/statistics/mc_statistics.ipynb">Monte-Carlo Simulations and Statistics - PyIU</a></button>
-            <div class="content">
-            <p>Another advanced topic notebook from PyIU at Indiana University, this notebook introduces and utilizes a Monte Carlo process to determine whether Earth-mass or Jupiter-mass exoplants are more frequently water-like. It utilizes data from the NASA Exoplanet Archive.</p>
-            </div>
-          
-            <button class="collapsible"><a href="https://github.com/BrandonRadzom/pyiu/blob/main/workshop/machine-learning/machine_learning_exercise.ipynb">Introduction to Machine Learning with PyTorch - PyIU</a></button>
-            <div class="content">
-            <p>In this code tutorial the user learns the basics of machine learning (ML) using the Python module Pytorch. To do this, we will train a convolutional neutral network to identify hand written numbers. This example uses the MNIST dataset of hand written numbers which is considered the "Hello World" of machine learning.</p>
-            </div>
+</table>
+
+        
 
     <img src="https://physdepot.org/graphics/Banner.png" width = 100%/>
 
