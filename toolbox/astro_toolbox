@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQNFG1N2SG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PQNFG1N2SG');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSDepot ⚛️</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+    <main>
+        <h1><img src="https://physdepot.org/graphics/Icon_Astro.png" height="40px"/>Astrophysics</h1>
+
+        <img src="https://physdepot.org/graphics/Astro_Banner.jpeg" width = 100%/>
+
+
+        <h2>Resources & Tools</h2>
+
+        <section id="important">
+            <h3 style="color:rgb(59, 24, 105)";;><strong><i>Core Skill:</i></strong></h3><h3><strong>SAOImageDS9 Image Processing for Astronomical Data</strong></h3>
+            <div class="important-container">
+            <div class="important-column">
+            <p style="font-size: 11px;">One of the most common software for analyzing FITS files, fundemental data structures where electromagentic information collected by telescopes is stored. Used to identify physical features in astrophysical objects, create composite images, and extract complex data.</p>
+        </section>
+
+        <div class="card-container">
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Stellarium</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Fairly strong internet connection, decent
+                        graphics processing for downloadable software.</p>
+                    <p>Using either the web-based interactive or the downloadable application, explore the night sky
+                        using this well-known software detailing the celestial sphere. Great for outreach, education,
+                        amateur astronomy, and anyone who wants to take a zoomed-in look at the night sky. Use this tool
+                        to determine exactly what the sky will look like at a specific location and time and to gain an
+                        interactive understanding of how to use popular astronomical coordinate systems. Stellarium
+                        allows you to chart magnitude, position, and other physical properties of almost all
+                        astronomical objects.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University</p>
+                    <a class="collapsible-content-button" href="https://stellarium-web.org/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Universe Monitor</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Strong internet connection.</p>
+                    <p>Universe Monitor is a free public website created by Dave Owen, AKA "Space Dave" of Te Awamutu,
+                        New Zealand. Owen is also the creator of the Te Awamutu Space Centre, a space museum and
+                        education center. The website contains live feeds, video, CGI visualizations, text reports, etc.
+                        from various sources, such as the Solar Dynamics Observatory, NASA Earth Observatories, NOAA,
+                        ISS, etc, and includes recent space news, launches, and random astronomical facts. It is
+                        accessible from any device. Dave Owen writes that anyone is able to access the website for
+                        educational purposes, as well as set up public displays for science museums, observatories, and
+                        schools. To help keep the website ad-free, one can support their Patreon and learn more about
+                        the
+                        service on their about page.</p>
+                    <p class="resource-contributor">Contributor: Robert J. Mailliard, Indiana University - Bloomington
+                    </p>
+                    <a class="collapsible-content-button" href="https://www.universemonitor.com/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SAOImageDS9: Image Processing for Astronomical Data</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Works best on Linux, but also available on
+                        MacOS and Windows</p>
+                    <p>How do astronomers process, analyze, and display the electromagnetic data they collect through
+                        telescopes from astronomical objects? One of the most common software for this purpose is
+                        SAODS9, a product of theChandra X-Ray Center (CXC). This software requires astronomical data to
+                        be
+                        contained in FITS (Flexible Image Transport System) files, which is the standard among
+                        astronomers. NASA has collected public FITS files for processing here and more are available
+                        on MAST.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University</p>
+                    <a class="collapsible-content-button" href="https://sites.google.com/cfa.harvard.edu/saoimageds9"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Slooh: Remote Telescope Control</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Fairly strong internet connection, paid
+                        subscription.</p>
+                    <p>Slooh is a powerful online platform that allows educators and amateur astronomers remotely access
+                        telescopes in Chile, the Canary Islands, and Australia. Simply select a target & telescope,
+                        queue a
+                        scheduling block, adjust preferences, and watch as your research-grade image is captured. It is
+                        a
+                        brilliant, interactive way to explore the cosmos. Slooh hosts a variety of educational events
+                        and
+                        more advanced research options (have your data exported as FITS files for more detailed
+                        examination)
+                        and a constant stream of observations is available to watch in real-time. While the service
+                        comes
+                        with a price, I helped use this platform for <a href="https://www.physics.purdue.edu/outreach/">
+                            Purdue University's physics and astronomy outreach program</a> and I can personally
+                            attest it
+                            is worth the investment if you're strongly interested in amateur astronomy but are
+                            overwhelmed
+                            with the mechanics/cost of a full personal telescope.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University</p>
+                    <a class="collapsible-content-button" href="https://www.slooh.com/amateurs" target="_blank">Click
+                        here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">TOPCAT: Tool for OPerations on Catalogues And Tables</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: TOPCAT requires Java environment to run. It can be used with or without an internet connection, but an internet connection is required if you want to use its database searching capabilities. </p>
+                    <p>From their website "TOPCAT is an interactive graphical viewer and editor for tabular data. Its aim is to provide most of the facilities that astronomers need for analysis and manipulation of source catalogues and other tables, though it can be used for non-astronomical data as well. It understands a number of different formats, both astronomically important (FITS, VOTable, CDF) and general purpose (CSV, ASCII, Parquet), and more formats can be added. It is especially good at interactive exploration of large (multi-million row, lots of columns) tables.
+
+It handles the following file types (list from their website): FITS BINTABLE (binary table) or TABLE (ASCII table) extensions, VOTables in any of the format variants (TABLEDATA, FITS, BINARY, BINARY2) or versions, ASCII tables in a number of variations, CDF files, Comma-Separated Values (CSV), Enhanced Character-Separated Values (ECSV), Results of SQL queries on relational databases, Parquet files, IPAC format, AAS Machine-Readable Tables, HAPI streams, Feather files, GBIN files.
+
+It offers a variety of ways to view and analyse tables, including a browser for the cell data themselves, viewers for information about table and column metadata, and facilities for sophisticated interactive 1-, 2-, 3- and higher-dimensional visualisation, calculating statistics and joining tables using flexible matching algorithms. Using a powerful and extensible Java-based expression language new columns can be defined and row subsets selected for separate analysis. Table data and metadata can be edited and the resulting modified table can be written out in a wide range of output formats.
+
+It is a stand-alone application which works quite happily with no network connection. However, because it uses Virtual Observatory (VO) standards, it can cooperate smoothly with other tools, services and datasets in the VO world and beyond.
+
+The program is written in pure Java (except for optional Parquet I/O libraries) and available under the GNU General Public Licence, though some of the library code is LGPL. Source code is available at https://github.com/Starlink/starjava. It has been developed mostly in the UK within various UK and Euro-VO projects (Starlink, AstroGrid, VOTech, AIDA, GAVO, GENIUS, DPAC) and under PPARC and STFC grants. Its underlying table processing facilities are provided by the related packages STIL and STILTS. 
+
+In my experience, it is an excellent resource for handling large data tables, and it is very straightforward to use.</p>
+                    <p class="resource-contributor">Contributor: Prof. Jeffrey Gerber, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://www.star.bris.ac.uk/mbt/topcat/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">AAVSO: The American Association of Variable Star Observers</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>This non-profit organization of both amateur and professional astronomers aims to provide scientific and educational resources worldwide to those who are interested in variable stars. Memberships are open to anyone and offers observing guides and manuals for those interested in helping deepen their pool of data on variable stars.</p>
+                    <p class="resource-contributor">Contributor: Braden Garretson, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://www.aavso.org/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">HEALPix: Spherical Data Analysis</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Compatible with C++, Fortran 90, IDL, Java and Python. Usage Requirements: Use of FITS files.</p>
+                    <p>Designed specifically for descritization/pixelizations and analysis of data on a sphere, particularly for detailed studies of the cosmic microwave background (CMB), HEALPix allows for the analysis and visualization of any data that are constrained to the surface of a sphere. Additionally useful for Earth & planetary data, including satellite imaging. A Python wrapper for HEALPix, <a href="https://github.com/healpy/healpy">healpy</a>healpy, is also available.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University, Bloomington</p>
+                    <a class="collapsible-content-button" href="https://healpix.sourceforge.io/index.php" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">PolSpice (Spice) CMB Analysis</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Fortran. Usage Requirements: Use of FITS files.</p>
+                    <p>PolSpice calculates cross-correlation functions between parameters of spherically-based maps (specifically maps of cosmic microwave background) of Stokes parameters, specifically maps pixelized by software like HEALPix. A Python wrapper, <a href="https://github.com/zonca/python_spice">python_spice</a>, is also available. </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University, Bloomington</p>
+                    <a class="collapsible-content-button" href="https://www2.iap.fr/users/hivon/software/PolSpice/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+        </div>
+
+        <h2>Packages</h2>
+
+<div class="card-container">
+
+    <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Astropy: Core Package for Astronomy Analysis in Python</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatable IDE or Jupyter Notebooks</p>
+                    <p>Astropy is an all-in-one Python package focused on helping astronomers/astrophysicists navigate and transform large and small datasets. It allows users to easily work with numerous types of coordinate systems, constants, units, dates and times, and models and fitting. The package makes it easy to create, modify, and interface with FITS files, a common file type for working with astronomical data. Astropy is a must-have package for astronomers of all experience levels working in Python.</p>
+                    <p class="resource-contributor">Contributor: Ethan Pinarski, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://www.astropy.org/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Altaipony: Stellar Flare Time Series Statistics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatable IDE or Jupyter Notebooks</p>
+                    <p>Altaipony is used to analyze flaring data from Kepler, K2, and Tess missions. It has built-in
+                        functions that lessen the noise of photometric data and identify flares from the normalized
+                        data. It’s completely free and the data from these missions can be pulled fromMASTthrough
+                        Altaipony. It also works with target pixel files! (andLightkurvedoes all of this as well).</p>
+                    <p class="resource-contributor">Contributor: Grace Cassidy, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://altaipony.readthedocs.io/en/latest/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">REBOUND: N-Body Statistics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatable IDE or Jupyter Notebooks</p>
+                    <p>REBOUND can be used to run N-body simulations easily. It takes into account all gravitational influences and does the numerical integration for you. This is useful for simulations of what our solar system may look like over a large timescale, simulations of stellar flybys, exoplanet systems, exomoons, mergers, the kozai-lidov effect, and many more open and current areas of research. REBOUNDx (rebound eXtension) includes non-gravitational effects such as tides, mass loss, GR.</p>
+                    <p class="resource-contributor">Contributor: Max Edelman, Tufts University Graduate</p>
+                    <a class="collapsible-content-button" href="https://rebound.hanno-rein.de/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button> 
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Lightkurve</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-compatable IDE or Jupyter Notebooks</p>
+                    <p>This package is extremely useful in downloading and analyzing flux-time series data. Through this package you can download this flux data from TESS, Kepler, and Kepler 2. You can then easily visualize and analyze the light curves and target pixel data provided by those telescopes. This is useful in research for exoplanet detection, spots and flares, determining rotational periods, and much more. In addition, you can use “Wotan” which is another free python package to easily detrend the data to be able to work with flat lightcurves, which is again useful for exoplanet detection, etc.</p>
+                    <p class="resource-contributor">Contributor: Max Edelman, Tufts University Graduate</p>
+                    <a class="collapsible-content-button" href="https://lightkurve.github.io/lightkurve/"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button> 
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">MESA: Modules for Experiments in Stellar Astrophysics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Terminal, Bash, Fortran 90. Usage
+                        Requirements: Ubuntu Linux setup for windows, or IOS alternative, git packages</p>
+                    <p>MESA is a hydrodynamic code that simulates stars, black bodies, and supernovae remnants. It is
+                        often used to simulate stars along the main sequence. The applications are wide in astrophysics
+                        and nuclear physics. You can use it to simulate the life and conditions of just about any star
+                        or black body you want. MESA also hosts a yearlysummer school; past summer schools have their
+                        materials publishedonline.</p>
+                    <p class="resource-contributor">Contributor: Aydian Brown, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://docs.mesastar.org/en/latest/index.html"
+                        target="_blank">Click here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">DISCO: 3D Moving-Mesh Magnetohydrodynamics Code for Astrophysical
+                    Disks</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Terminal C-Based Language. Usage
+                        Requirements: Ubuntu Linux setup for windows or IOS alternative</p>
+                    <p>DISCO is a moving-mesh hydrodynamics code that simulates gases moving and evolving at its core.
+                        This can be applied to any problem in astrophysics and broader applications for other
+                        hydrodynamic/fluid dynamic problems. For example, one could simulate a pulsar or a fluid-based
+                        experiment in a lab. The basics are set up for you in templates and you can create any fluid
+                        dynamic simulation you want simply by utilizing a little basic C and reading the source code.
+                    </p>
+                    <p class="resource-contributor">Contributor: Aydian Brown, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://github.com/duffell/Disco" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">galpy: Galactic Dynamics in Python</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-Compatable IDE, Jupyter Notebook</p>
+                    <p>galpy allows the user to model galactic dynamics or any large-scale system in a gravitaitonal
+                        potential. With plenty of examples and documentation, users can plot rotation curves and
+                        integrate orbits (plot object paths over time).</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://docs.galpy.org/en/v1.11.0/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+        </div>
+
+        <h2>Datasets</h2>
+        <div class="card-container">
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">MAST: Mikulski Archive for Space Telescopes</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only
+                        internet connection and/or local storage required.</p>
+                    <p>Spectra, images, photometry. Through their extensivecatalog, the Space Telescope Science Insitute
+                        allows simple querying of mass collections of astronomical data spanning missions such as JWST,
+                        Hubble, TESS, and more, including ground-based observations. Select a mission/enter the name of
+                        an astronomical target and begin querying.</p>
+                    <p class="resource-contributor">Contributor: Grace Cassidy, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://archive.stsci.edu/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SDSS-V: Sloan Digital Sky Survey</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>The Sloan Digital Sky Survey (SDSS) is one of the largest and longest-running astronomical surveys ever, regularly mapping over one-third of the night sky since 2000. SDSS is made up of several smaller surveys over each phase of operation (I-V), which collect data through images and spectroscopy in both the optical and near-infrared light regimes. These surveys consist of the Sloan Legacy Survey (which took data of ~2 million objects, 800,000 galaxies, and 100,000 quasars), the Baryon Oscillation Spectroscopic Survey (BOSS; which was designed to measure the expansion rate of the Universe), and many more. Data for specific observations and targets can be explored through the <a href="https://skyserver.sdss.org/dr19">SDSS SkyServer</a></p>
+                    <p class="resource-contributor">Contributor: Ethan Pinarski, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://www.sdss.org/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">ALeRCE ZTF/Rubin Data Broker</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>Short for Automatic Learning for the Rapid Classification of Events, ALeRCE is a  “Chilean-led Community Broker” which uses machine learning models to process and classify events in real-time. It is processing the massive alert data streams from the Zwicky Transient Facility (ZTF) and the Legacy Survey of Space and Time (LSST) at the Vera C. Rubin Observatory in Chile. The abundant data in this broker is often used in time-domain astronomy catch supernovae in their earliest stages.</p>
+                    <p class="resource-contributor">Contributor: Ethan Pinarski, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://science.alerce.online/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">NED: NASA/IPAC Extragalactic Database</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>Operated by Caltech under a contract with NASA, NED aims to accelerate scientific discovery in astrophysics by capturing the most reliable census of extragalactic objects. It also provides essential tools and data to facilitate research in astrophysics.</p>
+                    <p class="resource-contributor">Contributor: Braden Garretson, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://ned.ipac.caltech.edu/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Pan-STARRS: Panoramic Survey Telescope and Rapid Response System</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>Led by the University of Hawaii and funded by NASA, Pan-STARRS surveys the sky on a continual basis in search for moving or variable objects, such as asteroids, comets, supernovae, variable stars, and more. Pan-STARRS focuses 90% of its observing time in search for Near Earth Objects.</p>
+                    <p class="resource-contributor">Contributor: Braden Garretson, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812201/Pan-STARRS1+data+archive+home+page" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">IRSA: NASA/IPAC Infrared Science Archive</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): None. Usage Requirements: Web-based; only internet connection and/or local storage required.</p>
+                    <p>IRSA is a curator of NASA’s infrared and submillimeter mission science products, which include numerous large-area and all-sky surveys. It provides access to a trillion astronomical measurements across 29 bands through its digital archives and query engines. This is resources offers data analysis and visualization tools, and is run through Caltech.</p>
+                    <p class="resource-contributor">Contributor: Ethan Pinarski, Purdue University</p>
+                    <a class="collapsible-content-button" href="https://irsa.ipac.caltech.edu/frontpage/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+<button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">COSMOS-Web Public Data Release 1</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements: Jupyter Notebooks, Python-compatable IDE, .fits files.</p>
+                    <p>The COSMOS-Web survey is a branch of the Cosmic Evolution Survey (COSMOS) utilizing the James Webb Space Telescope MIRI and NIRCam to study galactic creation and evolution in infrared. Part of its research data have been made available to the public, with tutorials for use found <a href="https://cosmos2025.iap.fr/tutorials/catalog_usage_tutorial.html">here</a> in the form of Jupyter notebooks. The collaboration also hosts an interactive <a href="https://cosmos2025.iap.fr/fitsmap/?ra=150.0639689&dec=2.1765050&zoom=4">image viewer</a> in which the working field of view for the released data can be examined.</p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                    <a class="collapsible-content-button" href="https://cosmos2025.iap.fr/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+        </div>
+    </main>
+    <footer>
+        &copy; 2026 PHYSDepot. All rights reserved.
+    </footer>
+    <script src="../navbar.js" type="text/javascript"></script>
+    <script src="../collapsible-cards.js" type="text/javascript"></script>
+
+</body>
+
+</html>
