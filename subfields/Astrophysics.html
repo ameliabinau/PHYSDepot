@@ -178,6 +178,17 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">PLUTO Astrophysical Fluids</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Requires C/C++ and a compiler, MPI (for parallel computing), and Python (for the interactive setup GUI), and a Linux/Unix environment or equivalent. Usage Requirements: Standard laptop sufficient for basic tests, HPC cluster required for heavy production. Outputs raw binary, HDF5, or VTK files. Works offline.</p>
+                    <p>A highly modular, multi-physics code optimized for high-Mach-number, discontinuous astrophysical fluid flows. Users use an interactive Python menu to configure plasma settings to simulate environments like stellar winds or relativistic jets, making it the ideal pedagogical gateway into grid-based MHD. PLUTO is not the only code for MHD in astrophysics, all of which have their own strengths and weaknesses (see: Athena++, AthenaK, Cholla, etc.).</p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://plutocode.ph.unito.it/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
         </div>
 
         <h2>Packages</h2>
@@ -280,6 +291,75 @@ In my experience, it is an excellent resource for handling large data tables, an
                         here to access this resource</a>
                 </div>
             </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SunPy Solar Physics</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:
+                        Python-Compatable IDE & compiler, internet connection for dataset downloading</p>
+                    <p>SunPy is an open-source Python library for solar physics data analysis. It provides tools to query and download data from major solar observatories (like SDO and SOHO) and coordinate transformations specific to the Sun, helping solar scientists and learners study solar flares and space weather. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://sunpy.org/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+        </div>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">FSPS (Flexible Stellar Population Synthesis)</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Fortran backend, Python interface (through python-FSPS). Usage Requirements: Requires stellar evolution and spectral libraries (which can be installed through FSPS). Requires moderate computing resources.</p>
+                    <p>A library designed to compute the spectral energy distributions (SEDs) and evolution of stellar populations. It allows users to simulate how galaxies change in brightness and color over time under different chemical configurations, which is vital for matching computational models to actual telescope observations. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://dfm.io/python-fsps/current/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Synphot Synthetic Photometry</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements: Standard laptop hardware. Handles FITS, ASCII, and CSV files. Works offline once the required reference data files are downloaded.</p>
+                    <p>A synthetic photometry software package developed by STScI that simulates astronomical observations through various telescope filters. Users input stellar spectra to calculate predicted counts and magnitudes, which is critical for planning and calibrating observations with telescopes like HST and JWST. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://synphot.readthedocs.io/en/latest/index.html" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">radmc3dPy Radiative Transfer</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python (with NumPy and Matplotlib). Usage Requirements: Local installation of the core RADMC-3D executable (compiled via gfortran/make). Standard computer hardware is sufficient. Reads and writes custom RADMC-3D text/binary inputs, FITS files, and VTK data. Works offline.</p>
+                    <p>A comprehensive Python library meant for pre- and post-processing of RADMC-3D files, used to compute dust and gas radiative transfer. Users write Python scripts to generate grid density structures and plot resultant synthetic images or spectral energy distributions (SEDs). This makes it an indispensable, highly accessible diagnostic tool for modeling dust behavior in galaxies and protoplanetary disks.</p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/manual_rmcpy/index.html" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">YT Project</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements:  Scales from consumer laptops to supercomputer clusters, works offline but may require moderate RAM for larger datasets.</p>
+                    <p>A powerful Python package designed for analyzing and visualizing volumetric, spatially-resolved data from astrophysical studies and simulations. Users write scripts to generate slices, projections, and 3D volume renderings, lowering the barrier for researchers to interpret complex galaxy and star formation simulations, among other visualization uses. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://yt-project.org/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
+        </div>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SpiceyPy</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Requires Python and a C compiler (wraps NASA's SPICE Toolkit shared library). Usage Requirements:  Works offline on standard laptop hardware. Handles SPICE binary kernel files (.bsp, .bc, .tls).</p>
+                    <p>The official Python wrapper for NASA's SPICE toolkit, which is the international standard for calculating space geometry and planetary trajectories. It allows students to calculate the precise positions, velocities, and orientations of planets, satellites, and spacecraft at any given moment in time, making it useful for planetary science and mission planning. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://spiceypy.readthedocs.io/en/stable/" target="_blank">Click
+                        here to access this resource</a>
+                </div>
+            </button>
         </div>
 
         <h2>Datasets</h2>
@@ -354,6 +434,17 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Gaia ESA Data Archive</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Language Requirement(s): Python (via astroquery.gaia). Usage Requirements: Web browser. Requires a stable internet connection to query the database. Outputs VOTable, FITS, CSV, and JSON file formats. Usability is subject to the current status of the Gaia data servers. </p>
+                    <p>A massive , high-precision astrometric dataset mapping the positions, distances (parallaxes), and 3D motions of over one billion stars in the Milky Way. Researchers use the online repository via ADQL queries to chart galactic structure, stellar evolution, and kinematics. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://gea.esac.esa.int/archive/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
 <button class="collapsible-card collapsed">
                 <h2 class="collapsible-card-title">COSMOS-Web Public Data Release 1</h2>
                 <div class="collapsible-card-info">
@@ -361,6 +452,17 @@ In my experience, it is an excellent resource for handling large data tables, an
                     <p>The COSMOS-Web survey is a branch of the Cosmic Evolution Survey (COSMOS) utilizing the James Webb Space Telescope MIRI and NIRCam to study galactic creation and evolution in infrared. Part of its research data have been made available to the public, with tutorials for use found <a href="https://cosmos2025.iap.fr/tutorials/catalog_usage_tutorial.html">here</a> in the form of Jupyter notebooks. The collaboration also hosts an interactive <a href="https://cosmos2025.iap.fr/fitsmap/?ra=150.0639689&dec=2.1765050&zoom=4">image viewer</a> in which the working field of view for the released data can be examined.</p>
                     <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
                     <a class="collapsible-content-button" href="https://cosmos2025.iap.fr/" target="_blank">Click here
+                        to access this resource</a>
+                </div>
+            </button>
+
+<button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">ASAS-SN (All-Sky Automated Survey for Supernovae)</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">Usage Requirements: Web browser interface via the ASAS-SN Sky Patrol dashboard or Python APIs. Downloads available in CSV and ASCII table text formats. Requires internet connectivity to query the target database. </p>
+                    <p>A premier, open-access dataset providing real-time and historical photometric light curves for millions of stars across the entire sky. It is an incredibly powerful resource for entry-level researchers looking to study stellar variability, discover supernovae, or practice data-mining variable stars without needing specialized telescope access. Pronounced like “assassin”. </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida, The Ohio State University</p>
+                    <a class="collapsible-content-button" href="https://www.astronomy.ohio-state.edu/asassn/" target="_blank">Click here
                         to access this resource</a>
                 </div>
             </button>
