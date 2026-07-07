@@ -81,69 +81,66 @@ tr:nth-child(even) {
 
         <p style="text-align:center;">PHYSDepot is built on community contribution. Here's our current leaderboard of most contributions! You must have at least ~2~ contributions to PHYSDepot to appear on the leaderboard. If you see any inaccuracies in the leaderboard or believe you should be featured and are not, contact PHYSDepot leadership.</p>
 
-        <h2 style="text-align:center;"><strong>Last updated: Mar. 8, 2026</strong></h2>
+        <h2 style="text-align:center;"><strong>Last Updated: <span id="last-updated-time">Loading...</span>.</strong></h2>
 
 <table>
-  <tr>
-    <th>Contributor</th>
-    <th>Institution</th>
-    <th># Resources Contributed</th>
-    <th>Primary Subfield</th>
-  </tr>
-  <tr>
-    <td>Amelia Binau</td>
-    <td>Indiana University - Bloomington</td>
-    <td>25</td>
-    <td>Biophysics & Geophysics</td>
-  </tr>
-      <tr>
-    <td>Ricky Dube</td>
-    <td>Indiana University - Bloomington</td>
-    <td>5</td>
-    <td>Particle & Nuclear Physics</td>
-  </tr>
-  <tr>
-    <td>Robert Laughlin</td>
-    <td>Indiana University - Bloomington</td>
-    <td>4</td>
-    <td>Particle & Nuclear Physics</td>
-  </tr>
+  <thead>
     <tr>
-    <td>Hannah LeMoine</td>
-    <td>Indiana University - Bloomington</td>
-    <td>3</td>
-    <td>Particle & Nuclear Physics</td>
-  </tr>
+      <th>Contributor</th>
+      <th>Institution</th>
+      <th>Total Contributions</th>
+      <th>Primary Subfield Contributions</th>
+    </tr>
+  </thead>
+  <tbody id="leaderboard-data">
     <tr>
-    <td>Melody Shimba</td>
-    <td>Brown University</td>
-    <td>3</td>
-    <td>Condensed Matter, AMO & Optics</td>
-  </tr>
-    <tr>
-    <td>Aydian Brown</td>
-    <td>Purdue University</td>
-    <td>2</td>
-    <td>Astrophysics</td>
-  </tr>
-      <tr>
-    <td>Grace Cassidy</td>
-    <td>Purdue University</td>
-    <td>2</td>
-    <td>Astrophysics</td>
-  </tr>
-    <tr>
-    <td>Allison Loper</td>
-    <td>Purdue University</td>
-    <td>2</td>
-    <td>Biophysics & Geophysics</td>
-  </tr>
+      <td colspan="4" style="text-align: center;">Loading leaderboard...</td>
+    </tr>
+  </tbody>
 </table>
+
+<script>
+  fetch('./leaderboard.json')
+    .then(response => {
+      if (!response.ok) throw new Error("Could not load leaderboard data");
+      return response.json();
+    })
+    .then(payload => {
+      // 1. Inject the last updated timestamp
+      document.getElementById('last-updated-time').textContent = payload.lastUpdated;
+
+      const tableBody = document.getElementById('leaderboard-data');
+      const data = payload.entries; // Access the array inside the new object structure
+      
+      if (data.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No contributors meet the leaderboard criteria yet!</td></tr>';
+        return;
+      }
+      
+      // 2. Loop through the array and build the HTML rows
+      let rowsHtml = '';
+      data.forEach(contributor => {
+        rowsHtml += `
+          <tr>
+            <td>${contributor.name}</td>
+            <td>${contributor.institution}</td>
+            <td>${contributor.count}</td>
+            <td>${contributor.subfield}</td>
+          </tr>
+        `;
+      });
+      
+      tableBody.innerHTML = rowsHtml;
+    })
+    .catch(err => {
+      console.error("Leaderboard error:", err);
+      document.getElementById('leaderboard-data').innerHTML = '<tr><td colspan="4" style="text-align: center; color: red;">Failed to load leaderboard.</td></tr>';
+      document.getElementById('last-updated-time').textContent = 'Error loading date';
+    });
+</script>
 
 <br>
 
-
-</table>
 
         
 
