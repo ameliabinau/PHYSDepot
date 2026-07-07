@@ -34,6 +34,72 @@
       height: 100%;
       border: 0;
     }
+
+    /* The outer container clips anything that extends past the screen edges. */
+    .logo-slider {
+        overflow: hidden;
+        padding: 20px 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    /* Adds a nice fade-out effect on the left and right edges. */
+    .logo-slider::before,
+    .logo-slider::after {
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 150px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .logo-slider::before {
+        left: 0;
+        top: 0;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    }
+    .logo-slider::after {
+        right: 0;
+        top: 0;
+        background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    /* The track holding both blocks of logos arranged in a row. */
+    .logo-slide-track {
+        display: inline-flex;
+        width: max-content;
+        animation: scrollLogos 25s linear infinite; /* '25s' can be adjusted to change the speed. */
+    }
+
+    /* Individual slide blocks containing the images. */
+    .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* Keeps the images consistently sized and spaced. */
+    .logo-slide img {
+        height: 60px;
+        margin: 0 40px; /* Spacing can be adjusted between logos. */
+        object-fit: contain;
+    }
+
+    /* The magic animation: slides the track left by exactly half its full width. */
+    @keyframes scrollLogos {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Pause the scrolling when someone hovers over a logo. */
+    .logo-slider:hover .logo-slide-track {
+        animation-play-state: paused;
+    }
   </style>
 </head>
 
@@ -72,14 +138,28 @@
         <img src="https://physdepot.org/graphics/PhysDEPOT_goals2.png" width = 100%/> 
 
         <h3 p style="color:rgb(70, 44, 104); display: flex; justify-content: center; align-items: center;";><strong>PHYSDepot's powered by a network of involvement across institutions*</strong></h3 p>
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="https://physdepot.org/graphics/Indiana_Hoosiers_logo.svg.png" height="70px"/> 
-            <img src="https://physdepot.org/graphics/purdue-university-boilermakers-logo-png-transparent.png" height="70px"/>
-            <img src="https://physdepot.org/graphics/UConn-Football-Logo-Vector.svg--279x300.png" height="70px">
-            <img src="https://physdepot.org/graphics/JeffersonLab_Logo_Stacked.png" height="70px"/>
-            <img src="https://physdepot.org/graphics/fermilab-logo-2-min.png" height="70px"/>
-            <img src="https://physdepot.org/graphics/Brown.png" height="70px"/>
-            <img src="https://physdepot.org/graphics/OSU.png" height="70px"/>
+        <div class="logo-slider">
+            <div class="logo-slide-track">
+                <img src="https://physdepot.org/graphics/Indiana_Hoosiers_logo.svg.png" height="70px"/> 
+                <img src="https://physdepot.org/graphics/purdue-university-boilermakers-logo-png-transparent.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/UConn-Football-Logo-Vector.svg--279x300.png" height="70px">
+                <img src="https://physdepot.org/graphics/JeffersonLab_Logo_Stacked.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/fermilab-logo-2-min.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/Brown.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/OSU.png" height="70px"/>
+                <img src="./graphics/UF_logo.png" height="70px"/>
+            </div>
+            <!-- Duplicated so the sliding isn't as well-noticed. -->
+            <div class="logo-slide-track">
+                <img src="https://physdepot.org/graphics/Indiana_Hoosiers_logo.svg.png" height="70px"/> 
+                <img src="https://physdepot.org/graphics/purdue-university-boilermakers-logo-png-transparent.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/UConn-Football-Logo-Vector.svg--279x300.png" height="70px">
+                <img src="https://physdepot.org/graphics/JeffersonLab_Logo_Stacked.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/fermilab-logo-2-min.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/Brown.png" height="70px"/>
+                <img src="https://physdepot.org/graphics/OSU.png" height="70px"/>
+                <img src="./graphics/UF_logo.png" height="70px"/> <!--- todo fix with real link! -->
+            </div>
         </div>
 
         <h2 style="text-align:center;"><i>Featured</i></h2>
