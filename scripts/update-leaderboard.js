@@ -76,10 +76,29 @@ files.forEach(file => {
         // Find the contributor's name and institution via trimming.
         if (fullText.startsWith('Contributor:')) {
             const cleanText = fullText.replace('Contributor:', '').trim();
-            const parts = cleanText.split(',');
-            
-            const name = parts[0] ? parts[0].trim() : '';
-            const institution = parts[1] ? parts[1].trim() : 'Unknown';
+    
+            let name = '';
+            let institution = 'Unknown';
+
+            // Check if "on behalf of" is in the text (case-insensitive).
+            const behalfRegex = /(.*)\s+on\s+behalf\s+of\s+(.*)/i;
+            const match = cleanText.match(behalfRegex);
+
+            if (match) {
+                // match[1] is the proxy submitter (the first name).
+                // match[2] is the actual author + university (everything after "on behalf of").
+                const actualAuthorData = match[2].trim();
+                
+                // Now split the actual author's data by the comma to separate name and university.
+                const parts = actualAuthorData.split(',');
+                name = parts[0] ? parts[0].trim() : '';
+                institution = parts[1] ? parts[1].trim() : 'Unknown';
+            } else {
+                // Standard format: No "on behalf of" present.
+                const parts = cleanText.split(',');
+                name = parts[0] ? parts[0].trim() : '';
+                institution = parts[1] ? parts[1].trim() : 'Unknown';
+            }
 
             // Skip anonymous entries.
             if (name.toLowerCase() === 'anonymous') {
