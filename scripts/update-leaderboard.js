@@ -41,8 +41,7 @@ const subfieldMap = {
 
 // Get the HTML files from the subfield directory and other locations.
 const subfieldFiles = fs.readdirSync(subfieldsDir)
-    .filter(file => file.endsWith('.html'))
-    .map(file => path.join(subfieldsDir, file));
+    .filter(file => file.endsWith('.html'));
 const rootFilesToInclude = [path.join(repoRootDir, 'getting_started.html'),
     path.join(repoRootDir, 'learning_resources.html')
 ];
