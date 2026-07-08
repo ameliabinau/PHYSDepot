@@ -7,8 +7,13 @@
  * 
  * Revision History:
  *      07/06/2026 Initial version created with doc comments.
+ *      07/07/2026 Include resources not in subfields.
  * 
  * Notes:
+ * Run locally with Node/NPM. Will require a Cheerio installation, which can be done through "npm install cheerio".
+ * This assumes you already have NPM on your local machine.
+ * Then you can run "node scripts/update-leaderboard.js" or "node update-leaderboard.js", or equivalent.
+ * Make sure not to commit the Node/NPM files to the repository.
  */
 
 // --- 1. NPM Requirements ---
@@ -34,8 +39,14 @@ const subfieldMap = {
     'amo': 'Condensed Matter & AMO'
 };
 
-// Get the HTML files from the subfield directory.
-const files = fs.readdirSync(subfieldsDir).filter(file => file.endsWith('.html'));
+// Get the HTML files from the subfield directory and other locations.
+const subfieldFiles = fs.readdirSync(subfieldsDir)
+    .filter(file => file.endsWith('.html'))
+    .map(file => path.join(subfieldsDir, file));
+const rootFilesToInclude = [path.join(repoRootDir, 'getting_started.html'),
+    path.join(repoRootDir, 'learning_resources.html')
+];
+const files = [...subfieldFiles, ...rootFilesToInclude]; // All files that contributors can contribute to.
 
 // Initialize a contributor list.
 const contributors = {};
