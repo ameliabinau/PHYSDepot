@@ -4,8 +4,8 @@
     {
       "name": "Amelia Binau",
       "institution": "Indiana University - Bloomington",
-      "count": 49,
-      "subfield": "Experimental Techniques"
+      "count": 54,
+      "subfield": "Astrophysics"
     },
     {
       "name": "Neil Ghugare",
@@ -38,6 +38,12 @@
       "subfield": "Astrophysics"
     },
     {
+      "name": "Robert C. Laughlin",
+      "institution": "Indiana University - Bloomington",
+      "count": 3,
+      "subfield": "Particle & Nuclear Physics"
+    },
+    {
       "name": "Grace Cassidy",
       "institution": "Purdue University",
       "count": 2,
@@ -60,12 +66,6 @@
       "institution": "Purdue University - West Lafayette",
       "count": 2,
       "subfield": "Biophysics & Geophysics"
-    },
-    {
-      "name": "Robert C. Laughlin",
-      "institution": "Indiana University - Bloomington",
-      "count": 2,
-      "subfield": "Particle & Nuclear Physics"
     },
     {
       "name": "Hannah LeMoine",
