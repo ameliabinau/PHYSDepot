@@ -41,7 +41,8 @@ const subfieldMap = {
 
 // Get the HTML files from the subfield directory and other locations.
 const subfieldFiles = fs.readdirSync(subfieldsDir)
-    .filter(file => file.endsWith('.html'));
+    .filter(file => file.endsWith('.html'))
+    .map(file => path.join(subfieldsDir, file));
 const rootFilesToInclude = [path.join(repoRootDir, 'getting_started.html'),
     path.join(repoRootDir, 'learning_resources.html')
 ];
@@ -64,8 +65,7 @@ files.forEach(file => {
         .replace(/\b\w/g, c => c.toUpperCase());
 
     // Load the HTML file via Cheerio for scraping.
-    const filePath = path.join(subfieldsDir, file);
-    const html = fs.readFileSync(filePath, 'utf-8');
+    const html = fs.readFileSync(file, 'utf-8');
     const $ = cheerio.load(html);
 
     // Fetch each element with a "resource-contributor" id.
