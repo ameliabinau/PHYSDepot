@@ -1,0 +1,7 @@
+# MacOS
+*.DS_Store
+
+# Node/NPM
+node_modules/
+package-lock.json
+package.json

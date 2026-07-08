@@ -1,0 +1,64 @@
+# File: update-leaderboard.yml
+#
+# GitHub workflow that automatically runs the leaderboard update script on push.
+#
+# Programmer: Neil Ghugare
+#
+# Revision History:
+#   07/06/2026 Initial version with doc comments.
+#   07/07/2026 Fixed permission and token issues.
+#   07/08/2026 Updated Node version due to workflow annotation warning.
+#
+# Notes:
+#
+
+name: Auto Update Leaderboard
+
+# 1. Choose when this script runs.
+on:
+  push:
+    branches:
+      - main              # Runs every time code is pushed to the main branch.
+      - refactor-cleanup  # ! Test branch for testing, must be removed later
+
+# Gives this workflow write permissions.
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 2. Download the repository files to the GitHub server.
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ github.head_ref || github.ref_name }}
+
+    # 3. Set up Node.js environment.
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+        check-latest: true
+
+    # 4. Install cheerio (since the script requires it to scrape).
+    - name: Install dependencies
+      run: npm install cheerio
+
+    # 5. Execute the script to generate leaderboard.json.
+    - name: Run Scraper Script
+      run: node scripts/update-leaderboard.js
+
+    # 6. Check if leaderboard.json changed, then commit and push it back to the repo.
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add leaderboard.json
+        if ! git diff-index --quiet HEAD; then
+          git commit -m "Chore: Auto-Update Leaderboard Data"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
+        fi

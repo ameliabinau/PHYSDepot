@@ -1,0 +1,77 @@
+{
+  "lastUpdated": "July 8, 2026",
+  "entries": [
+    {
+      "name": "Amelia Binau",
+      "institution": "Indiana University - Bloomington",
+      "count": 54,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Neil Ghugare",
+      "institution": "University of Florida",
+      "count": 11,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Ethan Pinarski",
+      "institution": "Purdue University",
+      "count": 4,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Ricky Dube",
+      "institution": "Indiana University - Bloomington",
+      "count": 4,
+      "subfield": "Particle & Nuclear Physics"
+    },
+    {
+      "name": "Melody Shimba",
+      "institution": "Brown University",
+      "count": 3,
+      "subfield": "Condensed Matter & AMO"
+    },
+    {
+      "name": "Braden Garretson",
+      "institution": "Purdue University",
+      "count": 3,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Robert C. Laughlin",
+      "institution": "Indiana University - Bloomington",
+      "count": 3,
+      "subfield": "Particle & Nuclear Physics"
+    },
+    {
+      "name": "Grace Cassidy",
+      "institution": "Purdue University",
+      "count": 2,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Max Edelman",
+      "institution": "Tufts University Graduate",
+      "count": 2,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Aydian Brown",
+      "institution": "Purdue University",
+      "count": 2,
+      "subfield": "Astrophysics"
+    },
+    {
+      "name": "Allison Loper",
+      "institution": "Purdue University - West Lafayette",
+      "count": 2,
+      "subfield": "Biophysics & Geophysics"
+    },
+    {
+      "name": "Hannah LeMoine",
+      "institution": "Indiana University - Bloomington",
+      "count": 2,
+      "subfield": "Particle & Nuclear Physics"
+    }
+  ]
+}
