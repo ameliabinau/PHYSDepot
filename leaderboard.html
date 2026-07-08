@@ -106,18 +106,18 @@ tr:nth-child(even) {
       return response.json();
     })
     .then(payload => {
-      // 1. Inject the last updated timestamp
+      // 1. Inject the last updated timestamp.
       document.getElementById('last-updated-time').textContent = payload.lastUpdated;
 
       const tableBody = document.getElementById('leaderboard-data');
-      const data = payload.entries; // Access the array inside the new object structure
+      const data = payload.entries; // Access the array inside the new object structure.
       
       if (data.length === 0) {
         tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No contributors meet the leaderboard criteria yet!</td></tr>';
         return;
       }
       
-      // 2. Loop through the array and build the HTML rows
+      // 2. Loop through the array and build the HTML rows.
       let rowsHtml = '';
       data.forEach(contributor => {
         rowsHtml += `
