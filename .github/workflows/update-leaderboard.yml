@@ -7,6 +7,7 @@
 # Revision History:
 #   07/06/2026 Initial version with doc comments.
 #   07/07/2026 Fixed permission and token issues.
+#   07/08/2026 Updated Node version due to workflow annotation warning.
 #
 # Notes:
 #
@@ -40,7 +41,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '24'
 
     # 4. Install cheerio (since the script requires it to scrape).
     - name: Install dependencies
