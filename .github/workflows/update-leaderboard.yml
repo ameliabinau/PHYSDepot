@@ -8,6 +8,7 @@
 #   07/06/2026 Initial version with doc comments.
 #   07/07/2026 Fixed permission and token issues.
 #   07/08/2026 Updated Node version due to workflow annotation warning.
+#   07/10/2026 Removed test branch workflow run.
 #
 # Notes:
 #
@@ -19,7 +20,6 @@ on:
   push:
     branches:
       - main              # Runs every time code is pushed to the main branch.
-      - hep-resources  # ! Test branch for testing, must be removed later
 
 # Gives this workflow write permissions.
 permissions:
