@@ -19,7 +19,7 @@ on:
   push:
     branches:
       - main              # Runs every time code is pushed to the main branch.
-      - refactor-cleanup  # ! Test branch for testing, must be removed later
+      - hep-resources  # ! Test branch for testing, must be removed later
 
 # Gives this workflow write permissions.
 permissions:

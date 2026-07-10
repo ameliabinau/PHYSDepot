@@ -8,6 +8,7 @@
  * Revision History:
  *      07/06/2026 Initial version created with doc comments.
  *      07/07/2026 Include resources not in subfields.
+ *      07/10/2026 Update to allow for dual contributions via writer/curator.
  * 
  * Notes:
  * Run locally with Node/NPM. Will require a Cheerio installation, which can be done through "npm install cheerio".
@@ -31,7 +32,7 @@ const repoRootDir = path.join(__dirname, '../');
 const subfieldMap = {
     'bio': 'Biophysics & Geophysics',
     'education': 'Physics Education',
-    'education': 'Astrophysics',
+    'astro': 'Astrophysics',
     'experiment': 'Experimental Techniques',
     'mathematical': 'Math & Engineering Physics',
     'particle': 'Particle & Nuclear Physics',
@@ -43,7 +44,8 @@ const subfieldMap = {
 const subfieldFiles = fs.readdirSync(subfieldsDir)
     .filter(file => file.endsWith('.html'))
     .map(file => path.join(subfieldsDir, file));
-const rootFilesToInclude = [path.join(repoRootDir, 'getting_started.html'),
+const rootFilesToInclude = [
+    path.join(repoRootDir, 'getting_started.html'),
     path.join(repoRootDir, 'learning_resources.html')
 ];
 const files = [...subfieldFiles, ...rootFilesToInclude]; // All files that contributors can contribute to.
@@ -55,6 +57,9 @@ const contributors = {};
 
 // Loop through each subfield file.
 files.forEach(file => {
+    // Safety check: skip if the file doesn't exist to prevent script crashes.
+    if (!fs.existsSync(file)) return;
+
     // Get the exact filename without the ".html" extension, and lowercase it.
     const filenameKey = path.basename(file, '.html').toLowerCase();
 
@@ -68,64 +73,80 @@ files.forEach(file => {
     const html = fs.readFileSync(file, 'utf-8');
     const $ = cheerio.load(html);
 
-    // Fetch each element with a "resource-contributor" id.
+    // Fetch each element with a "resource-contributor" class.
     $('.resource-contributor').each((i, el) => {
         // Get the text of the element (trimmed).
         const fullText = $(el).text().trim();
         
-        // Find the contributor's name and institution via trimming.
+        // Ensure the text starts with "Contributor:".
         if (fullText.startsWith('Contributor:')) {
             const cleanText = fullText.replace('Contributor:', '').trim();
     
-            let name = '';
-            let institution = 'Unknown';
+            // A. Split by semicolon to handle multiple contributors (e.g., Curator; Writer)
+            const individualContributors = cleanText.split(';');
 
-            // Check if "on behalf of" is in the text (case-insensitive).
-            const behalfRegex = /(.*)\s+on\s+behalf\s+of\s+(.*)/i;
-            const match = cleanText.match(behalfRegex);
+            // B. Loop through each individual contributor block found.
+            individualContributors.forEach(contributorData => {
+                let currentBlock = contributorData.trim();
+                if (!currentBlock) return; // Skip if it's an empty block.
 
-            if (match) {
-                // match[1] is the proxy submitter (the first name).
-                // match[2] is the actual author + university (everything after "on behalf of").
-                const actualAuthorData = match[2].trim();
-                
-                // Now split the actual author's data by the comma to separate name and university.
-                const parts = actualAuthorData.split(',');
-                name = parts[0] ? parts[0].trim() : '';
-                institution = parts[1] ? parts[1].trim() : 'Unknown';
-            } else {
-                // Standard format: No "on behalf of" present.
-                const parts = cleanText.split(',');
-                name = parts[0] ? parts[0].trim() : '';
-                institution = parts[1] ? parts[1].trim() : 'Unknown';
-            }
+                let name = '';
+                let institution = 'Unknown';
 
-            // Skip anonymous entries.
-            if (name.toLowerCase() === 'anonymous') {
-                return;
-            }
+                // C. Check for "on behalf of" first
+                const behalfRegex = /(.*)\s+on\s+behalf\s+of\s+(.*)/i;
+                const match = currentBlock.match(behalfRegex);
 
-            // Check if the name exists.
-            if (name) {
-                // If the contributor is not already in the list, we add a new instance.
-                if (!contributors[name]) {
-                    contributors[name] = {
-                        name: name,
-                        institution: institution,
-                        count: 0,
-                        subfieldCounts: {}
-                    };
+                if (match) {
+                    // Handle "on behalf of" string.
+                    let actualAuthorData = match[2].trim();
+                    let parts = actualAuthorData.split(',').map(p => p.trim());
+                    
+                    // If the last part is a role, discard it.
+                    if (parts.length > 2 && ['writer', 'curator', 'editor'].includes(parts[parts.length - 1].toLowerCase())) {
+                        parts.pop();
+                    }
+                    
+                    name = parts[0] || '';
+                    institution = parts[1] || 'Unknown';
+                } else {
+                    // D. Standard format: Split by comma and clean up spaces.
+                    let parts = currentBlock.split(',').map(p => p.trim());
+
+                    // If the last part is one of our target roles, pop it out of the array!
+                    if (parts.length > 1 && ['writer', 'curator', 'editor'].includes(parts[parts.length - 1].toLowerCase())) {
+                        parts.pop();
+                    }
+
+                    name = parts[0] || '';
+                    institution = parts[1] || 'Unknown';
                 }
-                
-                // We now increment the number of contributions and check the most occuring subfield contribution.
-                contributors[name].count += 1;
-                contributors[name].subfieldCounts[currentSubfield] = (contributors[name].subfieldCounts[currentSubfield] || 0) + 1;
-                
-                // Dynamic check to see if we need to update the user's institution.
-                if (contributors[name].institution === 'Unknown' && institution !== 'Unknown') {
-                    contributors[name].institution = institution;
+
+                // Skip anonymous entries.
+                if (name.toLowerCase() === 'anonymous') {
+                    return; 
                 }
-            }
+
+                // Check if the name exists.
+                if (name) {
+                    if (!contributors[name]) {
+                        contributors[name] = {
+                            name: name,
+                            institution: institution,
+                            count: 0,
+                            subfieldCounts: {}
+                        };
+                    }
+                    
+                    // Now increment the leaderboard count.
+                    contributors[name].count += 1;
+                    contributors[name].subfieldCounts[currentSubfield] = (contributors[name].subfieldCounts[currentSubfield] || 0) + 1;
+                    
+                    if (contributors[name].institution === 'Unknown' && institution !== 'Unknown') {
+                        contributors[name].institution = institution;
+                    }
+                }
+            });
         }
     });
 });
@@ -160,8 +181,6 @@ const sortedLeaderboard = Object.values(contributors)
 // --- 5. Final Steps ---
 
 // Generate the final payload.
-// This includes the current date this file ran for the "Last Updated" title of the leaderboard page.
-// This also includes the sorted leaderboard itself.
 const finalPayload = {
     lastUpdated: new Date().toLocaleDateString('en-US', {
         year: 'numeric',
@@ -174,9 +193,9 @@ const finalPayload = {
 // Write the file to the root repo directory as a JSON file.
 fs.writeFileSync(
     path.join(repoRootDir, 'leaderboard.json'), 
-    JSON.stringify(finalPayload, null, 2) // Saves the payload object instead of just the array.
+    JSON.stringify(finalPayload, null, 2)
 );
 
-// Log to the console that the leaderboard has been updated with its new timestamp.
+// Log to the console that the leaderboard has been updated.
 console.log(`Leaderboard updated with timestamp!`);
 

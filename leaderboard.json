@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "July 9, 2026",
+  "lastUpdated": "July 10, 2026",
   "entries": [
     {
       "name": "Amelia Binau",
       "institution": "Indiana University - Bloomington",
       "count": 54,
-      "subfield": "Astrophysics"
+      "subfield": "Experimental Techniques"
     },
     {
       "name": "Neil Ghugare",
       "institution": "University of Florida",
-      "count": 11,
+      "count": 17,
       "subfield": "Astrophysics"
     },
     {
@@ -22,6 +22,12 @@
     {
       "name": "Ricky Dube",
       "institution": "Indiana University - Bloomington",
+      "count": 4,
+      "subfield": "Particle & Nuclear Physics"
+    },
+    {
+      "name": "Charlotte",
+      "institution": "Imperial College London",
       "count": 4,
       "subfield": "Particle & Nuclear Physics"
     },
