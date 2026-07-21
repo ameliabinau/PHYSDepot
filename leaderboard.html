@@ -18,6 +18,9 @@
     <title>PHYSDepot ⚛️</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Leaderboard table stylesheet relative link. -->
+    <link rel="stylesheet" href="./css/leaderboard_table.css">
+
 <style>
 
 .collapsible {
@@ -68,91 +71,50 @@ tr:nth-child(even) {
 </head>
 
 <body>
-    <header>
-        <nav id="navbar-placeholder"></nav>
-    </header>
+  <header>
+    <nav id="navbar-placeholder"></nav>
+  </header>
 
 
-    <main>
+<main>
 
-        <img src="https://physdepot.org/graphics/BumperLogo.png" width = 100%/>
+  <img src="https://physdepot.org/graphics/BumperLogo.png" width = 100%/>
 
-        <h2 style="text-align:center;"><strong>Leaderboard!</strong></h2>
+  <h2 style="text-align:center;"><strong>Leaderboard!</strong></h2>
 
-        <p style="text-align:center;">PHYSDepot is built on community contribution. Here's our current leaderboard of most contributions! You must have at least ~2~ contributions to PHYSDepot to appear on the leaderboard. If you see any inaccuracies in the leaderboard or believe you should be featured and are not, contact PHYSDepot leadership.</p>
+  <p style="text-align:center;">PHYSDepot is built on community contribution. Here's our current leaderboard of most contributions! You must have at least ~2~ contributions to PHYSDepot to appear on the leaderboard. If you see any inaccuracies in the leaderboard or believe you should be featured and are not, contact PHYSDepot leadership.</p>
 
-        <h2 style="text-align:center;"><strong>Last Updated: <span id="last-updated-time">Loading...</span>.</strong></h2>
+  <h2 style="text-align:center;"><strong>Last Updated: <span id="last-updated-time">Loading...</span>.</strong></h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Contributor</th>
-      <th>Institution</th>
-      <th>Total Contributions</th>
-      <th>Primary Subfield Contributions</th>
-    </tr>
-  </thead>
-  <tbody id="leaderboard-data">
-    <tr>
-      <td colspan="4" style="text-align: center;">Loading leaderboard...</td>
-    </tr>
-  </tbody>
-</table>
+  <header class="leaderboard-header">
+    <h2>Contributor Leaderboard</h2>
+  </header>
 
-<script>
-  fetch('./leaderboard.json')
-    .then(response => {
-      if (!response.ok) throw new Error("Could not load leaderboard data");
-      return response.json();
-    })
-    .then(payload => {
-      // 1. Inject the last updated timestamp.
-      document.getElementById('last-updated-time').textContent = payload.lastUpdated;
+  <table class="leaderboard-table">
+    <thead>
+      <tr>
+        <th>Contributor</th>
+        <th>Institution</th>
+        <th>Total Contributions</th>
+        <th>Primary Subfield</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-data">
+      <tr>
+        <td colspan="4" class="status-message">Loading leaderboard...</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <br>
 
-      const tableBody = document.getElementById('leaderboard-data');
-      const data = payload.entries; // Access the array inside the new object structure.
-      
-      if (data.length === 0) {
-        tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No contributors meet the leaderboard criteria yet!</td></tr>';
-        return;
-      }
-      
-      // 2. Loop through the array and build the HTML rows.
-      let rowsHtml = '';
-      data.forEach(contributor => {
-        rowsHtml += `
-          <tr>
-            <td>${contributor.name}</td>
-            <td>${contributor.institution}</td>
-            <td>${contributor.count}</td>
-            <td>${contributor.subfield}</td>
-          </tr>
-        `;
-      });
-      
-      tableBody.innerHTML = rowsHtml;
-    })
-    .catch(err => {
-      console.error("Leaderboard error:", err);
-      document.getElementById('leaderboard-data').innerHTML = '<tr><td colspan="4" style="text-align: center; color: red;">Failed to load leaderboard.</td></tr>';
-      document.getElementById('last-updated-time').textContent = 'Error loading date';
-    });
-</script>
+  <img src="https://physdepot.org/graphics/Banner.png" width = 100%/>
 
-<br>
+</main>
 
-
-        
-
-    <img src="https://physdepot.org/graphics/Banner.png" width = 100%/>
-
-
-    </main>
-
-
-    <footer>
-        &copy; 2026 PHYSDepot. All rights reserved.
-    </footer>
+<footer>
+    &copy; 2026 PHYSDepot. All rights reserved.
+</footer>
 
 <script src="navbar.js" type="text/javascript"></script>
 
@@ -172,6 +134,70 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
+
+<!-- Leaderboard fetching and populating JS script. -->
+<script>
+    fetch('./leaderboard.json')
+      .then(response => {
+        if (!response.ok) throw new Error("Could not load leaderboard data");
+        return response.json();
+      })
+      .then(payload => {
+        // 1. Inject the last updated timestamp
+        const timeElement = document.getElementById('last-updated-time');
+        if (timeElement) {
+          timeElement.textContent = payload.lastUpdated || "N/A";
+        }
+
+        const tableBody = document.getElementById('leaderboard-data');
+        const data = payload.entries || [];
+        
+        if (data.length === 0) {
+          tableBody.innerHTML = '<tr><td colspan="4" class="status-message">No contributors meet the leaderboard criteria yet!</td></tr>';
+          return;
+        }
+        
+        // 2. Build rows with data-label for the mobile card layout
+        let rowsHtml = '';
+        data.forEach(contributor => {
+          rowsHtml += `
+            <tr>
+              <td data-label="Contributor">${contributor.name}</td>
+              <td data-label="Institution">${contributor.institution}</td>
+              <td data-label="Total Contributions">${contributor.count}</td>
+              <td data-label="Primary Subfield">${contributor.subfield}</td>
+            </tr>
+          `;
+        });
+        
+        tableBody.innerHTML = rowsHtml;
+      })
+      .catch(err => {
+        console.error("Leaderboard error:", err);
+        const tableBody = document.getElementById('leaderboard-data');
+        if (tableBody) {
+          tableBody.innerHTML = '<tr><td colspan="4" class="status-message error">Failed to load leaderboard.</td></tr>';
+        }
+        const timeElement = document.getElementById('last-updated-time');
+        if (timeElement) {
+          timeElement.textContent = 'Error loading date';
+        }
+      });
+
+    // Collapsible Elements Script
+    const colls = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < colls.length; i++) {
+      colls[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  </script>
 
 </body>
 
