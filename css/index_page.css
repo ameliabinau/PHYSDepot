@@ -1,0 +1,378 @@
+/*
+File: index_page.css
+
+CSS page for the home page of Physdepot.org, separate from the generic stylesheet "style.css".
+
+Progammer: Neil Ghugare
+
+Revision History:
+07/20/2026 Created initial version of this file, separating from HTML.
+
+Notes:
+*/
+
+/* --- Affiliation Carousel --- */
+
+/* The outer container clips anything that extends past the screen edges. */
+.logo-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Adds a nice fade-out effect on the left and right edges. */
+.logo-slider::before,
+.logo-slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+.logo-slider::before {
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* The track holding both blocks of logos arranged in a row. */
+.logo-slide-track {
+    display: inline-flex;
+    width: max-content;
+    animation: scrollLogos 25s linear infinite; /* '25s' can be adjusted to change the speed if needed. */
+}
+
+/* Individual slide blocks containing the images. */
+.logo-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Keeps the images consistently sized and spaced. */
+.logo-slide img {
+    height: 60px;
+    margin: 0 40px; /* Spacing can be adjusted between logos if needed. */
+    object-fit: contain;
+}
+
+/* The magic animation: slides the track left by exactly half its full width. */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause the scrolling when someone hovers over a logo. */
+.logo-slider:hover .logo-slide-track {
+    animation-play-state: paused;
+}
+
+/* --- Featured Section --- */
+
+h2.section-title {
+    color: rgb(59, 24, 105);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+h2.section-title strong {
+    color: rgb(85, 35, 150);
+}
+
+.featured-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    text-decoration: none;  
+    color: inherit;         
+    
+    background: #eaeaea;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 2.5rem;
+    margin-bottom: 3rem;   
+    cursor: pointer;
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Smooth lifting effect on hover. */
+.featured-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+.featured-header-top {
+    width: 100%;
+    font-size: 1.45rem;
+    color: #1a1a1a;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.featured-image-center {
+    width: 100%;
+    max-width: 500px;        /* Limits width on large desktop screens. */
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-image-center img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;        /* Prevents images from taking over the screen height. */
+    object-fit: contain;     /* Preserves original graphic aspect ratio. */
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Gives light graphic assets a soft frame. */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 6px;
+    background-color: #fafafa;
+}
+
+.featured-description-full {
+    width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #444444;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.featured-meta-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.contributor-tag {
+    display: inline-block;
+    background-color: #f0f4f8;
+    color: rgb(0, 24, 35);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness. */
+@media (max-width: 600px) {
+    .featured-card {
+        padding: 1.5rem;
+    }
+    
+    .featured-header-top {
+        font-size: 1.25rem;
+    }
+
+    h2.section-title {
+        color: rgb(59, 24, 105);
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        text-align: left;
+    }
+}
+
+/* --- Social Section --- */
+
+.social-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Should stack on mobile */
+    gap: 1.5rem;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: #333333;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.instagram-card:hover {
+    border-color: #e1306c;
+}
+
+.discord-card:hover {
+    border-color: #5865f2; /* Discord Blurple */
+}
+
+.discord-card .social-icon {
+    color: #5865f2; /* Discord Blurple */
+}
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 2.2rem;
+}
+
+.social-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+}
+
+.social-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #555555;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.social-action {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.instragram-card .social-action {
+    color: #e1306c;
+}
+
+.discord-card .social-action {
+    color: #5865f2 /* Discord Blurple */
+}
+
+/* --- Contributor Section --- */
+
+.community-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f9f8ff 0%, #f0f4f8 100%); /* Soft gradient. */
+    border-radius: 20px;
+    border: 1px solid rgba(59, 24, 105, 0.08);
+}
+
+.community-header h2 {
+    color: rgb(59, 24, 105);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.community-lead {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contribution-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background: rgb(59, 24, 105);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: rgb(59, 24, 105);
+    border: 1px solid rgba(59, 24, 105, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contributors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.contrib-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contrib-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.institution-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.institution-list a {
+    color: rgb(59, 24, 105);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.institution-list a:hover {
+    text-decoration: underline;
+}

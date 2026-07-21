@@ -664,19 +664,6 @@ body {
 
 }
 
-.featured-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.featured-column {
-    flex: 1 1 250px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
 #important {
     background-color: hsla(272, 100%, 67%, 0.352);
     padding: 2px;

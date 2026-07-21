@@ -16,6 +16,12 @@
     <title>PHYSDepot ⚛️</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Separate homepage styelsheet, different from style.css itself. -->
+    <link rel="stylesheet" href="./css/index_page.css">
+
+    <!-- FontAwesome CDN link. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <title>PHYSDepot Calendar</title>
   <style>
     .calendar-container {
@@ -33,72 +39,6 @@
       width: 100%;
       height: 100%;
       border: 0;
-    }
-
-    /* The outer container clips anything that extends past the screen edges. */
-    .logo-slider {
-        overflow: hidden;
-        padding: 20px 0;
-        background: white;
-        white-space: nowrap;
-        position: relative;
-    }
-
-    /* Adds a nice fade-out effect on the left and right edges. */
-    .logo-slider::before,
-    .logo-slider::after {
-        content: "";
-        height: 100%;
-        position: absolute;
-        width: 150px;
-        z-index: 2;
-        pointer-events: none;
-    }
-    .logo-slider::before {
-        left: 0;
-        top: 0;
-        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    }
-    .logo-slider::after {
-        right: 0;
-        top: 0;
-        background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    }
-
-    /* The track holding both blocks of logos arranged in a row. */
-    .logo-slide-track {
-        display: inline-flex;
-        width: max-content;
-        animation: scrollLogos 25s linear infinite; /* '25s' can be adjusted to change the speed if needed. */
-    }
-
-    /* Individual slide blocks containing the images. */
-    .logo-slide {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    /* Keeps the images consistently sized and spaced. */
-    .logo-slide img {
-        height: 60px;
-        margin: 0 40px; /* Spacing can be adjusted between logos if needed. */
-        object-fit: contain;
-    }
-
-    /* The magic animation: slides the track left by exactly half its full width. */
-    @keyframes scrollLogos {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    /* Pause the scrolling when someone hovers over a logo. */
-    .logo-slider:hover .logo-slide-track {
-        animation-play-state: paused;
     }
   </style>
 </head>
@@ -162,148 +102,318 @@
             </div>
         </div>
 
-        <h2 style="text-align:center;"><i>Featured</i></h2>
+        <h2 style="text-align: center; font-size: 2rem;"><i>Featured</i></h2> <!-- todo: maybe want to replace with a banner instead of just the text, looks clunky -->
 
-        <section id="featured">
-            <h2 style="color:rgb(59, 24, 105)";>Featured in <strong>Astrophysics</strong> 🪐</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3 style="color:rgb(43, 43, 43)";><strong>Astropy: Core Package for Astronomy Analysis in Python</strong></h3>
-            <p>Astropy is an all-in-one Python package focused on helping astronomers/astrophysicists navigate and transform large and small datasets. It allows users to easily work with numerous types of coordinate systems, constants, units, dates and times, and models and fitting. The package makes it easy to create, modify, and interface with FITS files, a common file type for working with astronomical data. Astropy is a must-have package for astronomers of all experience levels working in Python.</p>
-    <p style="color:rgb(0, 24, 35);">Contributor: Ethan Pinarski, Purdue University</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/Astropy.png" width="300px" height="250px"/>
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Astrophysics</strong> 🪐</h2>
+            
+            <a href="https://www.astropy.org/" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">Astropy: Core Package for Astronomy Analysis in Python</h3>
+                
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/Astropy.png" alt="Astropy logo image." />
                 </div>
+                
+                <p class="featured-description">Astropy is an all-in-one Python package focused on helping astronomers/astrophysicists navigate and transform large and small datasets. It allows users to easily work with numerous types of coordinate systems, constants, units, dates and times, and models and fitting. The package makes it easy to create, modify, and interface with FITS files, a common file type for working with astronomical data. Astropy is a must-have package for astronomers of all experience levels working in Python.</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Ethan Pinarski, Purdue University</span>
+                </div>
+            </a>
+        </section>
+
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Quantum Information</strong> 💻</h2>
+            
+            <a href="https://quantum.cloud.ibm.com/" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">IBM Quantum Platform</h3>
+                
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/IBM.png" alt="Screenshot of IBM Quantum Platform with quantum circuit."/>
+                </div>
+                
+                <p class="featured-description">The IBM Quantum Platform offers some of theb est resources for beginner and more advanced quantum computing I've ever seen. Accessible upon creation of an IBMid, this web-based resources allows users to send quantum programs straight to IBM's quantum processors. They also offer a variety of learnign resources, including the Quantum Composer, a beautiful, clean interactive where individuals can toy around with quantum circuitry and immediately generate the corresponding code in Qiskit or OpenQASM 2.0. The platform offers courses in the fundamentals of quantum computing (IBM Quantum Learning). If you're an individual interested in experimenting with quantum computing/programming, the IBM Quantum Platform is a must-have. The only drawback is the user is only alloted 10 minutes of runtim on IBM's GPUs per month, which depending on the complexity of your quantum algorithms, may be a lot or too little.</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Amelia Binau, Indiana University - Bloomington</span>
+                </div>
+            </a>
+        </section>
+
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Condensed Matter and AMO</strong> ⚛️</h2>
+            
+            <a href="https://pages.nist.gov/MIST/" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">Microscopy Image Stitching Tool (MIST)</h3>
+                
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/MIST.png" alt="MIST example screenshot." />
+                </div>
+                
+                <p class="featured-description">Able to make 2D stitches/overlays of any data set compatible with ImageJ. Optimizes translational overlays in the X and Y directions for a full cohesive image.</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Melody Shimba, Brown University</span>
+                </div>
+            </a>
+        </section>
+
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Particle and Nuclear Physics</strong> 💥</h2>
+        
+            <a href="https://duberii.github.io/pid-playground/" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">Particle Identification Playground</h3>
+
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/PIP.png" alt="Particle image playground activities screenshot."/>
+                </div>
+
+                <p class="featured-description">This website presents a series of activities that walk through the particle identification (PID) process, which aims to determine what particles interacted with the various detectors in particle physics experiments. These activities are designed for high school and early undergraduate students, and the only required knowledge is Python, though high school level physics may be helpful as well.</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Richard Dube, Indiana University - Bloomington</span>
+                </div>
+            </a>
+        </section>
+
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Biophysics and Geophysics</strong> 🧬</h2>
+
+            <a href="https://jmars.asu.edu/" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">JMARS: Java Mission-Planning/Analysis for Remote Sensing</h3>
+
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/JMARS.png" alt="JMARS dashboard screenshot." />
+                </div>
+
+                <p class="featured-description">Provides interactive layer maps and datasets of various moons and planets, including but not limited to, Earth, Luna, Mars, Vesta, Venus, Pluto, etc. Developed at Arizona State University, the platform hosts open office hours, a Discord community, and a plethora of tutorials. JMARS has been used to plan many NASA missions, including "Mars Odyssey, Mars Global Surveyor, Mars Reconnaissance Orbiter, the Lunar Reconnaissance Orbiter, and the OSIRIS-REx asteroid sample return mission."</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Allison Loper, Purdue University - West Lafayette</span>
+                </div>
+            </a>
+        </section>
+
+        <section id="featured-section">
+            <h2 class="section-title">Featured in <strong>Experimental Techniques</strong>  🔍</h2>
+
+            <a href="https://www.rp-photonics.com/encyclopedia.html" class="featured-card" target="_blank" rel="noopener">
+                <h3 class="featured-header-top">RP Photons - Encyclopedia</h3>
+
+                <div class="featured-image-center">
+                    <img src="https://physdepot.org/graphics/RP.png" alt="Screenshot of RP Photonics encyclopedia." />
+                </div>
+
+                <p class="featured-description">Convenient location for many relevant and contemporary fields/topics in the optics space, including geometric optics, lasers, electromagnetism, material optical properties, and signal processing. It has very concie and well-written articles that simplify concepts and explanations and provide citations to begin a deeper dive, if you so choose. You can just search any relevant topic and add RP Photonics to the end of your search query to find their articles or you can just navigate on their website. Topics and subtopics are broken up into categories.</p>
+                <div class="featured-meta">
+                    <span class="contributor-tag">Contributor: Gabriel Skowronek, University of Central Florida (UCF)</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="social-section">
+            <div class="social-grid">
+                <a href="https://www.instagram.com/physdepot/" target="_blank" rel="noopener" class="social-card instagram-card">
+                    <div class="social-header">
+                        <i class="fa-brands fa-instagram social-icon"></i>
+                        <h3>Follow us on <strong>Instagram</strong></h3>
+                    </div>
+
+                    <p class="social-description">
+                        We announce events & community updates, feature new physics tools, and highlight resources and content creators in physics research!
+                    </p>
+                    <span class="social-action">Follow @PhysDepot →</span>
+                </a>
+
+                <a href="https://forms.gle/EX4rBfvTGWsdNhpH6" target="_blank" rel="noopener" class="social-card discord-card">
+                    <div class="social-header">
+                        <i class="fa-brands fa-discord social-icon"></i>
+                        <h3>Join our <strong>Discord</strong></h3>
+                    </div>
+
+                    <p class="social-description">
+                        Looking for a supportive community or peer mentorship? Request to join our server to organize events, coordinate research, host workshops, and collaborate worldwide.
+                    </p>
+                    <span class="social-action">Join Community →</span>
+                </a>
             </div>
         </section>
 
+        <h2>PHYSDepot Online Seminar/Event Calendar (Displaying in EST)</h2>
 
-        <section id="featured2">
-            <h2 style="color:rgb(59, 24, 105)";>Featured in <strong>Quantum Information</strong> 💻</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3 style="color:rgb(43, 43, 43)";><strong>IBM Quantum Platform</strong></h3>
-            <p>The IBM Quantum Platform offers some of the best resources for beginner and more advanced quantum computing I've ever seen. Accessable upon creation of an IBMid, this web-based resource allows users to send quantum programs straight to IBM's quantum processors. They also offer a variety of learning resources, including the Quantum Composer, a beautiful, clean interactive where individuals can toy around with quantum circuitry and immediately generate the corresponding code in Qiskit or OpenQASM 2.0. The platform offers courses in the fundementals of quantum computing <a href="https://learning.quantum.ibm.com/">(IBM Quantum Learning)</a>. If you're an individual interested in experimenting with quantum computing/programming, the IBM Quantum Platform is a must-have. The only drawback is the user is only allotted 10 minutes of runtime on IBM's GPU's per month, which depending on the complexity of your quantum algorithums, may be a lot or too little.</p>
-    <p style="color:rgb(0, 24, 35);">Contributor: Amelia Binau, Indiana University - Bloomington</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/IBM.png" width="300px" height="250px"/>
+        <div class="calendar-container">
+            <iframe src="https://calendar.google.com/calendar/embed?src=c_a6499d078dbc2aa013d3b75d4a4328f5e585acb58ddb1506b3019cca559f151a%40group.calendar.google.com&ctz=America%2FIndianapolis" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <section id="contributors" class="community-section">
+            <div class="community-header">
+                <h2>Built by the community, for the community ⚛️</h2>
+                <p class="community-lead">
+                    PhysDepot is powered by students, educators, and researchers worldwide. Whether you're curating a resource or writing content, there's a place for you here!
+                </p>
+
+                <div class="contribution-actions">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9zK_ipR71q9kCxk7h67qEJ-XpsYpG13emPIKZB3zU0p1UAA/viewform" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Suggest a Resource
+                    </a>
+                    <a href="mailto:amelia@physdepot.org" class="btn btn-secondary">
+                        <i class="fa-solid fa-handshake"></i> Become a Collaborator
+                    </a>
                 </div>
             </div>
-        </section>
-
-         <section id="featured">
-            <h2 style="color:rgb(59, 24, 105)";>Featured in <strong>Condensed Matter and AMO Physics</strong> ⚛️</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3><strong>Microscopy Image Stitching Tool (MIST)</strong></h3>
-            <p>Able to make 2D stitches/overlays of any data set compatible with ImageJ. Optimizes translational overlays in the X and Y directions for a fully cohesive image.</p>
-    <p style="color:rgb(0, 24, 35);">Contributor: Melody Shimba, Brown University</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/MIST.png" width="300px" height="250px"/>
-                </div>
-            </div>
-        </section>
-
-        <section id="featured2">
-            <h2 style="color:rgb(59, 24, 105)";;>Featured in <strong>Particle and Nuclear Physics</strong> 💥</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3><strong>Particle Identification Playground</strong></h3>
-            <p>This website presents a series of activities that walk through the particle identification (PID)
-                        process, which aims to determine what particles interacted with the various detectors in
-                        particle physics experiments. These activities are designed for high school and early
-                        undergraduate students, and the only required knowledge is python, though high school level
-                        physics may be helpful as well.</p>
-    <p style="color:rgb(0, 24, 35);">Contributor: Richard Dube, Indiana University - Bloomington</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/PIP.png" width="300px" height="250px"/>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="featured">
-            <h2 style="color:rgb(59, 24, 105)";>Featured in <strong>Biophysics and Geophysics</strong> 🧬</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3><strong>JMARS: Java Mission-planning and Analysis for Remote Sensing</strong></h3>
-            <p>Provides interactive layer maps and datasets of various moons and planets including but not limited to Earth, Luna, Mars, Vesta, Venus, Pluto, etc. Developed at Arizona State University, the platform hosts open office hours, a Discord community, and a plethora of tutorials. JMARS has been used to plan many NASA missions, including "Mars Odyssey, Mars Global Surveyor, Mars Reconnaissance Orbiter, the Lunar Reconnaissance Orbiter, and the OSIRIS-REx asteroid sample return mission."</p>
-    <p style="color:rgb(0, 24, 35);">Contributor: Allison Loper, Purdue University - West Lafayette</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/JMARS.png" width="300px" height="250px"/>
-                </div>
-            </div>
-        </section>
-
-    
-        <section id="featured2">
-            <h2 style="color:rgb(59, 24, 105)";>Featured in <strong>Experimental Techniques & Statistics</strong> 🔍</h2>
-            <div class="featured-container">
-            <div class="featured-column">
-            <h3><strong>RP Photonics - Encyclopedia</strong></h3>
-            <p>Convenient location for many relevant and contemporary fields/topics in the optics space including geometric optics, lasers, electromagnetism, material optical properties, signal processing. Has very concise and well-written articles that simplify concepts and explanations and provide citations to begin a deeper dive if you so choose. you can just search any relevant topic and add RP photonics to the end of your search query to find their article or you can just navigate on their website. Topics and subtopics are broken up in categories.</p>
-    <p style="color:rgb(20, 24, 35);">Contributor: Gabriel Skowronek - University of Central Florida (UCF)</p>
-            </div>
-                <div class="featured-column">
-                    <img src="https://physdepot.org/graphics/RP.png" width="300px" height="250px"/>
-                </div>
-            </div>
-        </section>
-
-        <p style="text-align: center"><a href="https://www.instagram.com/physdepot/">
-            <img src="https://physdepot.org/graphics/insta.png" height="40px"/>
-        </a>
-        <hr>
-        <p; style="color:rgb(120, 0, 70)">Follow us on <a href="https://www.instagram.com/physdepot/"><strong>Instagram</strong></a>, where we'll announce events & community updates, feature new physics tools, and highlight resources/content creators in physics research!</p></p>
-
-        <p style="text-align: center"><a href="https://forms.gle/EX4rBfvTGWsdNhpH6">
-            <img src="https://physdepot.org/graphics/discord_new.png" height="40px"/>
-        </a>
-        <hr>
-        <p style="color:rgb(29, 0, 107)">Looking to join a supportive, online community of students and scientists around the globe? Looking for peer mentorship in physics research/acadmemia? Request to join our <a href="https://forms.gle/EX4rBfvTGWsdNhpH6"><strong>Discord</strong></a>! This is where we organize events, discuss research options/project ideas, coordinate across institutions, host workshops, and help each other develop as learners, innovators, teachers, and creators.</p></p>
-
-<h2>PHYSDepot Online Seminar/Event Calendar (Displaying in EST)</h2>
-
-<div class="calendar-container">
-<iframe src="https://calendar.google.com/calendar/embed?src=c_a6499d078dbc2aa013d3b75d4a4328f5e585acb58ddb1506b3019cca559f151a%40group.calendar.google.com&ctz=America%2FIndianapolis" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-</div>
-
-        <section id="contributors">
-            <h2 style="color:rgb(0, 0, 0)">Contributors</h2>
-            <p  style="color:rgb(0, 0, 0)">We always welcome new collaborators! To join, email <a href="mailto:amelia@physdepot.org">Amelia</a> and
-                <a href="mailto:ricky@physdepot.org">Ricky</a>. To suggest resources, fill out our <a
-                    href=https://docs.google.com/forms/d/e/1FAIpQLSc9zK_ipR71q9kCxk7h67qEJ-XpsYpG13emPIKZB3zU0p1UAA/viewform>form</a>.
-            </p>
 
             <div class="contributors-container">
-                <div class="contrib-column">
-                    <h3>Institutions</h3>
-                    <p><a href="https://physics.indiana.edu/index.html" target="_blank">Indiana University
-                            (Bloomington)</a></p>
+                <div class="contrib-card">
+                    <h3><i class="fa-solid fa-users"></i> Core Contributors</h3>
+                    
+                    <ul class="institution-list">
+                        <li>
+                            <a href="mailto:amelia@physdepot.org">
+                                <i class="fa-solid fa-user-tie"></i> Amelia Binau
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:ricky@physdepot.org">
+                                <i class="fa-solid fa-user-tie"></i> Richard (Ricky) Dube
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr />
+
+                    <ul class="institution-list">
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Aydian Brown
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Grace Cassidy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Max Edelman
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Braden Garretson
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Neil Ghugare
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Charlotte Knight
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Robert C. Laughlin
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Hannah LeMoine
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Allison Loper
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Ethan Pinarski
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <i class="fa-solid fa-user"></i> Melody Shimba
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="contrib-column">
-                    <h3>Individuals</h3>
-                    <p>
-                        <a href="mailto:amelia@physdepot.org">Amelia Binau</a><br>
-                        <a href="mailto:ricky@physdepot.org">Richard (Ricky) Dube</a>
-                    </p>
+
+                <div class="contrib-card">
+                    <h3><i class="fa-solid fa-building-columns"></i> Participating Institutions*</h3>
+                    <ul class="institution-list">
+                        <li>
+                            <a href="https://physics.indiana.edu/index.html" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> Indiana University - Bloomington
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://purdue.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> Purdue University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://uconn.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> University of Connecticut
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.brown.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> Brown University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.osu.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> The Ohio State University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.ufl.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> University of Florida (UF)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.ucf.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> University of Central Florida (UCF)
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.tufts.edu/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> Tufts University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.imperial.ac.uk/" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-graduation-cap"></i> Imperial College London
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <p style="color:rgb(70, 44, 104)";>*PHYSDepot does not claim to be formally affiliated with, funded by, or represented by the depicted institutions. This banner is for illustrative purposes only; it represents institutions with which our <i>contributors and project partners</i> are affiliated and the breadth of our professional network.</p>
 
+        <br></br>
 
-    <br></br>
-<img src="https://physdepot.org/graphics/Banner.png" width = 100%/>
-
+        <img src="https://physdepot.org/graphics/Banner.png" width = 100%/>
+    
     </main>
-
 
     <footer>
         &copy; 2026 PHYSDepot. All rights reserved.              
