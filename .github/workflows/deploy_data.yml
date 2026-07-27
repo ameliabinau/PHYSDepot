@@ -34,7 +34,55 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Build and Inject HTML Block
+      - name: Write Automated Injector Script
+        run: |
+          cat << 'EOF' > inject_script.py
+          import os
+          import sys
+
+          # 1. Safely pull environmental variables
+          file_path = os.getenv('FILE')
+          anchor = os.getenv('ANCHOR')
+          title = os.getenv('TITLE')
+          reqs = os.getenv('REQS')
+          desc = os.getenv('DESC')
+          contrib = os.getenv('CONTRIB')
+          link = os.getenv('LINK')
+
+          # 2. Build template using isolated string concatenation
+          card = (
+              '             <button class="collapsible-card collapsed">\n'
+              f'                <h2 class="collapsible-card-title">{title}</h2>\n'
+              '                <div class="collapsible-card-info">\n'
+              f'                    <p class="resource-requirements">Usage Requirements: {reqs}</p>\n'
+              f'                    <p>{desc}</p>\n'
+              f'                    <p class="resource-contributor">Contributor: {contrib}</p>\n'
+              f'                    <a class="collapsible-content-button" href="{link}" target="_blank">Click here to\n'
+              '                        access this resource</a>\n'
+              '                </div>\n'
+              '            </button>\n'
+          )
+
+          # 3. Read raw HTML target page text
+          if not os.path.exists(file_path):
+              print(f"Error: File target path does not exist: {file_path}")
+              sys.exit(1)
+
+          with open(file_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+
+          # 4. Splice layout cleanly at the anchor hook position
+          if anchor in content:
+              updated_content = content.replace(anchor, f"{card}            {anchor}")
+              with open(file_path, 'w', encoding='utf-8') as f:
+                  f.write(updated_content)
+              print("Data successfully injected above target anchor comment.")
+          else:
+              print(f"Error: Target anchor placeholder hook was not found: {anchor}")
+              sys.exit(1)
+          EOF
+
+      - name: Execute Injector Script Engine
         env:
           TITLE: ${{ github.event.inputs.item_title }}
           REQS: ${{ github.event.inputs.item_requirements }}
@@ -43,42 +91,7 @@ jobs:
           LINK: ${{ github.event.inputs.item_link }}
           FILE: ${{ github.event.inputs.target_file }}
           ANCHOR: ${{ github.event.inputs.target_anchor }}
-        run: |
-          python -c "
-          import os
-          
-          # 1. Grab inputs safely out of the environment
-          file_path = os.getenv('FILE')
-          anchor = os.getenv('ANCHOR')
-          
-          # 2. Build the exact card block layout
-          card = (
-              '             <button class=\"collapsible-card collapsed\">\n'
-              f'                <h2 class=\"collapsible-card-title\">{os.getenv(\"TITLE\")}</h2>\n'
-              '                <div class=\"collapsible-card-info\">\n'
-              f'                    <p class=\"resource-requirements\">Usage Requirements: {os.getenv(\"REQS\")}</p>\n'
-              f'                    <p>{os.getenv(\"DESC\")}</p>\n'
-              f'                    <p class=\"resource-contributor\">Contributor: {os.getenv(\"CONTRIB\")}</p>\n'
-              f'                    <a class=\"collapsible-content-button\" href=\"{os.getenv(\"LINK\")}\" target=\"_blank\">Click here to\n'
-              '                        access this resource</a>\n'
-              '                </div>\n'
-              '            </button>\n'
-          )
-          
-          # 3. Read the HTML target file text
-          with open(file_path, 'r', encoding='utf-8') as f:
-              content = f.read()
-              
-          # 4. Find the placeholder anchor tag and slot the card above it
-          if anchor in content:
-              updated_content = content.replace(anchor, f'{card}            {anchor}')
-              with open(file_path, 'w', encoding='utf-8') as f:
-                  f.write(updated_content)
-              print('Successfully injected.')
-          else:
-              print(f'Error: Could not find target anchor tag: {anchor}')
-              exit(1)
-          "
+        run: python inject_script.py
 
       - name: Create Pull Request for Review
         uses: peter-evans/create-pull-request@v6
