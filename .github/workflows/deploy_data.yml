@@ -1,0 +1,60 @@
+name: Inject Formatted HTML Card
+
+on:
+  workflow_dispatch:
+    inputs:
+      item_title:
+        required: true
+      item_requirements:
+        required: true
+      item_description:
+        required: true
+      item_contributor:
+        required: true
+      item_link:
+        required: true
+      target_file:
+        required: true
+      target_anchor:
+        required: true
+
+jobs:
+  inject-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build and Inject HTML Block
+        run: |
+          TARGET_FILE="${{ github.event.inputs.target_file }}"
+          TARGET_ANCHOR="${{ github.event.inputs.target_anchor }}"
+
+          # Build your dynamic card with the specific inputs from Google Sheets
+          read -r -d '' HTML_BLOCK << EOM || true
+                       <button class="collapsible-card collapsed">
+                          <h2 class="collapsible-card-title">${{ github.event.inputs.item_title }}</h2>
+                          <div class="collapsible-card-info">
+                              <p class="resource-requirements">Usage Requirements: ${{ github.event.inputs.item_requirements }}</p>
+                              <p>${{ github.event.inputs.item_description }}</p>
+                              <p class="resource-contributor">Contributor: ${{ github.event.inputs.item_contributor }}</p>
+                              <a class="collapsible-content-button" href="${{ github.event.inputs.item_link }}" target="_blank">Click here to access this resource</a>
+                          </div>
+                      </button>
+          EOM
+
+          # Escape newlines so sed can safely handle the multi-line block replacement
+          ESCAPED_BLOCK=$(echo "$HTML_BLOCK" | sed ':a;N;$!ba;s/\n/\\n/g')
+          
+          # Inject the new block above the designated hidden placeholder tag
+          sed -i "s|$TARGET_ANCHOR|$ESCAPED_BLOCK\n            $TARGET_ANCHOR|g" "$TARGET_FILE"
+
+      - name: Create Pull Request for Review
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Automated entry: Add card for ${{ github.event.inputs.item_title }}"
+          title: "New Resource Submission: ${{ github.event.inputs.item_title }}"
+          body: "Target File: ${{ github.event.inputs.target_file }} | Target Anchor: ${{ github.event.inputs.target_anchor }}"
+          branch: "suggested-entry-${{ github.event.inputs.item_title }}"
+          base: "main"
