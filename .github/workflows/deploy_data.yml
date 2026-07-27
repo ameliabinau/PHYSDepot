@@ -18,6 +18,11 @@ on:
       target_anchor:
         required: true
 
+# 1. ADD THIS BLOCK: Grants the runner permission to write code and open PRs
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   inject-html:
     runs-on: ubuntu-latest
@@ -56,5 +61,7 @@ jobs:
           commit-message: "Automated entry: Add card for ${{ github.event.inputs.item_title }}"
           title: "New Resource Submission: ${{ github.event.inputs.item_title }}"
           body: "Target File: ${{ github.event.inputs.target_file }} | Target Anchor: ${{ github.event.inputs.target_anchor }}"
-          branch: "suggested-entry-${{ github.event.inputs.item_title }}"
+          # 2. CHANGE THIS LINE: Uses a unique runtime execution number instead of titles with spaces
+          branch: "suggested-entry-${{ github.run_id }}-${{ github.run_number }}"
           base: "main"
+
