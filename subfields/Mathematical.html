@@ -13,8 +13,15 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHYSDepot ⚛️</title>
+    <title>PHYSDepot</title>
     <link rel="stylesheet" href="../style.css">
+
+    <!-- Favicon image -->
+    <link rel="icon" type="image/png" href="../graphics/logo_favicon.png">
+
+    <!-- FontAwesome CDN link. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -83,34 +90,100 @@
 
         <h2>Packages</h2>
 
-<div class="card-container">
-            <button class="collapsible-card collapsed">
-                <h2 class="collapsible-card-title">Chebfun MATLAB</h2>
-                <div class="collapsible-card-info">
-                    <p class="resource-requirements">Language Requirement(s): MATLAB. Usage Requirements: MATLAB environment.
-                    </p>
-                    <p>Chebfun is a MATLAB package created in 2002 that allows the user to work with and visualize a plethora of advanced mathematical functions. It serves as the primary tool for examples in the textbook <a href="https://www.chebfun.org/ATAP/">Approximation Theory and Approximation Practice</a>, of which example codes and the first 6 chapters are available online. Work with linear and nonlinear ODEs, integration methods, Chebyshev expansions, complex analysis, Fourier analysis, PDEs, multivariate approximation methods, and more. Chebfun is well-documented, featuring a <a href="https://www.chebfun.org/docs/guide/">guide</a> which includes its extensions <a href="https://www.chebfun.org/docs/guide/guide16.html">Diskfun</a> and <a href="https://www.chebfun.org/docs/guide/guide17.html">Spherefun</a>. Must be awfully fun!</p>
-                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
-                    <a class="collapsible-content-button"
-                        href="https://www.chebfun.org/" target="_blank">Click here
-                        to access this resource</a> 
-                </div>
-            </button>
+            <div class="card-container">
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">Chebfun MATLAB</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">Language Requirement(s): MATLAB. Usage Requirements: MATLAB environment.
+                        </p>
+                        <p>Chebfun is a MATLAB package created in 2002 that allows the user to work with and visualize a plethora of advanced mathematical functions. It serves as the primary tool for examples in the textbook <a href="https://www.chebfun.org/ATAP/">Approximation Theory and Approximation Practice</a>, of which example codes and the first 6 chapters are available online. Work with linear and nonlinear ODEs, integration methods, Chebyshev expansions, complex analysis, Fourier analysis, PDEs, multivariate approximation methods, and more. Chebfun is well-documented, featuring a <a href="https://www.chebfun.org/docs/guide/">guide</a> which includes its extensions <a href="https://www.chebfun.org/docs/guide/guide16.html">Diskfun</a> and <a href="https://www.chebfun.org/docs/guide/guide17.html">Spherefun</a>. Must be awfully fun!</p>
+                        <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                        <a class="collapsible-content-button"
+                            href="https://www.chebfun.org/" target="_blank">Click here
+                            to access this resource</a> 
+                    </div>
+                </button>
 
-            <button class="collapsible-card collapsed">
-                <h2 class="collapsible-card-title">mpmath</h2>
-                <div class="collapsible-card-info">
-                    <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements: Python-compatible IDE.
-                    </p>
-                    <p>Need more precision in your calculations than base Python offers? mpmath allows the user to carry out calculations, whether real or complex, to an arbitrary decimal precision and also includes a robust library of special functions. With co-implementation of <a href="https://github.com/gmpy2/gmpy2">gmpy2</a>, users may arithmetically manipulate data at precisions over 100 decimal points. This package is integrated into popular packages/systems such as Sage and SymPy.</p>
-                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
-                    <a class="collapsible-content-button"
-                        href="https://mpmath.org/" target="_blank">Click here
-                        to access this resource</a> 
-                </div>
-            </button>
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">mpmath</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">Language Requirement(s): Python. Usage Requirements: Python-compatible IDE.
+                        </p>
+                        <p>Need more precision in your calculations than base Python offers? mpmath allows the user to carry out calculations, whether real or complex, to an arbitrary decimal precision and also includes a robust library of special functions. With co-implementation of <a href="https://github.com/gmpy2/gmpy2">gmpy2</a>, users may arithmetically manipulate data at precisions over 100 decimal points. This package is integrated into popular packages/systems such as Sage and SymPy.</p>
+                        <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington</p>
+                        <a class="collapsible-content-button"
+                            href="https://mpmath.org/" target="_blank">Click here
+                            to access this resource</a> 
+                    </div>
+                </button>
 
-        </div>
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">FEniCS Project</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">
+                            Language Requirement(s): Python or C++ interface. Backend components rely on C++. Usage Requirements: Works natively with MacOS or Linux, Windows requires WSL or Docker. Integrates with MPI for parallel computing if required.
+                        </p>
+                        <p>
+                            FEniCS is an open-source package for solving partial differential equations (PDEs), specifically using the finite element method (FEM).
+                            It has high-level Python and C++ interfaces, and runs on a wide range of hardware, from standard laptops to supercomputers.
+                            Some examples of usage within the physics/engineering world include solving: the heat equation, multiple styles of Poisson equations, linear elasticity and hyperelasticity equations, Navier-Stokes equations, and the Helmholtz equation.
+                            Additionally, the FEniCS project provides a <a href="https://launchpadlibrarian.net/83776282/fenics-book-2011-10-27-final.pdf" target="_blank" rel="noopener"><i>free ebook</i></a> that explains the theoretical background and design of FEniCS, and showcases applications.
+                            It is important to note that the book hasn't been updated since 2012, so why the theoretical framework is valid, the code examples may be out of date.
+                        </p>
+                        <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                        <a class="collapsible-content-button" href="https://fenicsproject.org/" target="_blank" rel="noopener">Click here to access this resource</a> 
+                    </div>
+                </button>
+
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">Meep</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">
+                            Language Requirement(s): Python, C++, and/or Scheme API. Usage Requirements: Runs on Linux or MacOS. Supports multi-core scaling via MPI. Relies on LAPACK/BLAS for linear algebra tools. Works offline. Outputs HDF5 files.
+                        </p>
+                        <p>
+                            Meep is an open-source package for the simulation of electromagnetics using the finite-difference time-domain (FDTD) method.
+                            It is completely scriptable via Python, C++, or Scheme APIs, and allows for simulations in one to three dimensions, and even in cylindrical coordinates.
+                            It contains many features for electromagnetic simulations, including but not limited to: arbitrary material types, a materials library, multiple boundary conditions, differing symmetries, wave solvers, and field analysis tools like Fourier transforms and Poynting flux analysis.
+                        </p>
+                        <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                        <a class="collapsible-content-button" href="https://meep.readthedocs.io/en/latest/" target="_blank" rel="noopener">Click here to access this resource</a> 
+                    </div>
+                </button>
+
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">Cantera</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">
+                            Language Requirement(s): The core engine is in C++, but a user can interface with it in Python, C++, MATLAB, and/or Fortran. Usage Requirements: Works on Linux, MacOS, or Windows. It can integrate with standard packages, like NumPy's standard numerical arrays. Works offline.
+                        </p>
+                        <p>
+                            Cantera is an open-source package that helps solve problems in chemical kinetics, transport processes, and thermodynamics.
+                            It allows for engineering physicists to model complex physical phenomena.
+                            This includes reactive fluid dynamics, electrochemical battery reactions, plasma chemistry, and combustion mechanics.
+                            It does so by solving ordinary differential equations (ODEs) and state equations.
+                        </p>
+                        <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                        <a class="collapsible-content-button" href="https://cantera.org/" target="_blank" rel="noopener">Click here to access this resource</a> 
+                    </div>
+                </button>
+
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">SUNDIALS</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">
+                            Language Requirement(s): Written in C, but has interfaces for Python or Fortran. Usage Requirements: Installed via Spack or CMake. Can be built with MPI support or GPU acceleration. Works offline across Linux, MacOS, and Windows.
+                        </p>
+                        <p>
+                            SUNDIALS (<strong>SU</strong>ite of <strong>N</strong>onlinear and <strong>DI</strong>fferential/<strong>AL</strong>gebraic Equation <strong>S</strong>olvers) is an open-source library developed by LLNL that helps solve mathematical equations of physical phenomena.
+                            It can be easily incorporated into existing simulation codes, consisting of six packages, including: ordinary differential equation (ODE) systems, differential-algebraic equation (DAE) systems, and nonlinear, algebraic systems.
+
+                        </p>
+                        <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                        <a class="collapsible-content-button" href="https://sundials.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Click here to access this resource</a> 
+                    </div>
+                </button>
+            </div>
 
         <h2>Datasets</h2>
 <div class="card-container">
@@ -129,9 +202,22 @@
 
         </div>
     </main>
-    <footer>
-        &copy; 2026 PHYSDepot. All rights reserved.
-    </footer>
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 <strong>PHYSDepot</strong>. All rights reserved.</p>
+        
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/physdepot/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram social-icon"></i>
+                </a>
+                <a href="https://forms.gle/EX4rBfvTGWsdNhpH6" target="_blank" rel="noopener" aria-label="Discord">
+                    <i class="fa-brands fa-discord social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </footer> 
+
     <script src="../navbar.js" type="text/javascript"></script>
     <script src="../collapsible-cards.js" type="text/javascript"></script>
 

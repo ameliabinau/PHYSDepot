@@ -342,14 +342,6 @@ a {
     text-decoration: underline;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #42008C;
-    color: white;
-    margin-top: 2rem;
-}
-
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -684,4 +676,54 @@ body {
     flex: 1 1 250px;
     color: rgb(0, 0, 0);
     text-align: center;
+}
+
+/* --- Footer Styling --- */
+
+.footer-socials .social-icon {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-socials a:hover .social-icon {
+    color: #b78bc3; /* Accent highlight cover (on hover). */
+    transform: translateY(-2px);
+}
+
+.site-footer {
+    background-color: #42008C;
+    color: #94a3b8;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.25rem 2rem;
+}
+
+.copyright strong {
+    color: #ffffff;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column-reverse; /* Icons on top, copyright on bottom, for mobile viewing. */
+        text-align: center;
+        justify-content: center;
+    }
 }
