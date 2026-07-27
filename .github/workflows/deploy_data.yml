@@ -18,7 +18,6 @@ on:
       target_anchor:
         required: true
 
-# 1. ADD THIS BLOCK: Grants the runner permission to write code and open PRs
 permissions:
   contents: write
   pull-requests: write
@@ -30,29 +29,56 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Build and Inject HTML Block
+        env:
+          TITLE: ${{ github.event.inputs.item_title }}
+          REQS: ${{ github.event.inputs.item_requirements }}
+          DESC: ${{ github.event.inputs.item_description }}
+          CONTRIB: ${{ github.event.inputs.item_contributor }}
+          LINK: ${{ github.event.inputs.item_link }}
+          FILE: ${{ github.event.inputs.target_file }}
+          ANCHOR: ${{ github.event.inputs.target_anchor }}
         run: |
-          TARGET_FILE="${{ github.event.inputs.target_file }}"
-          TARGET_ANCHOR="${{ github.event.inputs.target_anchor }}"
-
-          # Build your dynamic card with the specific inputs from Google Sheets
-          read -r -d '' HTML_BLOCK << EOM || true
-                       <button class="collapsible-card collapsed">
-                          <h2 class="collapsible-card-title">${{ github.event.inputs.item_title }}</h2>
-                          <div class="collapsible-card-info">
-                              <p class="resource-requirements">Usage Requirements: ${{ github.event.inputs.item_requirements }}</p>
-                              <p>${{ github.event.inputs.item_description }}</p>
-                              <p class="resource-contributor">Contributor: ${{ github.event.inputs.item_contributor }}</p>
-                              <a class="collapsible-content-button" href="${{ github.event.inputs.item_link }}" target="_blank">Click here to access this resource</a>
-                          </div>
-                      </button>
-          EOM
-
-          # Escape newlines so sed can safely handle the multi-line block replacement
-          ESCAPED_BLOCK=$(echo "$HTML_BLOCK" | sed ':a;N;$!ba;s/\n/\\n/g')
+          python -c "
+          import os
           
-          # Inject the new block above the designated hidden placeholder tag
-          sed -i "s|$TARGET_ANCHOR|$ESCAPED_BLOCK\n            $TARGET_ANCHOR|g" "$TARGET_FILE"
+          # 1. Grab inputs safely out of the environment
+          file_path = os.getenv('FILE')
+          anchor = os.getenv('ANCHOR')
+          
+          # 2. Build the exact card block layout
+          card = (
+              '             <button class=\"collapsible-card collapsed\">\n'
+              f'                <h2 class=\"collapsible-card-title\">{os.getenv(\"TITLE\")}</h2>\n'
+              '                <div class=\"collapsible-card-info\">\n'
+              f'                    <p class=\"resource-requirements\">Usage Requirements: {os.getenv(\"REQS\")}</p>\n'
+              f'                    <p>{os.getenv(\"DESC\")}</p>\n'
+              f'                    <p class=\"resource-contributor\">Contributor: {os.getenv(\"CONTRIB\")}</p>\n'
+              f'                    <a class=\"collapsible-content-button\" href=\"{os.getenv(\"LINK\")}\" target=\"_blank\">Click here to\n'
+              '                        access this resource</a>\n'
+              '                </div>\n'
+              '            </button>\n'
+          )
+          
+          # 3. Read the HTML target file text
+          with open(file_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+              
+          # 4. Find the placeholder anchor tag and slot the card above it
+          if anchor in content:
+              updated_content = content.replace(anchor, f'{card}            {anchor}')
+              with open(file_path, 'w', encoding='utf-8') as f:
+                  f.write(updated_content)
+              print('Successfully injected.')
+          else:
+              print(f'Error: Could not find target anchor tag: {anchor}')
+              exit(1)
+          "
 
       - name: Create Pull Request for Review
         uses: peter-evans/create-pull-request@v6
@@ -61,7 +87,5 @@ jobs:
           commit-message: "Automated entry: Add card for ${{ github.event.inputs.item_title }}"
           title: "New Resource Submission: ${{ github.event.inputs.item_title }}"
           body: "Target File: ${{ github.event.inputs.target_file }} | Target Anchor: ${{ github.event.inputs.target_anchor }}"
-          # 2. CHANGE THIS LINE: Uses a unique runtime execution number instead of titles with spaces
           branch: "suggested-entry-${{ github.run_id }}-${{ github.run_number }}"
           base: "main"
-
