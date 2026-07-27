@@ -694,7 +694,7 @@ body {
 .site-footer {
     background-color: #42008C;
     color: #94a3b8;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
     margin-top: 3rem;
     border-top: 1px solid #1e293b;
     font-size: 0.9rem;
@@ -702,12 +702,12 @@ body {
 }
 
 .footer-container {
-    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    padding: 0.25rem 2rem;
 }
 
 .copyright strong {
