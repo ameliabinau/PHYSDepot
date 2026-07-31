@@ -18,8 +18,8 @@ Notes:
     overflow: hidden;
     padding: 20px 0;
     background: white;
-    white-space: nowrap;
     position: relative;
+    width: 100%;
 }
 
 /* Adds a nice fade-out effect on the left and right edges. */
@@ -43,24 +43,22 @@ Notes:
     background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* The track holding both blocks of logos arranged in a row. */
-.logo-slide-track {
-    display: inline-flex;
+.logo-track-container {
+    display: flex;
     width: max-content;
-    animation: scrollLogos 25s linear infinite; /* '25s' can be adjusted to change the speed if needed. */
+    animation: scrollLogos 25s linear infinite;
 }
 
-/* Individual slide blocks containing the images. */
-.logo-slide {
+/* The track holding both blocks of logos arranged in a row. */
+.logo-slide-track {
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
 /* Keeps the images consistently sized and spaced. */
-.logo-slide img {
+.logo-slide-track img {
     height: 60px;
-    margin: 0 40px; /* Spacing can be adjusted between logos if needed. */
+    margin: 0 10px; /* Spacing can be adjusted between logos if needed. */
     object-fit: contain;
 }
 
@@ -75,7 +73,7 @@ Notes:
 }
 
 /* Pause the scrolling when someone hovers over a logo. */
-.logo-slider:hover .logo-slide-track {
+.logo-slider:hover .logo-track-container {
     animation-play-state: paused;
 }
 
