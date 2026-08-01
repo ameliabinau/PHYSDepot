@@ -46,7 +46,6 @@ jobs:
           const filePath = process.env.FILE;
           const anchor = process.env.ANCHOR;
 
-          // 1. Build the exact card layout string 
           const card = \`             <button class=\"collapsible-card collapsed\">
                           <h2 class=\"collapsible-card-title\">\${process.env.TITLE}</h2>
                           <div class=\"collapsible-card-info\">
@@ -57,25 +56,22 @@ jobs:
                           </div>
                       </button>\n\`;
 
-          // 2. Validate file existence safely
           if (!fs.existsSync(filePath)) {
-            console.error(\`❌ Error: The file '\${filePath}' does not exist in your repository!\`);
+            console.error(\`Error: The file '\${filePath}' does not exist in your repository!\`);
             process.exit(1);
           }
 
           let fileContent = fs.readFileSync(filePath, 'utf8');
 
-          // 3. Check for anchor tag presence inside target file
           if (!fileContent.includes(anchor)) {
-            console.error(\`❌ Error: The anchor tag comment '\${anchor}' was not found inside '\${filePath}'!\`);
+            console.error(\`Error: The anchor tag comment '\${anchor}' was not found inside '\${filePath}'!\`);
             console.log('Please verify your comment spelling matches your spreadsheet options identically.');
             process.exit(1);
           }
 
-          // 4. Inject card smoothly above anchor tag loop
           const updatedContent = fileContent.replace(anchor, \`\${card}            \${anchor}\`);
           fs.writeFileSync(filePath, updatedContent, 'utf8');
-          console.log('✅ Success: Card layout injected successfully!');
+          console.log('Success: Card layout injected successfully!');
           "
 
       - name: Create Pull Request for Review
