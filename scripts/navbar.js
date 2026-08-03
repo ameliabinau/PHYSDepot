@@ -1,5 +1,5 @@
 //Replaces the navbar placeholder with the actual navbar
-fetch("/navbar.html")
+fetch("../assets/navbar.html")
     .then(response => response.text())
     .then(html => {
         document.getElementById('navbar-placeholder').innerHTML = html;
