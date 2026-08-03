@@ -1,0 +1,99 @@
+/*
+ * File: 404_page.css
+ * 
+ * Description Placeholder
+ * 
+ * Programmer: Neil Ghugare
+ * 
+ * Revision History:
+ * 07/31/2026 - Created initial version.
+ * 
+ * Notes:
+ */
+
+/* --- 404 Page Styling --- */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.error-code {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #4b0082;
+    line-height: 1;
+}
+
+.error-container h2 {
+    font-size: 1.8rem;
+    margin: 10px 0 15px;
+    color: #222;
+}
+
+.error-container p {
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4b0082;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-home:hover {
+    background-color: #380062;
+    transform: translateY(-2px);
+}
+
+.error-banner {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.error-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* --- Body Updates --- */
+/* This is because the page is small vertically. */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
