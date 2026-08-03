@@ -22,6 +22,12 @@
     <!-- FontAwesome CDN link. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- For LaTeX styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            onload="renderMathInElement(document.body);"></script>
+
 </head>
 
 <body>
@@ -183,6 +189,23 @@
                         </p>
                         <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
                         <a class="collapsible-content-button" href="https://sundials.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Click here to access this resource</a> 
+                    </div>
+                </button>
+
+                <button class="collapsible-card collapsed">
+                    <h2 class="collapsible-card-title">HEACalculator</h2>
+                    <div class="collapsible-card-info">
+                        <p class="resource-requirements">
+                            Language Requirement(s): Python 3.10+ managed via pip or <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener">uv</a>.
+                            Usage Requirements: Runnable directly via local scripts, works offline in that form.
+                        </p>
+                        <p>
+                            HEACalculator is a Python package for calculating phenomenological parameters for High Entropy Alloys (HEAs).
+                            It uses thermodynamics and physics to predict the formation of solid solutions for HEAs.
+                            It can predict and calculate multiple utilities, like valence electron concentration (VEC), mixing enthalpy \(\Delta H_{\rm mix}\) and entropy \(\Delta S_{\rm mix}\), and atomic size differences \(\delta\), among others.
+                        </p>
+                        <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                        <a class="collapsible-content-button" href="https://dogusariturk.github.io/HEACalculator/" target="_blank" rel="noopener">Click here to access this resource</a>
                     </div>
                 </button>
 

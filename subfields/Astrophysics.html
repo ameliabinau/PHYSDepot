@@ -196,6 +196,22 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Strasbourg Astronomical Data Center</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Python via Astroquery or Java via Aladin, if you wish to use either for access instead of the standard web API.
+                        Usage Requirements: Web-accessible catalog database requires internet connection to query, although data can be saved locally later.
+                    </p>
+                    <p>
+                        An international scientific data hub operated by the Strasbourg Observatory that provides access to global astronomical databases.
+                        This includes SIMBAD, VizieR, and Aladin. It serves as an indispensable lookup ecosystem for identifying celestial obejcts and sourcing archival data.
+                    </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                    <a class="collapsible-content-button" href="https://cdsweb.u-strasbg.fr/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
 
             <!-- INSERT_ASTRO_SOFTWARE -->
 
@@ -382,6 +398,41 @@ In my experience, it is an excellent resource for handling large data tables, an
                         here to access this resource</a>
                 </div>
             </button>
+        
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">PyAutoGalaxy</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Requires Python and multiple Python packages as dependencies, such as NumPy and Astropy.
+                        Usage Requirements: Cross-platform, parallelizable for multi-core CPU projects, and works offline once necessary files and data are loaded.
+                    </p>
+                    <p>
+                        An open-source software for analysing the morphologies & structures of galaxies.
+                        It uses inference and analysis to dissect galaxy images into light profiles and identifies structural features like bars, spiral arms, merger tidal tails, etc.
+                        This helps bridge the gap between raw telescope imagery (like ALMA) and astrophysical morphology measurements.
+                        PyAutoGalaxy can also fit interferometer data from observatories.
+                    </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                    <a class="collapsible-content-button" href="https://pyautogalaxy.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Zoobot</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Requires Python and PyTorch/Tensorflow.
+                        Usage Requirements: Local hardware for fine-tuning or inference, but GPU hardware recommended for model training (and is supported). Works offline once necessary files are downloaded.
+                    </p>
+                    <p>
+                        An open-source Python library developed by the Galaxy Zoo collaboration that provides pre-trained deep learning models for galaxy morphology classification.
+                        Trained on millions of answers by volunteers, Zoobot lets researchers fine-tune Bayesian convolutional neural networks and vision transformers to identify specific features of galaxies with minimal new training labels and code.
+                        Such features include spiral arms, bars, or galaxy mergers.
+                    </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                    <a class="collapsible-content-button" href="https://github.com/mwalmsley/zoobot" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
 
 
     <!-- INSERT_ASTRO_PACKAGES -->
@@ -535,6 +586,41 @@ In my experience, it is an excellent resource for handling large data tables, an
                     <a class="collapsible-content-button" href="https://gwosc.org/" target="_blank">Click here to access this resource</a>
                 </div>
             </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Euclid Galaxy Morphology Dataset</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Multi-format dataset (PyTorch tensor files, HDF5, NumPy arrays, or CSV annotations). Language-agnostic, but it seems heavily geared towards Python/uv/Huggingface.
+                        Usage Requirements: Requires local disk space and internet connection for initial download.
+                    </p>
+                    <p>
+                        An astronomical dataset comprising of galaxy imagery, morphological classifications, and Sparse Autoencoder (SAE) latent fefature representations for ESA's <i>Euclid</i> space mission analysis pipelines.
+                        The code for the related <a href="https://arxiv.org/abs/2510.23749" target="_blank" rel="noopener">research paper</a> is also available in the GitHub.
+                    </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                    <a class="collapsible-content-button" href="https://github.com/jwuphysics/euclid-galaxy-morphology-saes" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Galaxy-MNIST</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Python (distributed as a Python package).
+                        Usage Requirements: Internet connection required for download, works offline on standard laptop hardware. Formatted natively for easy integration into machine learning projects and code bases.
+                    </p>
+                    <p>
+                        GalaxyMNIST is a dataset containing galaxy images labelled by morphology (shape).
+                        It is aimed to help with ML debugging and teaching, containing 10,000 images of galaxies, confidently labelled by Galaxy Zoo volunteers.
+                        The dataset has four classes: smooth and round, smooth and cigar-shaped, edge-on-disk, and unbarred spiral.
+                        The data provides a frictionless way to teach students computer vision, image classification, and machine learning techniques on real scientific data.
+                    </p>
+                    <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
+                    <a class="collapsible-content-button" href="https://github.com/mwalmsley/galaxy_mnist" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
             <!-- INSERT_ASTRO_DATA -->
 
 
