@@ -7,6 +7,7 @@ Progammer: Neil Ghugare
 
 Revision History:
 07/20/2026 Created initial version of this file, separating from HTML.
+08/05/2026 Hardware acceleration updates for mobile.
 
 Notes:
 */
@@ -47,6 +48,7 @@ Notes:
     display: flex;
     width: max-content;
     animation: scrollLogos 25s linear infinite;
+    will-change: transform;
 }
 
 /* The track holding both blocks of logos arranged in a row. */
@@ -60,6 +62,9 @@ Notes:
     height: 60px;
     margin: 0 10px; /* Spacing can be adjusted between logos if needed. */
     object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* The magic animation: slides the track left by exactly half its full width. */
