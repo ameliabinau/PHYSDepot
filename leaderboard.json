@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "September 6, 2026",
+  "lastUpdated": "September 5, 2026",
   "entries": [
     {
       "name": "Amelia Binau",
@@ -10,7 +10,7 @@
     {
       "name": "Neil Ghugare",
       "institution": "University of Florida",
-      "count": 36,
+      "count": 37,
       "subfield": "Astrophysics"
     },
     {
@@ -44,6 +44,12 @@
       "subfield": "Astrophysics"
     },
     {
+      "name": "Allison Loper",
+      "institution": "Purdue University - West Lafayette",
+      "count": 3,
+      "subfield": "Geophysics"
+    },
+    {
       "name": "Robert C. Laughlin",
       "institution": "Indiana University - Bloomington",
       "count": 3,
@@ -66,12 +72,6 @@
       "institution": "Purdue University",
       "count": 2,
       "subfield": "Astrophysics"
-    },
-    {
-      "name": "Allison Loper",
-      "institution": "Purdue University - West Lafayette",
-      "count": 2,
-      "subfield": "Biophysics & Geophysics"
     },
     {
       "name": "Hannah LeMoine",
