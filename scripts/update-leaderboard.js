@@ -9,6 +9,7 @@
  *      07/06/2026 Initial version created with doc comments.
  *      07/07/2026 Include resources not in subfields.
  *      07/10/2026 Update to allow for dual contributions via writer/curator.
+ *      09/05/2026 Updated to work with Biophysics/Geophysics split.
  * 
  * Notes:
  * Run locally with Node/NPM. Will require a Cheerio installation, which can be done through "npm install cheerio".
@@ -30,14 +31,15 @@ const repoRootDir = path.join(__dirname, '../');
 
 // A subfield map for mapping the pages of the HTML files to their actual subfield names.
 const subfieldMap = {
-    'bio': 'Biophysics & Geophysics',
+    'bio': 'Biophysics',
     'education': 'Physics Education',
     'astro': 'Astrophysics',
     'experiment': 'Experimental Techniques',
     'mathematical': 'Math & Engineering Physics',
     'particle': 'Particle & Nuclear Physics',
     'quantum': 'Quantum Information',
-    'amo': 'Condensed Matter & AMO'
+    'amo': 'Condensed Matter & AMO',
+    'geo': 'Geophysics',
 };
 
 // Get the HTML files from the subfield directory and other locations.
