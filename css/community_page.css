@@ -73,7 +73,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-
 /* 2-Column Grid */
 .community-grid {
   display: grid;
@@ -267,16 +266,30 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .community-grid {
-    grid-template-columns: 1fr; /* Stacks column on mobile */
+    grid-template-columns: 1fr;
   }
 
   .event-item {
-    flex-direction: column;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .event-date {
-    width: 50px;
+    min-width: 50px;
     height: 50px;
+  }
+
+  .event-date .month {
+    font-size: 0.65rem;
+  }
+
+  .event-date .day {
+    font-size: 1.1rem;
+  }
+
+  .even-details .badge {
+    margin-bottom: 0.25rem;
   }
 }
