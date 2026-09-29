@@ -225,11 +225,99 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">ZWO ASIStudio</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): None (desktop application).
+                        Usage Requirements: Desktop OS, USB3.0/2.0 ports for camera connections, optional local or remote storage for captured image files, internet connection optional. <b>Depending on operation system, might require a specialized driver download.</b>
+                    </p>
+                    <p>
+                        ASIStudio is ZWO's official, all-in-one desktop software suite designed for astrophotography acquisition.
+                        It is specially designed for ZWO's consumer- and pro-level CCD/CMOS cameras.
+                        It breaks down into specialized sub-apps (like ASIImg for deep-sky imaging, ASILive for real-time image stacking, etc.), providing an integrated platform to control cameras, focusers, and filter wheels without needing complex setups.
+                        <br /><br />
+                        Typically, for Linux/MacOS, you don't need any drivers. <b>For Windows, you typically need to install the following ZWO drivers alongside ASIStudio:</b>
+                        <ul>
+                            <li>ASCOM Platform</li>
+                            <li>3.5 Net Framework</li>
+                            <li>ASCOM Driver</li>
+                            <li>Camera Driver</li>
+                        </ul>
+                        The link for doing so is <a href="https://www.zwoastro.com/software/" target="_blank" rel="noopener">here.</a>
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://www.zwoastro.com/software/asistudio/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">NASA ADS</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Language agnostic (REST API, official and community Python libraries also exist).
+                        Usage Requirements: Active internet connection, user registration to obtain an API access token if wanted, HTTP client, or Python environment.
+                    </p>
+                    <p>
+                        Operated by the Smithsonian Astrophysical Observatory (SAO) under a NASA grant, ADS is the primary digital library for research papers in astronomy, astrophysics, and physics.
+                        Its REST API enables developers to programmatically search millions of publication abstracts, track citation networks, extract BibTeX entries, and analyze academic metrics.
+                        It's also an amazing way to find papers, get PDF or HTML versions of those papers, and see results by authors or by similar topic.
+                        <br /><br />
+                        <i>
+                            It is important to note that ADS is transitioning (although not entirely) to a more generalized science literature platform, called <a href="https://scixplorer.org/" target="_blank" rel="noopener">SciX</a>. 
+                            The impacts of this on ADS are still unclear at this time.
+                        </i>
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://ui.adsabs.harvard.edu/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Clear Dark Sky (Clear Sky Chart Data)</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): REST/HTTP queries for raw data feeds, otherwise no language requirements.
+                        Usage Requirements: Active internet connection. Compatible with a web browser or server-side fetcher.
+                    </p>
+                    <p>
+                        Based on numerical weather prediction models from the US and Europe, Clear Sky Charts provide hourly forecasts tailored specifically for amateur astronomers.
+                        They evaluate localized cloud cover, atmospheric transparency, and astronomical seeing over a 96-hour window for thousands of observing sites across North America.
+                        Integrations can display visual forecast charts directly on site-specific dashboards.
+                        As with any weather-based system, these predictions are predictions, and are subject to changes, fluctuations, or are possibly completely incorrect. 
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://www.cleardarksky.com/csk/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
 
             <!-- INSERT_ASTRO_SOFTWARE -->
 
-
         </div>
+
+        <section class="core-skill-box">
+            <span class="title-span">
+                Core Skill
+            </span>
+            <h3 class="skill-header">
+                NASA ADS (Astrophysics Data System)
+            </h3>
+            <div class="important-container">
+                <div class="important-column">
+                    <p class="skill-text">
+                        NASA ADS is the universal search engine and digital library for astronomy/astrophysics/physics literature, making its mastery a non-negotiable skill for anyone entering the filed.
+                        It allows users to instantly search millions of peer-reviewed papers and preprints, trace how scientific ideas evolve through citation networks, access PDF/HTML versions of papers, and export clean BibTeX citations directly into LaTeX documents.
+                        Navigating its advanced query syntax and/or its programmatic API moves a student from passively reading about astronomy to efficiently synthesizing and searching through existing research, identifying open scientific questions, and backing up original work with rigorous academic context.
+                        <br /><br />
+                        <i>
+                            It is important to note that ADS is transitioning (although not entirely) to a more generalized science literature platform, called <a href="https://scixplorer.org/" target="_blank" rel="noopener">SciX</a>. 
+                            The impacts of this on ADS are still unclear at this time.
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <h2>Packages</h2>
 
@@ -483,6 +571,59 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">BATMAN</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Python, with C extensions.
+                        Usage Requirements: Requires a C compiler for building backend extensions upon installation. Internet connection optional (runs offline after setup).
+                    </p>
+                    <p>
+                        BATMAN stands for <b>B</b>ad-<b>A</b>** <b>T</b>ransit <b>M</b>odel c<b>A</b>lculatio<b>N</b>.
+                        It generates fast, analytical transit models using custom or standard radial limb-darkening laws.
+                        Written in C and wrapped for Python, it can calculate millions of transit light curves in seconds, making it the standard forward-modeling endinge to pair with MCMC samplers like <code>emcee</code>.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://lkreidberg.github.io/batman/docs/html/index.html" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">exoplanet Toolkit</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Python/C++.
+                        Usage Requirements: C++ compiler for PyMC model compilation, runs offline.
+                    </p>
+                    <p>
+                        Part of the PyMC ecosystem, <code>exoplanet</code> provides probabilistic tools designed specifically for astronomical time-series data.
+                        It pairs <code>C++</code> evaluations of orbital mechanics and limb-darkening models with Gaussian Processes to handle stellar variability.
+                        This enables robust Bayesian parameter estimation via Hamiltonian Monte Carlo (HMC).
+                        As the name suggests, this PyMC package is focused on applying these tools to the observations of exoplanets.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://docs.exoplanet.codes/en/latest/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">YREC (Yale Rotating Evolution Code)</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Fortran (for development).
+                        Usage Requirements: Fortran compiler (i.e. <code>gfortran</code>), Unix/Linux/macOS terminal environment, local compute resources (runs offline, might require supercomputers for more compelx simulations).
+                    </p>
+                    <p>
+                        YREC is a high-precision stellar evolution code developed at Yale University to model 1D hydrostatic stars from pre-main sequence through helium burning.
+                        It incorporates pseudo-2D rotational effects, internal angular momentum transport, and magnetic wind braking (among others), serving as a core computational tool for solar physics, astroseismology, and general stellar theory.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://yrec.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+
+
     <!-- INSERT_ASTRO_PACKAGES -->
 
         </div>
@@ -684,6 +825,22 @@ In my experience, it is an excellent resource for handling large data tables, an
                     </p>
                     <p class="resource-contributor">Contributor: Amelia Binau, Indiana University - Bloomington, <i>Curator</i>; Neil Ghugare, University of Florida, <i>Writer</i></p>
                     <a class="collapsible-content-button" href="https://github.com/mwalmsley/galaxy_mnist" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">NASA Exoplanet Archive</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Language agnostic (SQL-based queries via Python, R, cURL, etc.).
+                        Usage Requirements: Active internet connection, modern web browser, or HTTP request library.
+                    </p>
+                    <p>
+                        Maintained by NexScI at Caltech, the NASA Exoplanet Archive is the authoritative online database for confirmed exoplanet data, stellar properties, and light curves.
+                        Its TAP (Table Access Protocol) service allows researchers to programmatically fetch catalog parameters directly into custom analysis pipelines.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener">Click here to access this resource</a>
                 </div>
             </button>
 
