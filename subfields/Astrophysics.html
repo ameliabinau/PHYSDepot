@@ -291,6 +291,23 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">SIMBAD</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Web browser interface. Programmatically accesible via Python (<code>astroquery</code>), REST APIs, and more.
+                        Usage Requirements: Requires internet connectivity to query the live database, though query results and tables can be exported and cached locally.
+                    </p>
+                    <p>
+                        SIMBAD (<b>S</b>et of <b>I</b>dentifications, <b>M</b>easurements, and <b>B</b>ibliography for <b>A</b>stronomical <b>D</b>ata) is a definitive reference databse for astronomical objects outside the Solar System.
+                        It aggregates cross-identifications, positional coordinates, basic flux measurements, and exhaustive bibliographic references for hundreds of millions of celestial targets.
+                        This makes it an essential lookup tool for professional, student, and amateur astronomers. 
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://simbad.u-strasbg.fr/simbad/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
 
             <!-- INSERT_ASTRO_SOFTWARE -->
 
@@ -622,6 +639,53 @@ In my experience, it is an excellent resource for handling large data tables, an
                 </div>
             </button>
 
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Powderday Radiative Transfer</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Written in Python, with backend components using C, Fortran, and Cython.
+                        Usage Requirements: Runs on Linux clusters or HPC environments. Requires <code>yt</code> for mesh handling, <code>python-fsps</code> for stellar population models, and Hyperion for Monte Carlo dust radiative transfer. Supports MPI parallelization, and technically works offline.
+                    </p>
+                    <p>
+                        A 3D dust radiative transfer package designed to interface directly with cosmological galaxy formation simulations (like Gadget, Gizmo, and Arepo).
+                        It takes in snapshot data to trace stellar light through interstellar dust, yielding realisitic mock spectral energy distributions (SEDs), broadband photometry, and multi-wavelength images for comparison with observational data.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://powderday.readthedocs.io/en/latest/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Prospector SED Fitting</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Requires Python 3 with standard Python packages like NumPy or SciPy.
+                        Usage Requirements: Cross-platform. Relies on <code>python-fsps</code> and nested sampling packages like <code>dynesty</code>. Works offline.
+                    </p>
+                    <p>
+                        A Bayesian inference framework designed to model galaxy spectral energy distributions (SEDs).
+                        By combining flexible, non-parametric star formation histories, self-consistent dust attenuation curves, and nebular emission grids with advanced dynamic nested sampling, it enables astronomers to robustly extract physical properties like stellar masses, metallicities, and star formation rates from photometric and spectroscopic data.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://prospect.readthedocs.io/en/stable/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">sedpy</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Requires Python3 with standard packages like NumPy and SciPy.
+                        Usage Requirements: Cross-OS, works offline, and frequently acts as a companion dependency for other tools like Prospector.
+                    </p>
+                    <p>
+                        A utility Python package containing a broad collection of astronomical filter transmission curves, spectrophotometric calibration tools, and filter-handling functions.
+                        It provides astronomers with standardized routines to calculate synthetic magnitudes, integrate filter curves, and manipulate spectral energy distribution (SED) data across various photometric systems.
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://sedpy.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
 
 
     <!-- INSERT_ASTRO_PACKAGES -->
@@ -841,6 +905,23 @@ In my experience, it is an excellent resource for handling large data tables, an
                     </p>
                     <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
                     <a class="collapsible-content-button" href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener">Click here to access this resource</a>
+                </div>
+            </button>
+
+            <button class="collapsible-card collapsed">
+                <h2 class="collapsible-card-title">Chandra X-Ray Data Archive</h2>
+                <div class="collapsible-card-info">
+                    <p class="resource-requirements">
+                        Language Requirement(s): Multi-format archive data (FITS files, XML metadata, etc.). Queryable via Python (<code>astroquery</code>), CIAO software tools, or web interfaces.
+                        Usage Requirements: Requires internet connectivity to search and download observations. Downloaded files and products can be analyzed locally using specialized X-ray reduction software and astronomy packages. Works offline once files are retrieved.
+                    </p>
+                    <p>
+                        The official public data repository for NASA's Chandra X-Ray Observatory, containing archival high-resolution X-ray observations of the universe.
+                        It provides astronomers with multi-wavelength event lists, images, and grating spectra from high-energy cosmic phenomena.
+                        These include supernova remnants, active galactic nuclei, and colliding galaxy clusters, which are vital for high-energy astrophysics research. 
+                    </p>
+                    <p class="resource-contributor">Contributor: Neil Ghugare, University of Florida</p>
+                    <a class="collapsible-content-button" href="https://cxc.harvard.edu/cda/" target="_blank" rel="noopener">Click here to access this resource</a>
                 </div>
             </button>
 
