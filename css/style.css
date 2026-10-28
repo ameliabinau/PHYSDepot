@@ -14,6 +14,10 @@ h3 {
   margin-left: 10px; /* Adjust the value as needed */
 }
 
+p {
+  line-height: 1.45;
+}
+
 /* NAVBAR STUFF
 Contains:
 - brand tag, which holds picture and website name
