@@ -8,6 +8,7 @@
  * Revision History:
  * 09/13/2026 - Created initial version.
  * 09/19/2026 - Header styling updates.
+ * 10/22/2026 - Carousel for contributors additions.
  * 
  * Notes:
  */
@@ -292,4 +293,152 @@ body {
   .even-details .badge {
     margin-bottom: 0.25rem;
   }
+}
+
+/* Carousel Styling */
+.contributors-section {
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+  align-items: stretch;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+}
+
+/* Contributor Card Styling */
+.contributor-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contributor-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.contributor-name {
+  margin: 10px 0 5px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: black;
+}
+
+.contributor-degrees {
+  font-size: 0.95rem;
+  color: black;
+  margin-bottom: 15px;
+  font-style: bold;
+}
+
+.contributor-bio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Carousel Control Buttons */
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.prev-btn {
+  margin-right: 10px;
+}
+
+.next-btn {
+  margin-left: 10px;
+}
+
+/* Indicator Dots */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.indicator {
+  border: none;
+  width: 12px;
+  height: 12px;
+  background: #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.indicator.current-slide {
+  background: #4b0082; 
+}
+
+/* Carousel Text Styling (Misc.) */
+.contributor-header {
+  text-align: center;
+  margin: 0 auto 2.5rem auto;
+  padding: 1rem 0;
+  background-color: #fdf7ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  
+}
+
+.contributor-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a; 
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
