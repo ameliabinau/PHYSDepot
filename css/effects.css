@@ -1,20 +1,9 @@
-.underlined {
-  color: black;
-  flex: 1;
-  font-size: 2em;
-  line-height: 1.2;
-  text-decoration: none;
-  background-image: linear-gradient(to right, yellow 0, yellow 100%);
-  background-position: 0 1.2em;
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background .5s;
-  &:hover, {
-    background-size: 100% 100%;
-  }
-  
-  &--gradient {
-    background-position: 0 -0.1em;
-    background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
-  }
+.gradient-text {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff007f, #ffdd00, #00f0ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
