@@ -1,8 +1,5 @@
 .gradient-text {
-  font-family: 'Arial Black', sans-serif;
-  font-size: 5rem;
-  font-weight: 900;
-  background: linear-gradient(45deg, #ff007f, #ffdd00, #00f0ff);
+  background: linear-gradient(45deg, #d88bff, #fff7c3, #b790ff);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
