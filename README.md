@@ -5,7 +5,7 @@ Our platform hosts an online library of open-source, accessible physics/math/STE
 
 To learn more, including information on how to contribute or join our community of physics researchers, visit us at PHYSDepot.org!
 
-A special thanks to our core contributors, @ameliabinau, @duberii, and @RandomKiddo
+A special thanks to our Core Contributors, [@ameliabinau](https://github.com/ameliabinau), [@duberii](https://github.com/duberii), and [@RandomKiddo](https://github.com/RandomKiddo). 
 
 ![The structure of the PHYSDepot.org platform.](graphics/Repo_Diagram.png)
 
