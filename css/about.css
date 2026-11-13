@@ -1,0 +1,69 @@
+/*
+ * File: about.css
+ * 
+ * CSS specific to the about page.
+ * 
+ * Programmer: Neil Ghugare
+ * 
+ * Revision History:
+ * 11/13/2026 - Created initial version.
+ * 
+ * Notes:
+ */
+
+/* Reset Default Margins */
+
+h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* "Callout" Header */
+
+.callout-header-wrapper {
+    max-width: 780px; 
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.callout-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; 
+    margin: 0;
+    line-height: 1.25;
+}
+
+.callout-top {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+}
+
+.callout-bottom {
+    text-align: right;
+    font-size: 1.85rem;
+}
+
+/* Mobile Viewing */
+
+@media (max-width: 600px) {
+    .callout-header {
+        align-items: flex-start; 
+    }
+    
+    .callout-top {
+        font-size: 1.25rem; 
+    }
+    
+    .callout-bottom {
+        font-size: 1.45rem;
+        text-align: left;
+    }
+}
+
