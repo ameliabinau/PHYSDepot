@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "November 12, 2026",
+  "lastUpdated": "November 13, 2026",
   "entries": [
     {
       "name": "Amelia Binau",
-      "institution": "Indiana University - Bloomington",
-      "count": 73,
+      "institution": "The Ohio State University",
+      "count": 72,
       "subfield": "Astrophysics"
     },
     {
@@ -72,6 +72,12 @@
       "institution": "Purdue University",
       "count": 2,
       "subfield": "Astrophysics"
+    },
+    {
+      "name": "Amelia Binau - The Ohio State University",
+      "institution": "Unknown",
+      "count": 2,
+      "subfield": "Experimental Techniques"
     },
     {
       "name": "Hannah LeMoine",
