@@ -50,6 +50,12 @@
       "subfield": "Geophysics"
     },
     {
+      "name": "Amelia Binau - The Ohio State University",
+      "institution": "Unknown",
+      "count": 3,
+      "subfield": "Experimental Techniques"
+    },
+    {
       "name": "Robert C. Laughlin",
       "institution": "Indiana University - Bloomington",
       "count": 3,
@@ -72,12 +78,6 @@
       "institution": "Purdue University",
       "count": 2,
       "subfield": "Astrophysics"
-    },
-    {
-      "name": "Amelia Binau - The Ohio State University",
-      "institution": "Unknown",
-      "count": 2,
-      "subfield": "Experimental Techniques"
     },
     {
       "name": "Hannah LeMoine",
