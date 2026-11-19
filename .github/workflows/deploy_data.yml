@@ -77,7 +77,6 @@ jobs:
       - name: Create Pull Request for Review
         uses: peter-evans/create-pull-request@v6
         with:
-          # FIXED LINE: Points to your high-clearance Repository Secret
           token: ${{ secrets.AUTOMATION_PAT }}
           commit-message: "Automated entry: Add card for ${{ github.event.inputs.item_title }}"
           title: "New Resource Submission: ${{ github.event.inputs.item_title }}"
